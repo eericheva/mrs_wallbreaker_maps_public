@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# build output
+dist/
+build/
+
+# env / secrets
+.env
+.env.*
+
+# local plaintext access-code mirror (issued codes; access.json keeps only hashes)
+.access_codes.json
+
+# logs
+*.log
+
+# local dev-server runtime (logs + pids from scripts/restart-dev.sh)
+.run/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# field-map scratch dumps (temporary HTML/PDF, never part of the map)
+field_maps/*/scratch/
