@@ -1,51 +1,51 @@
-# Как наполняется и строится карта: VCRC
+# How the map is filled and built: VCRC
 
-Этот отчёт про МАШИНУ, которая собрала карту, а не про её содержание (для содержания есть `report.md`). Три шага: как статья зарабатывает ВЕС по свежести и цитатам; как взвешенный каталог ЛОЖИТСЯ на тензор (сетки-хитмапы); и общий конвейер сборки. Отбор в каталог — мягкий: ни одна статья не выкидывается по весу или возрасту, вес влияет лишь на эмфазу (размер/цвет узла) и на право статьи ПОРОЖДАТЬ вопрос будущей работы.
+This report is about the MACHINE that assembled the map, not about its content (for content see `report.md`). Three steps: how a paper earns its WEIGHT from recency and citations; how the weighted catalog LANDS on the tensor (grid heatmaps); and the overall build pipeline. Selection into the catalog is soft: no paper is discarded by weight or age; weight affects only emphasis (node size/color) and a paper's right to SPAWN a future-work question.
 
-Якорь сборки (as_of): 2026-07. Статей в каталоге: 1702; точек на карте: 1495; закрыто ≥1 статьёй: 1492. Просьб будущей работы: 1834. «Гигантов» по цитатам: 226 (порог Тьюки 40 цитат, абсолютный пол 100).
+Build anchor (as_of): 2026-07. Papers in catalog: 1702; points on the map: 1495; closed by ≥1 paper: 1492. Future-work requests: 1834. Citation "giants": 226 (Tukey threshold 40 citations, absolute floor 100).
 
-## Инструмент взвешивания и фильтрации
+## The weighting and filtering instrument
 
-![Инструмент взвешивания и фильтрации](fig_weighting.png)
+![The weighting and filtering instrument](fig_weighting.png)
 
-- Что на картинке: слева — вклад СВЕЖЕСТИ как ступень от возраста статьи в месяцах (≤4 мес → 1.0, ≤12 мес → 0.6, ≤60 мес → 0.3, старше → 0); справа — итоговый вес = свежесть + 1.5·перцентиль цитирования, по одной линии на каждую ступень свежести.
-- Перцентиль цитирования — это доля каталога, у кого цитат-в-год (age-adjusted) МЕНЬШЕ, чем у этой статьи: [0,1], где 1 — самая цитируемая. Age-adjusted, чтобы старые не набирали фору просто за возраст.
-- Множитель канона 1.5 больше максимума свежести 1.0: цитаты ПЕРЕВЕШИВАЮТ свежесть — старая, но сильно цитируемая работа получает высокий вес.
-- Гигант (>100 цитат или выше порога Тьюки) и ручной landmark приравниваются к перцентилю 1.0 (эффективный канон) независимо от возраста — их вес садится на верхнюю линию.
-- Порог «канона» 0.5: старая статья (старше 60 мес, у которой свежесть уже 0) порождает вопросы и получает полную эмфазу только если её перцентиль ≥ 0.5; иначе остаётся тусклым узлом в каталоге (её не выкидывают).
+- What the figure shows: on the left, the RECENCY contribution as a step function of paper age in months (≤4 mo → 1.0, ≤12 mo → 0.6, ≤60 mo → 0.3, older → 0); on the right, the final weight = recency + 1.5·citation percentile, one line per recency tier.
+- The citation percentile is the fraction of the catalog whose citations-per-year (age-adjusted) is LOWER than this paper's: [0,1], where 1 is the most cited. Age-adjusted so older papers do not gain an edge just for their age.
+- The canon multiplier 1.5 is larger than the maximum recency 1.0: citations OUTWEIGH recency — an old but heavily cited paper still earns a high weight.
+- A giant (>100 citations or above the Tukey threshold) and a manual landmark are set to percentile 1.0 (effective canon) regardless of age — their weight sits on the top line.
+- The "canon" threshold 0.5: an old paper (older than 60 mo, whose recency is already 0) spawns questions and earns full emphasis only if its percentile ≥ 0.5; otherwise it stays a dim node in the catalog (it is not discarded).
 
-## Откуда статьи пришли по цитатам и срокам, и какой вес получили
+## Where papers come from by citations and age, and the weight they earned
 
-![Откуда статьи пришли по цитатам и срокам, и какой вес получили](fig_citation_age.png)
+![Where papers come from by citations and age, and the weight they earned](fig_citation_age.png)
 
-- Что на картинке: каждая точка — статья; по горизонтали её возраст в месяцах, по вертикали цитирования (+1, лог шкала), цвет — заработанный вес. Синяя полоса — окно «recent» (возраст ≤60 мес). Звёздочки — ручные landmark.
-- Две горизонтальные линии — пороги «гиганта»: абсолютный пол 100 цитат (красный пунктир) и относительный порог Тьюки Q3+1.5·IQR = 40 цитат для ЭТОГО каталога (оранжевый пунктир). Выше любой из них — гигант, который обязан сохраниться при пересборке.
-- Право статьи порождать вопрос (question-eligible) = recent (в синей полосе) ИЛИ canonical (перцентиль ≥ 0.5). Свежая с 0 цитат всё равно eligible; старая с низкими цитатами — нет.
-- Вертикальные пунктиры — границы ступеней свежести (4 / 12 / 60 месяцев).
+- What the figure shows: each point is a paper; the horizontal axis is its age in months, the vertical axis is citations (+1, log scale), and color is the earned weight. The blue band is the "recent" window (age ≤60 mo). The stars are manual landmarks.
+- The two horizontal lines are the "giant" thresholds: the absolute floor of 100 citations (red dashed) and the relative Tukey threshold Q3+1.5·IQR = 40 citations for THIS catalog (orange dashed). Above either one is a giant, which must survive a rebuild.
+- A paper's right to spawn a question (question-eligible) = recent (in the blue band) OR canonical (percentile ≥ 0.5). A fresh paper with 0 citations is still eligible; an old one with low citations is not.
+- The vertical dashed lines are the recency-tier boundaries (4 / 12 / 60 months).
 
-## Как взвешенный каталог ложится на тензор (RQ × LOCUS)
+## How the weighted catalog lands on the tensor (RQ × LOCUS)
 
-![Как взвешенный каталог ложится на тензор (RQ × LOCUS)](fig_tensor_heatmaps.png)
+![How the weighted catalog lands on the tensor (RQ × LOCUS)](fig_tensor_heatmaps.png)
 
-- Что на картинке: пять сеток-хитмапов. Строки — направления RQ (корневая ось), столбцы — значения оси «LOCUS» (карта сама выбрала её как самую разделяющую спрос-пустоты). Каждая клетка сетки сводит все точки тензора с этими двумя координатами (по остальным осям — усреднение), так весь N-мерный тензор проецируется на плоскость.
-- «Плотность размещений» — сколько статей стоит в клетках сетки; «Нерешённость 0..4» — сколько под-вопросов в среднем открыто (0 — всё закрыто, 4 — совсем пусто); «Открытый спрос» — сколько ещё не выполненных просьб (SPACE) целят в клетки; «Средний вес» — насколько тяжёлые (свежие/цитируемые) статьи там сидят; «Плотность связей» — сколько рёбер просьба→клетка приходит.
-- Так видно неоднородность области: где густо работают, где громко просят при пустоте, и где плотнее всего взаимодействие участников (связи).
+- What the figure shows: five grid heatmaps. Rows are RQ directions (the root axis), columns are values of the "LOCUS" axis (the map itself chose it as the one that most sharply separates demand-gaps). Each grid cell aggregates all tensor points with these two coordinates (averaging over the other axes), so the whole N-dimensional tensor projects onto the plane.
+- "Placement density" is how many papers sit in the grid cells; "Unansweredness 0..4" is how many sub-questions are open on average (0 = all answered, 4 = completely empty); "Open demand" is how many not-yet-fulfilled requests (SPACE) target the cells; "Mean weight" is how heavy (fresh/cited) the papers sitting there are; "Link density" is how many request→cell edges arrive.
+- This reveals the heterogeneity of the field: where work is dense, where demand is loud amid emptiness, and where the interaction between participants (links) is densest.
 
-## Полный конвейер сборки
+## The full build pipeline
 
-От брифа до собранного JSON. Взвешивание — общий поставщик эмфазы и права порождать вопрос; отбор в каталог остаётся мягким (курируется вручную), а состояния клеток и рёбра выводятся детерминированно.
+From the brief to the assembled JSON. Weighting is the shared provider of emphasis and the right to spawn a question; selection into the catalog remains soft (manually curated), while cell states and edges are derived deterministically.
 
 ```mermaid
 flowchart TD
-  rq["F0: корневая ось RQ<br/>(вопросы исследования из брифа)"]
-  harvest["F1: каталог статей<br/>arXiv-мета + цитаты (Semantic Scholar)"]
-  weigh["Взвешивание (weight.py)<br/>вес = свежесть + 1.5·перцентиль цитат<br/>гиганты >100 цитат / порог Тьюки"]
-  soft["Мягкий отбор<br/>ни одна статья не выкидывается;<br/>вес решает эмфазу и право порождать вопрос"]
-  place["F2-F3: размещение на тензор<br/>каждая статья в свои точки (клетки)"]
-  fw["F4: волны future-work<br/>просьбы из статей → канонические темы Fk"]
-  edges["Рёбра (parse_edges)<br/>paper → question → cell"]
-  aspects["F4.5: аспекты клеток<br/>подтверждено 2+ / устойчиво 3+ / решено"]
-  cells["Выводимые состояния клеток<br/>gap / 3-2-1 open / answered"]
-  served["Собранная карта (JSON)<br/>+ пивот, + фронтир спроса"]
+  rq["F0: root RQ axis<br/>(research questions from the brief)"]
+  harvest["F1: paper catalog<br/>arXiv metadata + citations (Semantic Scholar)"]
+  weigh["Weighting (weight.py)<br/>weight = recency + 1.5·citation percentile<br/>giants >100 citations / Tukey threshold"]
+  soft["Soft selection<br/>no paper is discarded;<br/>weight decides emphasis and the right to spawn a question"]
+  place["F2-F3: placement on the tensor<br/>each paper into its points (cells)"]
+  fw["F4: future-work waves<br/>requests from papers → canonical themes Fk"]
+  edges["Edges (parse_edges)<br/>paper → question → cell"]
+  aspects["F4.5: cell aspects<br/>corroborated 2+ / robust 3+ / answered"]
+  cells["Derived cell states<br/>gap / 3-2-1 open / answered"]
+  served["Assembled map (JSON)<br/>+ pivot, + demand frontier"]
   rq --> harvest --> weigh --> soft --> place --> fw --> edges --> aspects --> cells --> served
 ```

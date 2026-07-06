@@ -1,334 +1,334 @@
-# Что происходит в области: Refusal directions, harm schemas, evasion and defense of probe/latent monitors
+# What is happening in the field: Refusal directions, harm schemas, evasion and defense of probe/latent monitors
 
-**Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — область молодая и активная (ранняя стадия: почти нет выводов, которые перепроверены тремя и более независимыми статьями — даже базовые вещи ещё не устоялись). Карта состоит из 203 точек (каждая точка — это отдельный вопрос в конкретных условиях). Хотя бы одной статьёй закрыто 118 из 203 точек (58%); из закрытых 21% подтверждены ещё одной независимой статьёй (две и более) и лишь 8% — тремя и более; полностью решено (по точке не осталось открытых под-вопросов) 1% всех точек. Важно не путать три разные вещи: ПОКРЫТИЕ (в точке есть хоть одна статья) — это ещё не зрелость; ПОДТВЕРЖДЁННОСТЬ (2+ исследования) и РЕШЁННОСТЬ (закрыты все под-вопросы точки) и есть зрелость. Серединная плотность 1 статьи на закрытую клетку (клетка карты — это та же точка: один вопрос в конкретных условиях) — необходимое, но недостаточное условие: серединное значение может быть на цели, пока тонкая половина клеток сидит на одной статье. Поле просит 25 крупных тем для будущей работы (это сжато из 246 отдельных просьб, найденных в статьях); из них 18 — «никто не делает» (orphaned: многие просят, но за это никто не взялся) и 6 — «решили на словах» (contested: кто-то заявил, что сделал, но точки всё ещё открыты). Из просьб с определившимся исходом (выполнена либо ещё открыта) уже сделана лишь 3% (7 из 240: нашлась статья, которая это реально сделала); цитирования сильно сосредоточены у немногих статей (индекс концентрации Gini=0.85: 0 — поровну, 1 — всё у единиц).
+**Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — a young and active field (early stage: almost no findings have been re-checked by three or more independent papers — even the basics have not yet settled). The map consists of 203 points (each point is a separate question under specific conditions). At least one paper closes 118 of 203 points (58%); of the closed ones, 21% are corroborated by another independent paper (two or more) and only 8% by three or more; fully answered (no open sub-questions left on the point) are 1% of all points. It is important not to confuse three different things: COVERAGE (a point has at least one paper) is not yet maturity; CORROBORATION (2+ studies) and ANSWEREDNESS (all of a point's sub-questions closed) are what maturity means. A median density of 1 paper per closed cell (a map cell is the same as a point: one question under specific conditions) is a necessary but not sufficient condition: the median value can be on target while the thin half of the cells sits on a single paper. The field asks for 25 major themes of future work (compressed from 246 separate requests found in the papers); of these, 18 are "nobody has taken it up" (orphaned: many ask, but no one has taken it up) and 6 are "solved on paper" (contested: someone claimed to have done it, but the points are still open). Of the requests with a settled outcome (either done or still open), only 3% are already done (7 of 240: a paper was found that actually did it); citations are heavily concentrated in a few papers (Gini concentration index=0.85: 0 — evenly shared, 1 — all in a handful).
 
-## Сводка (главные числа)
+## Summary (key numbers)
 
-| Метрика | Значение |
+| Metric | Value |
 | --- | --- |
-| Статей (уникальных) | 153 |
-| Точек на карте (вопрос в конкретных условиях) | 203 |
-| Осей на карте (измерений, по которым различаются вопросы) | 14 |
-| Значений по осям (вариантов на каждой оси) | RQ 24 · Models / families 2 · non-unique-direction 2 · Public code 3 · Threat model / access 3 · Failure polarity 3 · Mechanism dynamics 3 · Cross-model transfer tested 4 · Architecture family 4 · failure mechanism 6 · modality 6 · Lifecycle stage 6 · evaluation-chain stage 8 · Behavior concept 9 — всего 83 |
-| Направлений исследований (RQ — корневая ось) | 24 |
-| Закрыто хотя бы 1 статьёй / совсем пустых | 118 / 85 |
-| Полностью решено (нет открытых под-вопросов) | 3 (1%) |
-| Подтверждено 2+ независимыми статьями (из закрытых) | 25 (21%) |
-| Устоялось на 3+ статьях (из закрытых) | 9 (8%) |
-| Плотность (серединно статей на закрытую клетку) | 1 |
-| Тем-просьб (F, после объединения похожих) | 25 |
-| Отдельных просьб (с автором / собрано инструментом) | 246 (236 / 10) |
-| Просьб: уже сделано / ещё открыто / нужна новая ось | 7 / 233 / 6 |
-| «Никто не делает» / «решили на словах» | 18 / 6 |
-| Концентрация цитат (Gini, 0 — поровну, 1 — у единиц) | 0.85 |
+| Papers (unique) | 153 |
+| Points on the map (question under specific conditions) | 203 |
+| Axes on the map (dimensions along which questions differ) | 14 |
+| Values per axis (options on each axis) | RQ 24 · Models / families 2 · non-unique-direction 2 · Public code 3 · Threat model / access 3 · Failure polarity 3 · Mechanism dynamics 3 · Cross-model transfer tested 4 · Architecture family 4 · failure mechanism 6 · modality 6 · Lifecycle stage 6 · evaluation-chain stage 8 · Behavior concept 9 — 83 total |
+| Research directions (RQ — the root axis) | 24 |
+| Closed by at least 1 paper / completely empty | 118 / 85 |
+| Fully answered (no open sub-questions) | 3 (1%) |
+| Corroborated by 2+ independent papers (of closed) | 25 (21%) |
+| Robust on 3+ papers (of closed) | 9 (8%) |
+| Density (median papers per closed cell) | 1 |
+| Request themes (F, after merging similar ones) | 25 |
+| Separate requests (with author / gathered by instrument) | 246 (236 / 10) |
+| Requests: already done / still open / needs a new axis | 7 / 233 / 6 |
+| "Nobody does it" / "solved on paper" | 18 / 6 |
+| Citation concentration (Gini, 0 — evenly shared, 1 — in a handful) | 0.85 |
 
-## Зрелость поля: насколько выводы перепроверены
+## Field maturity: how re-checked the findings are
 
-![Зрелость поля: насколько выводы перепроверены](maturity.png)
+![Field maturity: how re-checked the findings are](maturity.png)
 
-- Что на картинке: слева — сколько точек карты в каком состоянии (пустая = ни одной статьи; «1/2/3 open» = по точке осталось столько-то нерешённых под-вопросов; «answered» = решено полностью). Справа — «воронка зрелости»: сколько точек прошли каждую ступень (есть хотя бы одна статья -> подтверждено второй независимой статьёй -> устоялось на трёх и более -> решено целиком).
-- Только 8% закрытых точек устоялись на трёх и более независимых статьях — почти всё держится на одной-единственной статье, которую ещё никто не перепроверил.
-- Лишь 21% точек подтверждены хотя бы второй статьёй — большинство выводов пока опирается на одну работу.
-- 42% точек вообще пустые (по ним нет ни одной статьи): тема охвачена широко, но очень редко.
-- Чаще всего точки пустые (нет ни одной статьи): таких 85 — это самая большая группа. Совсем пустых 42%, а решённых до конца лишь 1% — то есть основная масса где-то посередине и пока не доведена до конца.
-- Полная разбивка всех 203 точек по состоянию — совсем пустых, без единой статьи (=4): 85, с 3 открытыми под-вопросами (=3): 47, с 2 открытыми под-вопросами (=2): 59, с 1 открытым под-вопросом (=1): 9, полностью закрытых (=0): 3.
-- Воронка быстро сужается: из точек с хотя бы одной статьёй до подтверждения второй статьёй доходит 21%, оттуда до трёх и более — 36%, и до полного решения — 33%. Больше всего отсеивается на перепроверке второй статьёй (дальше проходит лишь 21%) — это и есть главный признак незрелости.
+- What the figure shows: on the left — how many map points are in each state (empty = no papers; "1/2/3 open" = that many open sub-questions remain on the point; "answered" = fully answered). On the right — the "maturity funnel": how many points passed each rung (has at least one paper -> corroborated by a second independent paper -> robust on three or more -> fully answered).
+- Only 8% of closed points are robust on three or more independent papers — almost everything rests on a single paper that no one has re-checked yet.
+- Only 21% of points are corroborated by at least a second paper — most findings still rest on a single work.
+- 42% of points are completely empty (no paper on them at all): the field is covered broadly but very sparsely.
+- Most often the points are empty (no papers at all): there are 85 such — the largest group. Completely empty are 42%, and fully answered only 1% — that is, the bulk sits somewhere in the middle and is not yet finished.
+- Full breakdown of all 203 points by state — completely empty, without a single paper (=4): 85, with 3 open sub-questions (=3): 47, with 2 open sub-questions (=2): 59, with 1 open sub-question (=1): 9, fully closed (=0): 3.
+- The funnel narrows fast: of the points with at least one paper, 21% reach corroboration by a second paper, from there 36% reach three or more, and 33% reach a full answer. The most is filtered out at re-checking by a second paper (only 21% pass further) — this is the main sign of immaturity.
 
-## Спрос и предложение: что нарасхват, а что заброшено
+## Demand and supply: what is in high demand and what is abandoned
 
-![Спрос и предложение: что нарасхват, а что заброшено](demand_answeredness.png)
+![Demand and supply: what is in high demand and what is abandoned](demand_answeredness.png)
 
-- Что на картинке: каждый кружок — одна тема-просьба. По горизонтали — «спрос» (сколько разных статей об этом просят: правее = просят чаще). По вертикали — «насколько ещё не решено» по шкале 0..4. Размер кружка — сколько статей уже взялись за тему. Пунктиры делят поле на четыре угла (часто/редко просят на решено/не решено).
-- Что такое «целевые точки темы»: это клетки карты, которые именно эта тема-просьба хочет закрыть. Клетка карты — это один вопрос в конкретных условиях, заданный сочетанием направления исследования (RQ) и других осей карты (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept); своего короткого названия у клетки нет — её задают именно эти координаты. Какие клетки относятся к теме, берётся не вручную, а из самих статей-просьб: каждая просьба помечает, какие клетки надо закрыть, а тема собирает их все вместе. Например, у темы `F20` steering reliability 16 целевых точек; одна из них — RQ17: Geometry of over-refusal (POLARITY): a separ… — Models / families «multi», non-unique-direction «no», Public code «not-released», Threat model / access «white-box», Failure polarity «over-refusal», Mechanism dynamics «static», Cross-model transfer tested «not-tested», Architecture family «dense», failure mechanism «training», modality «text», Lifecycle stage «inference-time», evaluation-chain stage «direction», Behavior concept «refusal» — и эта клетка сейчас из числа совсем пустых, без единой статьи (=4).
-- Откуда шкала 0..4 (её не выставляют вручную): каждая точка карты несёт чек-лист из не более чем 3 уточняющих под-вопросов, и число — это сколько из них ещё открыто (0 — все закрыты, значит точка «решена»; 1, 2 или 3 — столько под-вопросов осталось). Особый случай — точка, по которой нет вообще ни одной статьи: она хуже, чем «3 открытых», поэтому ей дают 4 (потолок шкалы). У темы обычно несколько целевых точек (клеток карты, которые тема просит закрыть), и её «нерешённость» — это среднее этих чисел по всем её точкам (поэтому значение дробное, например 2.6).
-- Спрос (горизонталь): в среднем 8 разных статей просят тему, у серединного — 7; у большинства это 3–18 (в такой коридор попадает 90%), а вообще от 2 до 21. Самая востребованная справа — `F1` cross-model transfer (её просят 21 статей); слева — темы, которые просят всего 2 раз (единичные просьбы и те, что собрал сам инструмент — в названиях такие темы помечены «(greenfield)»: их сформулировал сам инструмент, без статьи-автора).
-- Насколько не решено (вертикаль): в среднем 3.3 из 4 (4 — совсем пусто), серединное значение 3.3 — облако кружков висит в верхней половине, то есть почти ничего ещё не доведено до конца. На примере темы `F20` steering reliability:
-  - откуда берётся 3.1: у темы 16 целевых точек (клеток карты, которые тема просит закрыть) — 8 совсем пустых, без единой статьи (=4), 4 с 3 открытыми под-вопросами (=3), 2 с 2 открытыми под-вопросами (=2), 2 с 1 открытым под-вопросом (=1); среднее этих чисел (0..4) и есть «нерешённость» = 3.12
-- Связь спроса и нерешённости: слабая отрицательная связь (коэффициент -0.16 по шкале от -1 до 1: +1 — чем чаще тему просят, тем она НЕрешённее; -1 — наоборот; 0 — связи нет (сравниваем порядок тем по спросу и по нерешённости)) — чем чаще тему просят, тем МЕНЬШЕ по ней пустоты — за популярные темы хотя бы частично берутся (они становятся «решёнными на словах»), а редкие так и стоят нетронутыми; при этом до полного решения почти ничто не доходит. Например (так и получается коэффициент -0.16): самую востребованную тему `F1` cross-model transfer просят 21 статей при нерешённости 3.6 из 4, а редко спрашиваемую `F19` boundary data — всего 2 при нерешённости 4.0: у самой востребованной нерешённость ниже (3.6 против 4.0) — это и есть отрицательная связь: чем чаще просят, тем меньше пустоты.
-- Сколько тем в каждом углу: «никто не делает» (orphaned) 18, «решили на словах» (contested) 6, «сделано и закрыто» (settled) 0, «открыто, но мало кто просит» (low-signal open) 1 — всего 25 тем.
-- Уже выполнено лишь 3% просьб — это 7 из 240 (к 7 нашлась статья, которая их реально сделала; остальные 233 пока открыты). Просят гораздо больше, чем успевают делать.
-- **«никто не делает»** (orphaned) — 18 тем (многие просят, но за тему никто не взялся, и она упирается в пустую точку). Самая яркая: `F1` cross-model transfer (её просят 21 статей, нерешённость 3.6 из 4).
-  - просьба: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — «We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodological improvements to future work.»
-  - реализаций нет — за тему пока никто не взялся
-  - почему «никто не делает»: за тему просят 21 статей, но реализаторов 0, и она упирается в пустые точки (15 без единой статьи) — спрос есть, работы нет.
-- **«решили на словах»** (contested) — 6 тем (кто-то заявил «сделано», но целевые точки темы (клетки карты, которые она просит закрыть) всё ещё открыты). Самая яркая: `F20` steering reliability (её просят 17 статей, нерешённость 3.1 из 4).
-  - просьба: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — «Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the logical reasoning community.»
-  - реализация: [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) — **causal separation** of 3 sycophancy behaviors (agreement/praise/genuine) into distinct linear directions; each can be **independently amplified/suppressed** …
-  - почему «на словах»: реализатор [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) есть, но из 16 целевых точек (клеток карты, которые тема просит закрыть) закрыта лишь 0 (полностью решена), ещё 8 с открытыми под-вопросами и 8 совсем пустых — уточняющие под-вопросы не сняты, поэтому засчитываем только «на словах».
-- **«сделано и закрыто»** (settled) — 0 тем: ни одна тема ещё не доведена до полного решения — поле пока незрелое.
-- **«открыто, но мало кто просит»** (low-signal open) — 1 тем (тема не решена и за неё никто не взялся, но и просят её мало). Самая яркая: `F24` agent safety (её просят 3 статей, нерешённость 2.3 из 4).
-  - просьба: [`P106` Indirect Prompt Injection in the Wild](https://arxiv.org/pdf/2604.27202) — «Overall, in-page prompt injections do not always overpower web agents, but they do succeed often enough, and under ordinary enough conditions, to warrant serious attention.»
-  - реализаций нет — за тему пока никто не взялся
-  - почему «мало просят»: тема не решена (нерешённость 2.3 из 4) и за неё никто не взялся, но просят её лишь 3 раз — спроса слишком мало, чтобы считать её громко брошенной (orphaned).
+- What the figure shows: each circle is one request theme. Horizontally — "demand" (how many different papers ask for it: further right = asked more often). Vertically — "how open-ness it still is" on a 0..4 scale. The circle size is how many papers have already taken up the theme. Dashed lines split the field into four corners (often/rarely asked x answered/unanswered).
+- What "the theme's target points" are: they are the map cells that this particular request theme wants to close. A map cell is a single question under specific conditions, defined by a combination of a research direction (RQ) and the map's other axes (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept); a cell has no short name of its own — it is defined precisely by these coordinates. Which cells belong to a theme is not set by hand but taken from the request papers themselves: each request marks which cells it wants closed, and the theme gathers them all together. For example, the theme `F20` steering reliability has 16 target points; one of them — RQ17: Geometry of over-refusal (POLARITY): a separ… — Models / families "multi", non-unique-direction "no", Public code "not-released", Threat model / access "white-box", Failure polarity "over-refusal", Mechanism dynamics "static", Cross-model transfer tested "not-tested", Architecture family "dense", failure mechanism "training", modality "text", Lifecycle stage "inference-time", evaluation-chain stage "direction", Behavior concept "refusal" — and this cell is currently among the completely empty, without a single paper (=4).
+- Where the 0..4 scale comes from (it is not set by hand): each map point carries a checklist of at most 3 clarifying sub-questions, and the number is how many of them are still open (0 — all closed, so the point is "answered"; 1, 2 or 3 — that many sub-questions remain). A special case — a point with no papers at all: it is worse than "3 open", so it is given a 4 (the scale's ceiling). A theme usually has several target points (map cells the theme asks to close), and its "open-ness" is the mean of these numbers over all its points (which is why the value is fractional, e.g. 2.6).
+- Demand (horizontal): on average 8 different papers ask for the theme, the median is 7; for most it is 3–18 (that band holds 90%), and overall from 2 to 21. The most requested on the right — `F1` cross-model transfer (asked for by 21 articles); on the left — themes asked for only 2 times (isolated, rarely mentioned requests). Some separate requests in the field were phrased by the instrument itself, with no source author — these are called greenfield (they do not form separate themes but merge into ordinary ones).
+- How unanswered (vertical): on average 3.3 of 4 (4 — completely empty), median value 3.3 — the cloud of circles hangs in the upper half, meaning almost nothing has been finished. Take the theme `F20` steering reliability as an example:
+  - where 3.1 comes from: the theme has 16 target points (map cells the theme asks to close) — 8 completely empty, without a single paper (=4), 4 with 3 open sub-questions (=3), 2 with 2 open sub-questions (=2), 2 with 1 open sub-question (=1); the mean of these numbers (0..4) is the open-ness (answeredScore) = 3.12
+- Relationship between demand and open-ness: weak negative relationship (coefficient -0.16 on a scale from -1 to 1: +1 — the more often a theme is requested, the more OPEN it is; -1 — the opposite; 0 — no relationship (we compare the ordering of themes by demand and by open-ness)) — the more often a theme is asked for, the FEWER gaps it has — popular themes are at least partially taken up (they become "solved on paper"), while rare ones stand untouched; meanwhile almost nothing reaches a full answer. For example (and that is how you get the coefficient -0.16): the most requested theme `F1` cross-model transfer is asked for by 21 articles at open-ness 3.6 of 4, while the rarely asked `F19` boundary data — only 2 at open-ness 4.0: the most requested one has lower open-ness (3.6 vs 4.0) — this is exactly the negative relationship: the more often asked, the fewer gaps.
+- How many themes in each corner: "nobody does it" (orphaned) 18, "solved on paper" (contested) 6, "done and closed" (settled) 0, "open, but few ask" (low-signal open) 1 — 25 themes in total.
+- Only 3% of requests are already done — that is 7 of 240 (for 7, a paper was found that actually did them; the remaining 233 are still open). Far more is asked for than gets done.
+- **"nobody does it"** (orphaned) — 18 themes (many ask, but no one has taken up the theme, and it runs into an empty point). Most striking: `F1` cross-model transfer (asked for by 21 articles, open-ness 3.6 of 4).
+  - request: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — "We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodological improvements to future work."
+  - no realizations — nobody has taken up the theme yet
+  - why "nobody has taken it up": the theme is asked for by 21 articles, but realizers 0, and it runs into empty points (15 without a single paper) — there is demand, but no work.
+- **"solved on paper"** (contested) — 6 themes (someone claimed "done", but the theme's target points (map cells it asks to close) are still open). Most striking: `F20` steering reliability (asked for by 17 articles, open-ness 3.1 of 4).
+  - request: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — "Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the logical reasoning community."
+  - realization: [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) — **causal separation** of 3 sycophancy behaviors (agreement/praise/genuine) into distinct linear directions; each can be **independently amplified/suppressed** …
+  - why "on paper": a realizer [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) exists, but of 16 target points (map cells the theme asks to close) only 0 are closed (fully answered), another 8 have open sub-questions and 8 are completely empty — the clarifying sub-questions are not resolved, so we count it only as "on paper".
+- **"done and closed"** (settled) — 0 themes: not a single theme has yet reached a full answer — the field is still immature.
+- **"open, but few ask"** (low-signal open) — 1 theme (the theme is unanswered and nobody has taken it up, but it is also rarely asked for). Most striking: `F24` agent safety (asked for by 3 articles, open-ness 2.3 of 4).
+  - request: [`P106` Indirect Prompt Injection in the Wild](https://arxiv.org/pdf/2604.27202) — "Overall, in-page prompt injections do not always overpower web agents, but they do succeed often enough, and under ordinary enough conditions, to warrant serious attention."
+  - no realizations — nobody has taken up the theme yet
+  - why "rarely asked": the theme is unanswered (open-ness 2.3 of 4) and nobody has taken it up, but it is asked for only 3 times — too little demand to count it as loudly orphaned.
 
-## Насколько просьбы конкретны (готовый план или просто пожелание)
+## How concrete the requests are (a ready-to-run plan or just a wish)
 
-![Насколько просьбы конкретны (готовый план или просто пожелание)](asks_quality.png)
+![How concrete the requests are (a ready-to-run plan or just a wish)](asks_quality.png)
 
-- Что на картинке: насколько просьбы конкретны. Конкретность (scope) — это ярлык, который ставит куратор, читая саму просьбу в статье (его не считают по формуле): «готовый план» (full) — описан конкретный эксперимент, можно брать и делать; «частичный план» (partial) — есть идея и часть деталей; «только набросок» (barely sketched) — направление названо без деталей; «без деталей» (unspecified) — общее пожелание. Это упорядоченная шкала от самого проработанного к самому расплывчатому. Слева — из чего состоят все просьбы и отдельно уже сделанные и ещё открытые. Справа — сколько просьб уже сделано, сколько ещё открыто и сколько требуют новой мерки, которой на карте пока нет (ярлык NEW).
-- Как это выглядит в реальных просьбах (по одному примеру на каждый тип формулировки; для отсутствующих типов — пометка, что таких просьб нет):
-  - «готовый план (full)»: [`P78` Anthropomorphic Misalignment Needs Stronger Evidence (…](https://arxiv.org/pdf/2606.07612) — «As a nascent research field, AMR is still arguably in a pre-paradigmatic state (Kuhn, 1997 ) , with theoretical foundations, and standards of evaluation yet to be established.»
-  - «частичный план (partial)»: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — «We leave this intermediate analysis to future work.»
-  - «только набросок (barely sketched)»: [`P106` Indirect Prompt Injection in the Wild](https://arxiv.org/pdf/2604.27202) — «Overall, in-page prompt injections do not always overpower web agents, but they do succeed often enough, and under ordinary enough conditions, to warrant serious attention.»
-  - «без деталей (unspecified)»: таких просьб в поле нет ни одной — нет вовсе безадресных общих пожеланий
-- Чаще всего просьбы — это частичный план (partial) (211 из 246); полностью готовых планов лишь 1 (0%), остальное — пожелания разной степени детализации.
-- По статусу выполнения каждая просьба — одно из трёх (для каждого статуса: сколько таких, почему просьба туда попадает и живой пример):
-  - «уже сделано (REALIZED)»: 7 из 246 — нашлась статья, которая это реально сделала. Пример: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — «We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodologica…»
-  - «ещё открыто (SPACE)»: 233 из 246 — просьба есть, а статьи-реализатора пока нет. Пример: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — «Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the…»
-  - «нужна новая ось (NEW)»: 6 из 246 — просьба требует измерения, которого нет среди осей карты. Пример: [`P141` From Weights to Activations: Is Steering the Next Fron…](https://arxiv.org/pdf/2604.14090) — «Although many steering methods exploit linear structure that supports additive composition, reliable compositionality remains an open challenge.»
-- Уже сделанные просьбы против ещё открытых: среди сделанных доля готовых планов 0%, среди открытых — 0%. То есть то, что ещё ждёт, проработано лучше, чем то, за что уже взялись.
-- 7 «сделанных» просьб на самом деле закрыты лишь частично или наброском — формально галочка стоит, а по сути сделано неглубоко.
-  - пример: [`P09` PAIR](https://arxiv.org/pdf/2310.08419) помечена сделанной, но сама просьба была лишь «частичный план (partial)» — «Directions for future work include extending this framework to systematically generate red teaming datasets for fine-tuning to improve the safety of LLMs and e…»
+- What the figure shows: how concrete the requests are. Concreteness (scope) is a label the curator assigns while reading the request itself in the paper (it is not computed by a formula): "ready-to-run plan" (full) — a concrete experiment is described, ready to pick up and run; "partial plan" (partial) — there is an idea and some of the details; "just a sketch" (barely sketched) — the direction is named without details; "no details" (unspecified) — a general wish. This is an ordered scale from the most worked-out to the vaguest. On the left — what all requests are made of, and separately the already-done and still-open ones. On the right — how many requests are already done, how many are still open, and how many need a new measure the map does not yet have (the NEW label).
+- How this looks in real requests (one example per phrasing type; for missing types — a note that there are no such requests):
+  - "ready-to-run plan (full)": [`P78` Anthropomorphic Misalignment Needs Stronger Evidence (…](https://arxiv.org/pdf/2606.07612) — "As a nascent research field, AMR is still arguably in a pre-paradigmatic state (Kuhn, 1997 ) , with theoretical foundations, and standards of evaluation yet to be established."
+  - "partial plan (partial)": [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — "We leave this intermediate analysis to future work."
+  - "just a sketch (barely sketched)": [`P106` Indirect Prompt Injection in the Wild](https://arxiv.org/pdf/2604.27202) — "Overall, in-page prompt injections do not always overpower web agents, but they do succeed often enough, and under ordinary enough conditions, to warrant serious attention."
+  - "no details (unspecified)": there is not a single such request in the field — no purely open-ended general wishes at all
+- Most often requests are partial plan (partial) (211 of 246); fully ready plans are only 1 (0%), the rest are wishes of varying detail.
+- By completion status each request is one of three (for each status: how many, why a request lands there, and a live example):
+  - "already done (REALIZED)": 7 of 246 — a paper was found that actually did it. Example: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — "We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodologica…"
+  - "still open (SPACE)": 233 of 246 — the request exists, but there is no realizer paper yet. Example: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — "Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the…"
+  - "needs a new axis (NEW)": 6 of 246 — the request needs a dimension that is not among the map's axes. Example: [`P141` From Weights to Activations: Is Steering the Next Fron…](https://arxiv.org/pdf/2604.14090) — "Although many steering methods exploit linear structure that supports additive composition, reliable compositionality remains an open challenge."
+- Already-done requests vs still-open ones: among the done, the share of ready plans is 0%, among the open — 0%. That is, what is still waiting is more worked-out than what has already been taken up.
+- 7 requests of those marked "done" are in fact closed only partially or as a sketch — the checkbox is formally ticked, but in substance the work is shallow.
+  - example: [`P09` PAIR](https://arxiv.org/pdf/2310.08419) is marked done, but the request itself was only "partial plan (partial)" — "Directions for future work include extending this framework to systematically generate red teaming datasets for fine-tuning to improve the safety of LLMs and e…"
 
-## Болевые точки: «никто не делает», «решили на словах», «просят расширять»
+## Pain points: "nobody does it", "solved on paper", "asked to extend"
 
-![Болевые точки: «никто не делает», «решили на словах», «просят расширять»](tension.png)
+![Pain points: "nobody does it", "solved on paper", "asked to extend"](tension.png)
 
-- Что на картинке (три столбца): слева — темы, которые многие просят, но никто не делает (orphaned: высокий спрос, ноль взявшихся, упирается в пустую точку), отсортированы по спросу. В центре — темы, про которые кто-то заявил «сделано», а точки всё ещё открыты (contested, «решили на словах»). Справа — уже закрытые точки, которые поле упорно просит расширять; их «вес» — это число сошедшихся на одной точке просьб о расширении.
-- «Никто не делает» (orphaned): 18 тем; спрос (сколько статей просят) — в среднем 9 статей, у серединного — 7; у большинства это 3–18 (в такой коридор попадает 90%), а вообще от 2 до 21. Самая востребованная — `F1` cross-model transfer (просят 21); наименее из показанных — `F3` mechanism count (просят 7); серединное число просьб 7.
-  - просьба: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — «We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodological improvements to future work.»
-  - реализаций нет — за тему пока никто не взялся
-- «Решили на словах» (contested): 6 тем; нерешённость по шкале 0..4 — это сколько уточняющих под-вопросов в среднем осталось открыто по точкам темы (0 — всё закрыто, 4 — точка совсем пустая); серединное 3.3, размах 2.6–3.7. Самая горячая — `F20` steering reliability (просят 17, нерешённость 3.1 из 4); пограничная — `F11` emergence (просят 3, 3.3 из 4).
-  - откуда берётся 3.1: у темы 16 целевых точек (клеток карты, которые тема просит закрыть) — 8 совсем пустых, без единой статьи (=4), 4 с 3 открытыми под-вопросами (=3), 2 с 2 открытыми под-вопросами (=2), 2 с 1 открытым под-вопросом (=1); среднее этих чисел (0..4) и есть «нерешённость» = 3.12
-  - просьба: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — «Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the logical reasoning community.»
-  - реализация: [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) — **causal separation** of 3 sycophancy behaviors (agreement/praise/genuine) into distinct linear directions; each can be **independently amplified/suppressed** …
-  - почему «на словах»: реализатор [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) есть, но из 16 целевых точек (клеток карты, которые тема просит закрыть) закрыта лишь 0 (полностью решена), ещё 8 с открытыми под-вопросами и 8 совсем пустых — уточняющие под-вопросы не сняты, поэтому засчитываем только «на словах».
-- «Просят расширять» (over-extended): 67 уже закрытых точек поле хочет развивать дальше; число сошедшихся просьб на точку — в среднем 2 просьб, у серединного — 1; у большинства это 1–4 (в такой коридор попадает 90%), а вообще от 1 до 5. Сильнее всего — RQ18: Transfer of safety geometry across modality (text… | refusal vector for other safety dimensions; auto-… (5 просьб); слабее всего из верхушки — RQ8: Transfer across models (suffix/dir/feature/neuron) | transfer beyond refusal (3 просьб); серединное 1.
-  - просят расширить: [`P112` SARSteer: Safe-Ablated Refusal Steering (audio LALM)](https://arxiv.org/pdf/2510.17633), [`P135` OmniSteer: Omni-Safety under Cross-Modality Conflict](https://arxiv.org/pdf/2602.10161), [`P136` Acoustic Interference (AIA, audio mechanism)](https://arxiv.org/pdf/2605.18168) — что именно: refusal vector for other safety dimensions; auto-search of the vector
+- What the figure shows (three columns): on the left — themes many ask for but nobody does (orphaned: high demand, zero takers, runs into an empty point), sorted by demand. In the center — themes someone claimed "done" while the points are still open (contested, "solved on paper"). On the right — already-closed points the field insistently asks to extend; their "weight" is the number of extension requests that converge on a single point.
+- "Nobody does it" (orphaned): 18 themes; demand (how many papers ask) — on average 9 papers, the median is 7; for most it is 3–18 (that band holds 90%), and overall from 2 to 21. The most requested — `F1` cross-model transfer (asked for by 21); the least among those shown — `F3` mechanism count (asked for by 7); median number of requests 7.
+  - request: [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — "We see this paper as more of an existence proof that such a direction exists, rather than a careful study of how best to extract it, and we leave methodological improvements to future work."
+  - no realizations — nobody has taken up the theme yet
+- "Solved on paper" (contested): 6 themes; open-ness on the 0..4 scale is how many clarifying sub-questions on average remain open across the theme's points (0 — all closed, 4 — the point completely empty); median 3.3, range 2.6–3.7. The hottest — `F20` steering reliability (asked for by 17, open-ness 3.1 of 4); the borderline one — `F11` emergence (asked for by 3, 3.3 of 4).
+  - where 3.1 comes from: the theme has 16 target points (map cells the theme asks to close) — 8 completely empty, without a single paper (=4), 4 with 3 open sub-questions (=3), 2 with 2 open sub-questions (=2), 2 with 1 open sub-question (=1); the mean of these numbers (0..4) is the open-ness (answeredScore) = 3.12
+  - request: [`P97` Linear Probes Detect Task Format, Not Reasoning Mode](https://arxiv.org/pdf/2606.02907) — "Understanding what that uniform strategy is, and whether it can be steered toward genuinely mode-specific reasoning, remains an important open question for the logical reasoning community."
+  - realization: [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) — **causal separation** of 3 sycophancy behaviors (agreement/praise/genuine) into distinct linear directions; each can be **independently amplified/suppressed** …
+  - why "on paper": a realizer [`P153` Sycophancy Is Not One Thing (causal separation)](https://arxiv.org/pdf/2509.21305) exists, but of 16 target points (map cells the theme asks to close) only 0 are closed (fully answered), another 8 have open sub-questions and 8 are completely empty — the clarifying sub-questions are not resolved, so we count it only as "on paper".
+- "Asked to extend" (over-extended): 67 already-closed points the field wants to develop further; the number of requests converging on a point — on average 2 requests, the median is 1; for most it is 1–4 (that band holds 90%), and overall from 1 to 5. The strongest — RQ18: Transfer of safety geometry across modality (text… | refusal vector for other safety dimensions; auto-… (5 requests); the weakest of the top — RQ8: Transfer across models (suffix/dir/feature/neuron) | transfer beyond refusal (3 requests); median 1.
+  - asked to extend: [`P112` SARSteer: Safe-Ablated Refusal Steering (audio LALM)](https://arxiv.org/pdf/2510.17633), [`P135` OmniSteer: Omni-Safety under Cross-Modality Conflict](https://arxiv.org/pdf/2602.10161), [`P136` Acoustic Interference (AIA, audio mechanism)](https://arxiv.org/pdf/2605.18168) — what exactly: refusal vector for other safety dimensions; auto-search of the vector
 
-## Из каких больших областей состоит карта
+## Which large areas the map consists of
 
-![Из каких больших областей состоит карта](domain_layers.png)
+![Which large areas the map consists of](domain_layers.png)
 
-- Что на картинке: слева — на какие большие области делятся все вопросы (Foundations — базовая статистика и измеримость; Deep learning — общие приёмы глубокого обучения; Map-specific — всё своё, специфичное для этой карты), и насколько в каждой области закрыто/открыто. Справа область Map-specific разбита на под-темы по общим ключевым словам самих вопросов.
-- О чём карта: **Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — Reads refusal as a geometric object inside the model, sliced by where the mechanism lives (token → direction → subspace → feature → neuron → circuit → weights) and the lens used to study it. Every axis is read per paper…
-- Обозначения: «просят N статей» — сколько статей суммарно просят темы группы; «открыто %» — доля ещё не закрытых; «нерешённость 0..4» — в среднем насколько далеко до решения (0 — закрыто, 4 — совсем пусто); «никто не делает» — сколько тем группы просят, но за них никто не взялся.
-- **Foundations (stats/measurement)**: 0 тем — вопросов этой области в поле нет.
-- **Deep learning / representation**: 3 тем, просят 38 статей, открыто 100% (нерешённость 3.3/4, «никто не делает» 2):
-  - `F20` steering reliability (просят 17 статей, нерешённость 3.1 из 4)
-  - `F10` finetune robustness & backdoors (просят 12 статей, нерешённость 3.4 из 4)
-  - `F16` probe monitoring & detection (просят 9 статей, нерешённость 3.3 из 4)
-- **Map-specific (niche)**: 22 тем, просят 169 статей, открыто 100% (нерешённость 3.3/4, «никто не делает» 16).
-- Область Map-specific делится на 6 под-тем (по общим ключевым словам самих вопросов):
-- **refusal, mechanisms** — 12 тем, просят 94 статей, открыто 100% («никто не делает» 8, нерешённость 3.3/4):
-  - `F1` cross-model transfer (просят 21 статей, нерешённость 3.6 из 4)
-  - `F6` non-refusal behaviors (просят 12 статей, нерешённость 3.3 из 4)
-  - `F8` multimodal (просят 11 статей, нерешённость 3.0 из 4)
-  - `F4` causal evidence (просят 10 статей, нерешённость 3.5 из 4)
-  - `F2` linear vs nonlinear (просят 9 статей, нерешённость 3.3 из 4)
-  - `F3` mechanism count (просят 7 статей, нерешённость 3.9 из 4)
-  - `F23` harmfulness mechanism (просят 6 статей, нерешённость 3.6 из 4)
-  - `F9` non-dense architectures (просят 5 статей, нерешённость 3.6 из 4)
-  - `F7` over-refusal (просят 4 статей, нерешённость 3.0 из 4)
-  - `F5` extraction (просят 3 статей, нерешённость 3.7 из 4)
-  - `F22` SAE features (просят 3 статей, нерешённость 3.3 из 4)
-  - `F24` agent safety (просят 3 статей, нерешённость 2.3 из 4)
-- **safety, defenses** — 5 тем, просят 22 статей, открыто 100% («никто не делает» 4, нерешённость 3.4/4):
-  - `F25` reasoning safety (просят 7 статей, нерешённость 2.8 из 4)
-  - `F12` training intervention (просят 6 статей, нерешённость 2.8 из 4)
-  - `F17` certified defense (просят 4 статей, нерешённость 4.0 из 4)
-  - `F11` emergence (просят 3 статей, нерешённость 3.3 из 4)
-  - `F19` boundary data (просят 2 статей, нерешённость 4.0 из 4)
-- **attacks, black** — 2 тем, просят 22 статей, открыто 100% («никто не делает» 1, нерешённость 3.0/4):
-  - `F14` transferable & obfuscation attacks (просят 17 статей, нерешённость 3.3 из 4)
-  - `F15` multi-turn (просят 5 статей, нерешённость 2.6 из 4)
-- **defenses, adversarial** — 1 тем, просят 6 статей, открыто 100% («никто не делает» 1, нерешённость 3.5/4):
-  - `F18` empirical defenses (просят 6 статей, нерешённость 3.5 из 4)
-- **adversarial, attack** — 1 тем, просят 7 статей, открыто 100% («никто не делает» 1, нерешённость 3.7/4):
-  - `F13` attack optimization (просят 7 статей, нерешённость 3.7 из 4)
-- **jailbreak, attacker** — 1 тем, просят 18 статей, открыто 100% («никто не делает» 1, нерешённость 3.1/4):
-  - `F21` eval rigor & benchmarks (просят 18 статей, нерешённость 3.1 из 4)
-- Самая востребованная под-тема — refusal, mechanisms (просят 94 статей, «никто не делает» 8) — туда поле давит сильнее всего.
+- What the figure shows: on the left — the large areas all questions split into (Foundations — basic statistics and measurability; Deep learning — generic deep-learning techniques; Map-specific — everything of its own, specific to this map), and how closed/open each area is. On the right the Map-specific area is broken into sub-themes by shared keywords of the questions themselves.
+- What the map is about: **Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — Reads refusal as a geometric object inside the model, sliced by where the mechanism lives (token → direction → subspace → feature → neuron → circuit → weights) and the lens used to study it. Every axis is read per paper…
+- Notation: "asked for by N papers" — how many papers in total ask for the group's themes; "open %" — the share of not-yet-closed ones; "open-ness 0..4" — on average how far from an answer (0 — closed, 4 — completely empty); "nobody does it" — how many of the group's themes are asked for but nobody has taken up.
+- **Foundations (stats/measurement)**: 0 themes — there are no questions of this area in the field.
+- **Deep learning / representation**: 3 themes, asked for by 38 articles, open 100% (open-ness 3.3/4, "nobody does it" 2):
+  - `F20` steering reliability (asked for by 17 articles, open-ness 3.1 of 4)
+  - `F10` finetune robustness & backdoors (asked for by 12 articles, open-ness 3.4 of 4)
+  - `F16` probe monitoring & detection (asked for by 9 articles, open-ness 3.3 of 4)
+- **Map-specific (niche)**: 22 themes, asked for by 169 articles, open 100% (open-ness 3.3/4, "nobody does it" 16).
+- The Map-specific area splits into 6 sub-themes (by shared keywords of the questions themselves):
+- **refusal, mechanisms** — 12 themes, asked for by 94 articles, open 100% ("nobody does it" 8, open-ness 3.3/4):
+  - `F1` cross-model transfer (asked for by 21 articles, open-ness 3.6 of 4)
+  - `F6` non-refusal behaviors (asked for by 12 articles, open-ness 3.3 of 4)
+  - `F8` multimodal (asked for by 11 articles, open-ness 3.0 of 4)
+  - `F4` causal evidence (asked for by 10 articles, open-ness 3.5 of 4)
+  - `F2` linear vs nonlinear (asked for by 9 articles, open-ness 3.3 of 4)
+  - `F3` mechanism count (asked for by 7 articles, open-ness 3.9 of 4)
+  - `F23` harmfulness mechanism (asked for by 6 articles, open-ness 3.6 of 4)
+  - `F9` non-dense architectures (asked for by 5 articles, open-ness 3.6 of 4)
+  - `F7` over-refusal (asked for by 4 articles, open-ness 3.0 of 4)
+  - `F5` extraction (asked for by 3 articles, open-ness 3.7 of 4)
+  - `F22` SAE features (asked for by 3 articles, open-ness 3.3 of 4)
+  - `F24` agent safety (asked for by 3 articles, open-ness 2.3 of 4)
+- **safety, defenses** — 5 themes, asked for by 22 articles, open 100% ("nobody does it" 4, open-ness 3.4/4):
+  - `F25` reasoning safety (asked for by 7 articles, open-ness 2.8 of 4)
+  - `F12` training intervention (asked for by 6 articles, open-ness 2.8 of 4)
+  - `F17` certified defense (asked for by 4 articles, open-ness 4.0 of 4)
+  - `F11` emergence (asked for by 3 articles, open-ness 3.3 of 4)
+  - `F19` boundary data (asked for by 2 articles, open-ness 4.0 of 4)
+- **attacks, black** — 2 themes, asked for by 22 articles, open 100% ("nobody does it" 1, open-ness 3.0/4):
+  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 3.3 of 4)
+  - `F15` multi-turn (asked for by 5 articles, open-ness 2.6 of 4)
+- **defenses, adversarial** — 1 theme, asked for by 6 articles, open 100% ("nobody does it" 1, open-ness 3.5/4):
+  - `F18` empirical defenses (asked for by 6 articles, open-ness 3.5 of 4)
+- **adversarial, attack** — 1 theme, asked for by 7 articles, open 100% ("nobody does it" 1, open-ness 3.7/4):
+  - `F13` attack optimization (asked for by 7 articles, open-ness 3.7 of 4)
+- **jailbreak, attacker** — 1 theme, asked for by 18 articles, open 100% ("nobody does it" 1, open-ness 3.1/4):
+  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.1 of 4)
+- The most requested sub-theme — refusal, mechanisms (asked for by 94 articles, "nobody does it" 8) — the field pushes there hardest.
 
-## Кто задаёт повестку, а кто делает работу
+## Who sets the agenda and who does the work
 
-![Кто задаёт повестку, а кто делает работу](provenance.png)
+![Who sets the agenda and who does the work](provenance.png)
 
-- Что на картинке: вместо отдельных статей сравниваем ОБЛАСТИ карты. У карты несколько осей (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept), и у каждой оси — свои значения (например, у оси «Models / families» это «multi», «single» и т.д.). Слева — области, про которые поле просит больше всего будущей работы; справа — области, где уже сидит больше всего статей (реальная работа). «Спрос» области — это суммарное число статей-просьб, чьи целевые точки попадают в эту область (просьбу засчитываем во все области её точек). «Работа» — это сколько разных статей стоят в точках этой области (считаем по координатам статей на карте).
-- **Models / families**: больше всего просят «multi» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «multi» (140 статей).
-- **non-unique-direction**: больше всего просят «no» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «no» (145 статей).
-- **Public code**: больше всего просят «not-released» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «released» (74 статей) — спрос и работа смотрят в разные стороны: просят про одно, а делают про другое.
-- **Threat model / access**: больше всего просят «white-box» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «white-box» (128 статей).
-- **Failure polarity**: больше всего просят «under-refusal» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «under-refusal» (104 статей).
-- **Mechanism dynamics**: больше всего просят «static» (спрос 204 — столько статей суммарно просят про это); больше всего работ в «static» (134 статей).
-- **Cross-model transfer tested**: больше всего просят «not-tested» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «not-tested» (124 статей).
-- **Architecture family**: больше всего просят «dense» (спрос 202 — столько статей суммарно просят про это); больше всего работ в «dense» (144 статей).
-- **failure mechanism**: больше всего просят «directions» (спрос 202 — столько статей суммарно просят про это); больше всего работ в «directions» (79 статей).
-- **modality**: больше всего просят «text» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «text» (136 статей).
-- **Lifecycle stage**: больше всего просят «inference-time» (спрос 204 — столько статей суммарно просят про это); больше всего работ в «inference-time» (137 статей).
-- **evaluation-chain stage**: больше всего просят «direction» (спрос 187 — столько статей суммарно просят про это); больше всего работ в «direction» (82 статей).
-- **Behavior concept**: больше всего просят «refusal» (спрос 207 — столько статей суммарно просят про это); больше всего работ в «refusal» (115 статей).
-- 10 просьб собрал сам инструмент, без конкретной статьи-автора (greenfield) — это скрытый спрос, который никто в поле прямо не озвучил, но он вытекает из устройства карты. Вот они все:
-  - Across dense, mixture-of-experts, state-space and diffusion models, is refusal carried by the SAME geometric object (direction/cone) or is it architecture-spec… — сворачивается в тему `F1` cross-model transfer; конкретность частичный план (partial); направление RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; целевых точек (клеток карты, которые тема просит закрыть): 3
-  - Is there ONE shared cross-modal refusal vector validated jointly across audio, vision and video, rather than a separate direction recovered per modality? — сворачивается в тему `F8` multimodal; конкретность частичный план (partial); направление RQ18: Transfer of safety geometry across modality (text -> V…; целевых точек (клеток карты, которые тема просит закрыть): 2
-  - Do the shared LLM<->vision-language safety neurons imply a shared cross-modal refusal SUBSPACE whose ablation transfers across modalities? — сворачивается в тему `F8` multimodal; конкретность частичный план (partial); направление RQ18: Transfer of safety geometry across modality (text -> V…; целевых точек (клеток карты, которые тема просит закрыть): 2
-  - Is there a multi-dimensional refusal CONE in audio language models, and is its dimensionality conserved with the vision-language cone? — сворачивается в тему `F8` multimodal; конкретность только набросок (barely sketched); направление RQ18: Transfer of safety geometry across modality (text -> V…; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Does the refusal non-uniqueness / cone-count result (RQ24) hold for non-refusal behaviors such as truth, sycophancy and persona? — сворачивается в тему `F6` non-refusal behaviors; конкретность только набросок (barely sketched); направление RQ24: non-unique-direction: is the direction/cone unique, ho…; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Is refusal in diffusion language models a multi-dimensional cone evolving across denoising steps, not a single per-step signal? — сворачивается в тему `F9` non-dense architectures; конкретность только набросок (barely sketched); направление RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Is the mixture-of-experts refusal mechanism a per-expert cone concentrated in safety experts, or distributed across routing? — сворачивается в тему `F9` non-dense architectures; конкретность только набросок (barely sketched); направление RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Can a latent refusal-direction monitor be built that provably survives ADAPTIVE evasion, not just one adaptive attacker? — сворачивается в тему `F16` probe monitoring & detection; конкретность частичный план (partial); направление RQ4: Does a probe detect harm; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Does a nonlinear / manifold refusal geometry transfer cone-to-cone ACROSS models, not just within one model? — сворачивается в тему `F2` linear vs nonlinear; конкретность частичный план (partial); направление RQ1: Does a refusal direction exist; целевых точек (клеток карты, которые тема просит закрыть): 1
-  - Can the step-wise internal refusal signal in diffusion LMs be reinforced across denoising to resist trajectory re-masking attacks? — сворачивается в тему `F9` non-dense architectures; конкретность частичный план (partial); направление RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; целевых точек (клеток карты, которые тема просит закрыть): 1
+- What the figure shows: instead of individual papers we compare the map's AREAS. The map has several axes (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept), and each axis has its own values (for example, on the "Models / families" axis these are "multi", "single", etc.). On the left — the areas the field asks for the most future work; on the right — the areas where the most papers already sit (actual work). An area's "demand" is the total number of request papers whose target points fall into this area (a request is counted in all the areas of its points). "Work" is how many different papers sit in the points of this area (counted from the papers' coordinates on the map).
+- **Models / families**: most asked for is "multi" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "multi" (140 articles).
+- **non-unique-direction**: most asked for is "no" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "no" (145 articles).
+- **Public code**: most asked for is "not-released" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "released" (74 articles) — demand and work point in different directions: one thing is asked for, another is worked on.
+- **Threat model / access**: most asked for is "white-box" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "white-box" (128 articles).
+- **Failure polarity**: most asked for is "under-refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "under-refusal" (104 articles).
+- **Mechanism dynamics**: most asked for is "static" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "static" (134 articles).
+- **Cross-model transfer tested**: most asked for is "not-tested" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "not-tested" (124 articles).
+- **Architecture family**: most asked for is "dense" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "dense" (144 articles).
+- **failure mechanism**: most asked for is "directions" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "directions" (79 articles).
+- **modality**: most asked for is "text" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "text" (136 articles).
+- **Lifecycle stage**: most asked for is "inference-time" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "inference-time" (137 articles).
+- **evaluation-chain stage**: most asked for is "direction" (demand 187 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "direction" (82 articles).
+- **Behavior concept**: most asked for is "refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "refusal" (115 articles).
+- 10 requests were gathered by the instrument itself, with no specific source author (greenfield) — this is hidden demand that no one in the field voiced directly, but it follows from the map's structure. Here they all are:
+  - Across dense, mixture-of-experts, state-space and diffusion models, is refusal carried by the SAME geometric object (direction/cone) or is it architecture-spec… — rolls up into the theme `F1` cross-model transfer; scope partial plan (partial); research direction RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; target points (map cells the theme asks to close): 3
+  - Is there ONE shared cross-modal refusal vector validated jointly across audio, vision and video, rather than a separate direction recovered per modality? — rolls up into the theme `F8` multimodal; scope partial plan (partial); research direction RQ18: Transfer of safety geometry across modality (text -> V…; target points (map cells the theme asks to close): 2
+  - Do the shared LLM<->vision-language safety neurons imply a shared cross-modal refusal SUBSPACE whose ablation transfers across modalities? — rolls up into the theme `F8` multimodal; scope partial plan (partial); research direction RQ18: Transfer of safety geometry across modality (text -> V…; target points (map cells the theme asks to close): 2
+  - Is there a multi-dimensional refusal CONE in audio language models, and is its dimensionality conserved with the vision-language cone? — rolls up into the theme `F8` multimodal; scope just a sketch (barely sketched); research direction RQ18: Transfer of safety geometry across modality (text -> V…; target points (map cells the theme asks to close): 1
+  - Does the refusal non-uniqueness / cone-count result (RQ24) hold for non-refusal behaviors such as truth, sycophancy and persona? — rolls up into the theme `F6` non-refusal behaviors; scope just a sketch (barely sketched); research direction RQ24: non-unique-direction: is the direction/cone unique, ho…; target points (map cells the theme asks to close): 1
+  - Is refusal in diffusion language models a multi-dimensional cone evolving across denoising steps, not a single per-step signal? — rolls up into the theme `F9` non-dense architectures; scope just a sketch (barely sketched); research direction RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; target points (map cells the theme asks to close): 1
+  - Is the mixture-of-experts refusal mechanism a per-expert cone concentrated in safety experts, or distributed across routing? — rolls up into the theme `F9` non-dense architectures; scope just a sketch (barely sketched); research direction RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; target points (map cells the theme asks to close): 1
+  - Can a latent refusal-direction monitor be built that provably survives ADAPTIVE evasion, not just one adaptive attacker? — rolls up into the theme `F16` probe monitoring & detection; scope partial plan (partial); research direction RQ4: Does a probe detect harm; target points (map cells the theme asks to close): 1
+  - Does a nonlinear / manifold refusal geometry transfer cone-to-cone ACROSS models, not just within one model? — rolls up into the theme `F2` linear vs nonlinear; scope partial plan (partial); research direction RQ1: Does a refusal direction exist; target points (map cells the theme asks to close): 1
+  - Can the step-wise internal refusal signal in diffusion LMs be reinforced across denoising to resist trajectory re-masking attacks? — rolls up into the theme `F9` non-dense architectures; scope partial plan (partial); research direction RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; target points (map cells the theme asks to close): 1
 
-## Направления исследований: куда движется поле и насколько они проработаны
+## Research directions: where the field is heading and how worked-out they are
 
-![Направления исследований: куда движется поле и насколько они проработаны](per_rq_state.png)
+![Research directions: where the field is heading and how worked-out they are](per_rq_state.png)
 
-- Что на картинке: «RQ» — это крупные направления исследований (большие вопросы, которыми занимается поле). Сверху для каждого направления показано, в каком состоянии его точки (пусто / частично открыто / решено), снизу — сколько статей это направление просят и сколько тем под ним брошено («никто не делает»).
-- Направления (RQ) — это то, КУДА поле движется по сути, а конкретные темы-просьбы под каждым — точечные шаги внутри направления. У каждого направления — свой текст, состояние и спрос, а под ним перечислены относящиеся к нему темы-просьбы (широкая просьба отнесена к одному направлению, а не дублируется в каждом). «Спрос» в шапке — это сколько статей суммарно его просят (включая просьбы, общие с соседними направлениями).
-- Важно про счётчики в шапке направления: и «спрос», и «брошено («никто не делает»)» считаются с пересечениями — одна тема может задевать несколько направлений сразу и попадает в счёт каждого из них. Поэтому эти числа нельзя складывать по направлениям: их сумма может оказаться больше, чем 18 разных брошенных тем во всём поле (а если каждая тема относится лишь к одному направлению — совпадает с этим числом).
-- Насколько направления закрыты: в среднем у направления пустует 41% точек (от 0% до 100%). Больше всего пустот у направления RQ12: Shallow vs deep alignment (100% точек пустые, всего 1 точек); меньше всего — у RQ16: Predict-control: a feature predicts but does not control (0% пустых).
-- Сильнее всего поле просит направление RQ8: Transfer across models (suffix/dir/feature/neuron) (его просят 129 статей суммарно).
-- Направления закрыты очень неравномерно: между самым пустым и самым проработанным разница в 100% пустых точек.
-- Направления по убыванию спроса (самые востребованные — первыми). У каждой темы-просьбы под направлением в скобках стоит «нерешённость N из 4» — среднее по её точкам число ещё открытых уточняющих под-вопросов (0 — все под-вопросы по точке закрыты, 4 — точка совсем пустая, без статей):
-- **RQ8**: Transfer across models (suffix/dir/feature/neuron) — 13 точек; из них 31% пустые, 69% частично открыты, 0% решены; просят 129 статей, брошено («никто не делает») 7. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ1**: Does a refusal direction exist — 19 точек; из них 37% пустые, 58% частично открыты, 5% решены; просят 119 статей, брошено («никто не делает») 7. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F20` steering reliability (просят 17 статей, нерешённость 3.1 из 4)
-  - `F2` linear vs nonlinear (просят 9 статей, нерешённость 3.3 из 4)
-  - `F23` harmfulness mechanism (просят 6 статей, нерешённость 3.6 из 4)
-  - `F15` multi-turn (просят 5 статей, нерешённость 2.6 из 4)
-  - `F5` extraction (просят 3 статей, нерешённость 3.7 из 4)
-  - `F24` agent safety (просят 3 статей, нерешённость 2.3 из 4)
-- **RQ6**: Defense (input / latent / multi-layer) — 11 точек; из них 36% пустые, 64% частично открыты, 0% решены; просят 93 статей, брошено («никто не делает») 8. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F18` empirical defenses (просят 6 статей, нерешённость 3.5 из 4)
-  - `F17` certified defense (просят 4 статей, нерешённость 4.0 из 4)
-- **RQ10**: Attacks stronger than GCG — 20 точек; из них 65% пустые, 30% частично открыты, 5% решены; просят 92 статей, брошено («никто не делает») 9. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F21` eval rigor & benchmarks (просят 18 статей, нерешённость 3.1 из 4)
-  - `F14` transferable & obfuscation attacks (просят 17 статей, нерешённость 3.3 из 4)
-  - `F13` attack optimization (просят 7 статей, нерешённость 3.7 из 4)
-- **RQ22**: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Mamba/diffusion) — 14 точек; из них 43% пустые, 57% частично открыты, 0% решены; просят 92 статей, брошено («никто не делает») 4. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F1` cross-model transfer (просят 21 статей, нерешённость 3.6 из 4)
-  - `F9` non-dense architectures (просят 5 статей, нерешённость 3.6 из 4)
-- **RQ12**: Shallow vs deep alignment — 1 точек; из них 100% пустые, 0% частично открыты, 0% решены; просят 91 статей, брошено («никто не делает») 5. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ4**: Does a probe detect harm — 16 точек; из них 50% пустые, 44% частично открыты, 6% решены; просят 88 статей, брошено («никто не делает») 6. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F16` probe monitoring & detection (просят 9 статей, нерешённость 3.3 из 4)
-  - `F12` training intervention (просят 6 статей, нерешённость 2.8 из 4)
-  - `F19` boundary data (просят 2 статей, нерешённость 4.0 из 4)
-- **RQ19**: STAGE: emergence/drift/transfer of the direction (pretrain -> finetune -> compress) — 10 точек; из них 20% пустые, 80% частично открыты, 0% решены; просят 76 статей, брошено («никто не делает») 5. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ14**: Other directions/circuits (sycophancy/deception/emergent-misalignment/persona-traits): do they exist and transfer? — 20 точек; из них 35% пустые, 65% частично открыты, 0% решены; просят 75 статей, брошено («никто не делает») 3. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F6` non-refusal behaviors (просят 12 статей, нерешённость 3.3 из 4)
-- **RQ9**: SAE decomposition of refusal (core/tail, redundancy) — 9 точек; из них 56% пустые, 44% частично открыты, 0% решены; просят 66 статей, брошено («никто не делает») 5. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F22` SAE features (просят 3 статей, нерешённость 3.3 из 4)
-- **RQ24**: non-unique-direction: is the direction/cone unique, how many really? — 7 точек; из них 43% пустые, 57% частично открыты, 0% решены; просят 66 статей, брошено («никто не делает») 2. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F3` mechanism count (просят 7 статей, нерешённость 3.9 из 4)
-- **RQ5**: Evasion of probe/latent monitors — 3 точек; из них 33% пустые, 67% частично открыты, 0% решены; просят 65 статей, брошено («никто не делает») 4. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ13**: Benchmarks / evaluation — 8 точек; из них 50% пустые, 50% частично открыты, 0% решены; просят 59 статей, брошено («никто не делает») 5. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ7**: Count of harm-schemas/neurons (min/max) — 8 точек; из них 62% пустые, 38% частично открыты, 0% решены; просят 51 статей, брошено («никто не делает») 3. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F11` emergence (просят 3 статей, нерешённость 3.3 из 4)
-- **RQ17**: Geometry of over-refusal (POLARITY): a separate direction, how many dimensions? — 5 точек; из них 20% пустые, 80% частично открыты, 0% решены; просят 51 статей, брошено («никто не делает») 2. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F7` over-refusal (просят 4 статей, нерешённость 3.0 из 4)
-- **RQ18**: Transfer of safety geometry across modality (text -> VLM/audio/video) — 11 точек; из них 36% пустые, 64% частично открыты, 0% решены; просят 50 статей, брошено («никто не делает») 3. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F8` multimodal (просят 11 статей, нерешённость 3.0 из 4)
-- **RQ23**: BACKDOOR/conditional: geometry of trigger-behavior, count — 7 точек; из них 43% пустые, 57% частично открыты, 0% решены; просят 50 статей, брошено («никто не делает») 4. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F10` finetune robustness & backdoors (просят 12 статей, нерешённость 3.4 из 4)
-- **RQ21**: DYNAMICS (across-generation): dynamics of refusal/cone along generation steps — 4 точек; из них 25% пустые, 75% частично открыты, 0% решены; просят 37 статей, брошено («никто не делает») 3. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F4` causal evidence (просят 10 статей, нерешённость 3.5 из 4)
-- **RQ20**: ACCESS: probe-as-attack (grey-box), degradation under access change — 2 точек; из них 50% пустые, 50% частично открыты, 0% решены; просят 27 статей, брошено («никто не делает») 2. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ15**: Refusal in reasoning/CoT models: one direction, cones, does the picture transfer? — 8 точек; из них 38% пустые, 62% частично открыты, 0% решены; просят 14 статей, брошено («никто не делает») 2. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - `F25` reasoning safety (просят 7 статей, нерешённость 2.8 из 4)
-- **RQ3**: Suffix mechanism (suppression vs activation, hijack) — 3 точек; из них 33% пустые, 67% частично открыты, 0% решены; просят 7 статей, брошено («никто не делает») 1. горячее, но заброшенное — высокий спрос упирается в пустые точки.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ2**: How many directions / geometry (cones, dim) — 3 точек; из них 33% пустые, 67% частично открыты, 0% решены; просят 3 статей, брошено («никто не делает») 0. широко открыто — много пустых точек ждут первой работы.
-  - (под этим направлением нет отдельных тем-просьб)
-- **RQ16**: Predict-control: a feature predicts but does not control — 1 точек; из них 0% пустые, 100% частично открыты, 0% решены; просят 0 статей, брошено («никто не делает») 0. тихое направление — поле его почти не запрашивает.
-  - (под этим направлением нет отдельных тем-просьб)
+- What the figure shows: "RQ" is the large research directions (the big questions the field works on). At the top, for each direction, it shows the state of its points (empty / partially open / answered); at the bottom — how many papers ask for this direction and how many themes under it are abandoned ("nobody does it").
+- Directions (RQ) are WHERE the field is essentially heading, and the specific request themes under each are the pointwise steps within a direction. Each direction has its own text, state and demand, and beneath it the request themes belonging to it are listed (a broad request is assigned to one direction, not duplicated in each). "Demand" in the header is how many papers ask for it in total (including requests shared with neighboring directions).
+- Important about the counters in a direction's header: both "demand" and "abandoned ("nobody does it")" are counted with overlaps — one theme can touch several directions at once and lands in the count of each of them. So these numbers cannot be summed across directions: their total may turn out larger than 18 (the total number of abandoned themes across the whole field; and if each theme belongs to only one direction, it coincides with this number).
+- How closed the directions are: on average a direction has 41% of its points empty (from 0% to 100%). The most gaps are in the direction RQ12: Shallow vs deep alignment (100% of points empty, 1 point in total); the fewest — in RQ16: Predict-control: a feature predicts but does not control (0% empty).
+- The field asks most strongly for the direction RQ8: Transfer across models (suffix/dir/feature/neuron) (asked for by 129 articles in total).
+- The directions are closed very unevenly: between the emptiest and the most worked-out the difference is 100% of empty points.
+- Directions in descending order of demand (the most requested first). Each request theme under a direction carries in parentheses "open-ness N of 4" — the mean over its points of the number of still-open clarifying sub-questions (0 — all sub-questions on the point closed, 4 — the point completely empty, no papers):
+- **RQ8**: Transfer across models (suffix/dir/feature/neuron) — 13 points; of which 31% empty, 69% partially open, 0% answered; asked for by 129 articles, abandoned ("nobody does it") 7. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ1**: Does a refusal direction exist — 19 points; of which 37% empty, 58% partially open, 5% answered; asked for by 119 articles, abandoned ("nobody does it") 7. hot but abandoned — high demand runs into empty points.
+  - `F20` steering reliability (asked for by 17 articles, open-ness 3.1 of 4)
+  - `F2` linear vs nonlinear (asked for by 9 articles, open-ness 3.3 of 4)
+  - `F23` harmfulness mechanism (asked for by 6 articles, open-ness 3.6 of 4)
+  - `F15` multi-turn (asked for by 5 articles, open-ness 2.6 of 4)
+  - `F5` extraction (asked for by 3 articles, open-ness 3.7 of 4)
+  - `F24` agent safety (asked for by 3 articles, open-ness 2.3 of 4)
+- **RQ6**: Defense (input / latent / multi-layer) — 11 points; of which 36% empty, 64% partially open, 0% answered; asked for by 93 articles, abandoned ("nobody does it") 8. hot but abandoned — high demand runs into empty points.
+  - `F18` empirical defenses (asked for by 6 articles, open-ness 3.5 of 4)
+  - `F17` certified defense (asked for by 4 articles, open-ness 4.0 of 4)
+- **RQ10**: Attacks stronger than GCG — 20 points; of which 65% empty, 30% partially open, 5% answered; asked for by 92 articles, abandoned ("nobody does it") 9. hot but abandoned — high demand runs into empty points.
+  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.1 of 4)
+  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 3.3 of 4)
+  - `F13` attack optimization (asked for by 7 articles, open-ness 3.7 of 4)
+- **RQ22**: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Mamba/diffusion) — 14 points; of which 43% empty, 57% partially open, 0% answered; asked for by 92 articles, abandoned ("nobody does it") 4. hot but abandoned — high demand runs into empty points.
+  - `F1` cross-model transfer (asked for by 21 articles, open-ness 3.6 of 4)
+  - `F9` non-dense architectures (asked for by 5 articles, open-ness 3.6 of 4)
+- **RQ12**: Shallow vs deep alignment — 1 point; of which 100% empty, 0% partially open, 0% answered; asked for by 91 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ4**: Does a probe detect harm — 16 points; of which 50% empty, 44% partially open, 6% answered; asked for by 88 articles, abandoned ("nobody does it") 6. hot but abandoned — high demand runs into empty points.
+  - `F16` probe monitoring & detection (asked for by 9 articles, open-ness 3.3 of 4)
+  - `F12` training intervention (asked for by 6 articles, open-ness 2.8 of 4)
+  - `F19` boundary data (asked for by 2 articles, open-ness 4.0 of 4)
+- **RQ19**: STAGE: emergence/drift/transfer of the direction (pretrain -> finetune -> compress) — 10 points; of which 20% empty, 80% partially open, 0% answered; asked for by 76 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ14**: Other directions/circuits (sycophancy/deception/emergent-misalignment/persona-traits): do they exist and transfer? — 20 points; of which 35% empty, 65% partially open, 0% answered; asked for by 75 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
+  - `F6` non-refusal behaviors (asked for by 12 articles, open-ness 3.3 of 4)
+- **RQ9**: SAE decomposition of refusal (core/tail, redundancy) — 9 points; of which 56% empty, 44% partially open, 0% answered; asked for by 66 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
+  - `F22` SAE features (asked for by 3 articles, open-ness 3.3 of 4)
+- **RQ24**: non-unique-direction: is the direction/cone unique, how many really? — 7 points; of which 43% empty, 57% partially open, 0% answered; asked for by 66 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
+  - `F3` mechanism count (asked for by 7 articles, open-ness 3.9 of 4)
+- **RQ5**: Evasion of probe/latent monitors — 3 points; of which 33% empty, 67% partially open, 0% answered; asked for by 65 articles, abandoned ("nobody does it") 4. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ13**: Benchmarks / evaluation — 8 points; of which 50% empty, 50% partially open, 0% answered; asked for by 59 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ7**: Count of harm-schemas/neurons (min/max) — 8 points; of which 62% empty, 38% partially open, 0% answered; asked for by 51 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
+  - `F11` emergence (asked for by 3 articles, open-ness 3.3 of 4)
+- **RQ17**: Geometry of over-refusal (POLARITY): a separate direction, how many dimensions? — 5 points; of which 20% empty, 80% partially open, 0% answered; asked for by 51 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
+  - `F7` over-refusal (asked for by 4 articles, open-ness 3.0 of 4)
+- **RQ18**: Transfer of safety geometry across modality (text -> VLM/audio/video) — 11 points; of which 36% empty, 64% partially open, 0% answered; asked for by 50 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
+  - `F8` multimodal (asked for by 11 articles, open-ness 3.0 of 4)
+- **RQ23**: BACKDOOR/conditional: geometry of trigger-behavior, count — 7 points; of which 43% empty, 57% partially open, 0% answered; asked for by 50 articles, abandoned ("nobody does it") 4. hot but abandoned — high demand runs into empty points.
+  - `F10` finetune robustness & backdoors (asked for by 12 articles, open-ness 3.4 of 4)
+- **RQ21**: DYNAMICS (across-generation): dynamics of refusal/cone along generation steps — 4 points; of which 25% empty, 75% partially open, 0% answered; asked for by 37 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
+  - `F4` causal evidence (asked for by 10 articles, open-ness 3.5 of 4)
+- **RQ20**: ACCESS: probe-as-attack (grey-box), degradation under access change — 2 points; of which 50% empty, 50% partially open, 0% answered; asked for by 27 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ15**: Refusal in reasoning/CoT models: one direction, cones, does the picture transfer? — 8 points; of which 38% empty, 62% partially open, 0% answered; asked for by 14 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
+  - `F25` reasoning safety (asked for by 7 articles, open-ness 2.8 of 4)
+- **RQ3**: Suffix mechanism (suppression vs activation, hijack) — 3 points; of which 33% empty, 67% partially open, 0% answered; asked for by 7 articles, abandoned ("nobody does it") 1. hot but abandoned — high demand runs into empty points.
+  - (there are no separate request themes under this direction)
+- **RQ2**: How many directions / geometry (cones, dim) — 3 points; of which 33% empty, 67% partially open, 0% answered; asked for by 3 articles, abandoned ("nobody does it") 0. wide open — many empty points await their first work.
+  - (there are no separate request themes under this direction)
+- **RQ16**: Predict-control: a feature predicts but does not control — 1 point; of which 0% empty, 100% partially open, 0% answered; asked for by 0 articles, abandoned ("nobody does it") 0. quiet direction — the field almost never asks for it.
+  - (there are no separate request themes under this direction)
 
-## Цитирования и возраст статей
+## Citations and paper age
 
-![Цитирования и возраст статей](canon.png)
+![Citations and paper age](canon.png)
 
-- Что на картинке: слева — насколько неравномерно поделены цитирования. Кривая показывает, какую долю всех цитат набирают статьи, если идти от наименее к наиболее цитируемым; чем сильнее она провисает под диагональю (диагональ = у всех поровну), тем сильнее всё сосредоточено у немногих. Сплошная линия — все статьи, штрих-пунктир — те же статьи без «гигантов» (самых цитируемых выбросов). Число Gini сжимает кривую в одну цифру по шкале 0..1: это площадь зазора между диагональю и кривой, поделённая на всю площадь под диагональю (0 — все статьи цитируют одинаково, 1 — все цитаты у одной статьи). Шкала выбрана так, чтобы не зависеть ни от числа статей, ни от абсолютного числа цитат. Справа — сколько статей по возрасту: моложе 4 месяцев, до года, до 2 лет, старше 2 лет.
-- Неравномерность цитат (по всем статьям): верхние 10% самых цитируемых собирают 75% всех цитат (Gini 0.85) — несколько «гигантов» тянут поле.
-- Как получается 0.85 на реальных числах: если идти от наименее цитируемых, нижняя половина статей (66 из 133) собирает лишь 0% всех цитат, а верхние 10% — 75%. Будь цитаты у всех поровну, нижняя половина набрала бы свои 50%, кривая легла бы на диагональ и Gini был бы 0; чем дальше эта доля от 50%, тем ближе Gini к 1 — здесь 0.85.
-- Кого считаем «гигантами» (это выбросы по цитатам): статьи, у которых цитат больше верхней границы по правилу Тьюки — третий квартиль плюс 1.5 межквартильных размаха (то есть заметно выше типичного разброса). Здесь порог — 188 цитат; выше него 23 статей из 133 (счёт цитат ведётся по 133 статьям с известным числом цитирований — у остальных 20 из 153 счётчик пока не заполнен). Кого именно исключаем (по убыванию цитат):
-  - [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 цитирований (2023)
-  - [`P14` Jailbroken: How Does Safety Training Fail](https://arxiv.org/pdf/2307.02483) — 1947 цитирований (2023)
-  - [`P09` PAIR](https://arxiv.org/pdf/2310.08419) — 1518 цитирований (2023)
-  - [`P58` HarmBench](https://arxiv.org/pdf/2402.04249) — 1269 цитирований (2024)
-  - [`P70` Representation Engineering (RepE)](https://arxiv.org/pdf/2310.01405) — 1112 цитирований (2023)
-  - [`P71` Contrastive Activation Addition (CAA)](https://arxiv.org/pdf/2312.06681) — 827 цитирований (2023)
-  - [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — 807 цитирований (2024)
-  - [`P72` The Geometry of Truth](https://arxiv.org/pdf/2310.06824) — 595 цитирований (2023)
-  - … и ещё 15 (все с цитатами выше 188)
-- Тот же расчёт без гигантов (на оставшихся 110 статьях): концентрация заметно падает — Gini 0.85 -> 0.80, а верхние 10% теперь собирают 67% цитат вместо 75%. Серединная статья по-прежнему набирает 2 цитат (было 4), но максимум среди оставшихся — 183 (а был 3250). То есть без нескольких сверхцитируемых работ поле всё равно неровное, но уже не «всё у единиц».
-- Сколько цитируют типичную статью (по всем): серединное значение 4, у верхних 5% — 680, максимум 3250. То есть обычную статью цитируют мало, а весь объём держат единицы.
-- Возраст: 63% статей моложе года, серединный возраст 9 мес — молодой и активный поток. Разбивка по группам возраста (сколько статей в каждой): моложе 4 месяцев: 58, от 4 месяцев до года: 38, от года до 2 лет: 33, старше 2 лет: 24.
+- What the figure shows: on the left — how unevenly the citations are divided. The curve shows what share of all citations papers collect, going from the least- to the most-cited; the more it sags below the diagonal (the diagonal = everyone equal), the more everything is concentrated in a few. The solid line — all papers, the dash-dot — the same papers without the "giants" (the most-cited outliers). The Gini number compresses the curve into a single figure on a 0..1 scale: it is the area of the gap between the diagonal and the curve, divided by the whole area under the diagonal (0 — all papers cited equally, 1 — all citations on one paper). The scale is chosen so as not to depend on either the number of papers or the absolute number of citations. On the right — how many papers by age: younger than 4 months, up to a year, up to 2 years, older than 2 years.
+- Citation unevenness (across all papers): the top 10% most-cited collect 75% of all citations (Gini 0.85) — a few "giants" pull the field.
+- How 0.85 arises on real numbers: going from the least-cited, the bottom half of papers (66 of 133) collects only 0% of all citations, while the top 10% — 75%. If citations were shared equally, the bottom half would collect its 50%, the curve would lie on the diagonal and Gini would be 0; the further this share is from 50%, the closer Gini is to 1 — here 0.85.
+- Who counts as a "giant" (these are citation outliers): papers whose citations exceed the upper bound by Tukey's rule — the third quartile plus 1.5 interquartile ranges (that is, noticeably above the typical spread). Here the threshold is 188 citations; above it are 23 articles of 133 (the citation count runs over the 133 papers with a known citation number — for the remaining 20 of 153 the counter is not yet filled in). Which ones exactly we exclude (by descending citations):
+  - [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 citations (2023)
+  - [`P14` Jailbroken: How Does Safety Training Fail](https://arxiv.org/pdf/2307.02483) — 1947 citations (2023)
+  - [`P09` PAIR](https://arxiv.org/pdf/2310.08419) — 1518 citations (2023)
+  - [`P58` HarmBench](https://arxiv.org/pdf/2402.04249) — 1269 citations (2024)
+  - [`P70` Representation Engineering (RepE)](https://arxiv.org/pdf/2310.01405) — 1112 citations (2023)
+  - [`P71` Contrastive Activation Addition (CAA)](https://arxiv.org/pdf/2312.06681) — 827 citations (2023)
+  - [`P17` Refusal Is Mediated by a Single Direction](https://arxiv.org/pdf/2406.11717) — 807 citations (2024)
+  - [`P72` The Geometry of Truth](https://arxiv.org/pdf/2310.06824) — 595 citations (2023)
+  - … and 15 more (all with citations above 188)
+- The same computation without the giants (on the remaining 110 papers): concentration drops noticeably — Gini 0.85 -> 0.80, and the top 10% now collect 67% of citations instead of 75%. The median paper still gets 2 quotes (was 4), but the maximum among the remaining ones is 183 (it was 3250). That is, without a few super-cited works the field is still uneven, but no longer "all in a handful".
+- How much a typical paper is cited (across all): median value 4, top 5% — 680, maximum 3250. That is, an ordinary paper is cited little, while a handful hold the whole volume.
+- Age: 63% of papers are younger than a year, median age 9 months — a young and active stream. Breakdown by age group (how many papers in each): younger than 4 months: 58, from 4 months to a year: 38, from a year to 2 years: 33, older than 2 years: 24.
 
-## Какой это тип поля (среди всех карт)
+## What type of field this is (among all maps)
 
-![Какой это тип поля (среди всех карт)](field_type.png)
+![What type of field this is (among all maps)](field_type.png)
 
-- Что на картинке: сплошная линия — 14 дескрипторов ЭТОЙ карты, пунктир — центр её ближайшего типа среди всех возможных карт (оба в цвете типа). Совпадение линий = карта типична для своего типа; расхождения по спицам показывают, чем она из типа выбивается.
-- Ближе всего к архетипу **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open); евклидово расстояние по 6 композитным осям 0.63 (0 — точно в центре типа).
-- Композитные оси карты: maturity 0.12, freshness 0.63, coherence 0.58, coverage 0.58, interaction 0.69, canon 0.85.
-- Сильнее всего отклоняется от центра типа: orphaned fraction 72% vs 15% у типа; coherence (demand↔work) 58% vs 20% у типа; ask concreteness (full+partial) 86% vs 50% у типа.
+- What the figure shows: the solid line — 14 descriptors of THIS map, the dashed line — the center of its nearest type among all possible maps (both in the type's color). Matching lines = the map is typical of its type; divergences along the spokes show how it stands out from the type.
+- Closest to the archetype **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open); Euclidean distance over the 6 composite axes 0.63 (0 — exactly at the type's center).
+- The map's composite axes (each in [0,1]): maturity (maturity: share of re-checked findings) 0.12, freshness (freshness: share of young papers) 0.63, coherence (coherence: how much the field works on what it asks for) 0.58, coverage (coverage: share of closed cells) 0.58, interaction (interaction density: future-work requests per cell) 0.69, canon (canon concentration: citation inequality (Gini)) 0.85.
+- Deviates most from the type's center: orphaned fraction 72% vs 15% for the type; coherence (demand↔work) 58% vs 20% for the type; ask concreteness (full+partial) 86% vs 50% for the type.
 
-## Оценки поля по теориям
+## Field scores by theory
 
-Ещё один срез: где это поле стоит на осях опубликованных теорий оценки научных областей (и нашего синтеза). Значение в [0,1] считается теми же формулами, что и в кросс-картовом отчёте (по нашим дескрипторам/композитным осям — никаких выдуманных сетевых метрик). **faithful** — ось воспроизводится честно, **proxy** — приближённо; неоперационализируемые оси теории (N/A) опущены.
+Another slice: where this field stands on the axes of published theories of evaluating scientific areas (and our synthesis). The value in [0,1] is computed from our field descriptors and composite axes — no made-up network metrics. **faithful** — the axis is reproduced honestly, **proxy** — approximately; non-operationalizable theory axes (N/A) are omitted.
 
-![Положение поля по теориям](theory_positions.png)
+![Field position by theory](theory_positions.png)
 
-- Что на картинке: сплошная линия — положение ЭТОГО поля на вычислимых осях каждой теории (в цвете его типа), пунктир — идеальные типы теории (каждый своим цветом). Совпадение = поле похоже на этот идеальный тип. Первая панель — наш синтез: поле на 6 консолидированных осях + открытость поверх 6 архетипов (тот же взгляд, что и «Какой это тип поля», но по консолидированным осям).
-- **Our synthesis (working theory)**: ближе всего к идеальному типу «Fresh frontier»; евклидово расстояние по осям теории 0.66 (0 — точно в этом типе). Оси поля: Maturity / consolidation 0.12, Freshness 0.63, Coherence (demand↔work) 0.58, Tensor coverage 0.58, Link density 0.69, Canon concentration 0.85, Uncertainty / openness 0.99.
-- **Attributes of an emerging field (Rotolo–Hic…**: ближе всего к идеальному типу «Emerging»; евклидово расстояние по осям теории 0.65 (0 — точно в этом типе). Оси поля: Rapid growth 0.63, Coherence 0.58, Prominent impact 0.85, Uncertainty/ambiguity 0.99.
-- **Three binary theories together (mainstream …**: ближе всего к идеальному типу «Mainstream / normal science»; евклидово расстояние по осям теории 0.64 (0 — точно в этом типе). Оси поля: Consolidation↔disruption … 0.48, Consensus (Shwed) 0.33, Conventionality (Uzzi) 0.85.
+- What the figure shows: the solid line — the position of THIS field on each theory's computable axes (in its type's color), the dashed lines — the theory's ideal types (each in its own color). A match = the field resembles that ideal type. The first panel is our synthesis: the field on the 6 consolidated axes (maturity, freshness, coherence, coverage, interaction density, canon concentration) plus open-ness, overlaid on the 6 reference field archetypes.
+- **Our synthesis (working theory)**: closest to the ideal type "Fresh frontier"; Euclidean distance over the theory's axes 0.66 (0 — exactly in this type). The field's axes: Maturity / consolidation 0.12, Freshness 0.63, Coherence (demand↔work) 0.58, Tensor coverage 0.58, Link density 0.69, Canon concentration 0.85, Uncertainty / openness 0.99.
+- **Attributes of an emerging field (Rotolo–Hic…**: closest to the ideal type "Emerging"; Euclidean distance over the theory's axes 0.65 (0 — exactly in this type). The field's axes: Rapid growth 0.63, Coherence 0.58, Prominent impact 0.85, Uncertainty/ambiguity 0.99.
+- **Three binary theories together (mainstream …**: closest to the ideal type "Mainstream / normal science"; Euclidean distance over the theory's axes 0.64 (0 — exactly in this type). The field's axes: Consolidation↔disruption … 0.48, Consensus (Shwed) 0.33, Conventionality (Uzzi) 0.85.
 
-| Теория | Ось | Тип | Значение поля | Что показывает ось |
+| Theory | Axis | Type | Field value | What the axis shows |
 | --- | --- | --- | --- | --- |
-| Our synthesis (working theory) | Maturity / consolidation | faithful | 0.12 | перепроверенное решённое ядро |
-| Our synthesis (working theory) | Freshness | faithful | 0.63 | доля свежих статей |
-| Our synthesis (working theory) | Coherence (demand↔work) | faithful | 0.58 | поле работает над тем, что просит |
-| Our synthesis (working theory) | Tensor coverage | faithful | 0.58 | доля закрытых клеток |
-| Our synthesis (working theory) | Link density | faithful | 0.69 | просьб на клетку |
-| Our synthesis (working theory) | Canon concentration | faithful | 0.85 | неравенство цитат (Gini) |
-| Our synthesis (working theory) | Uncertainty / openness | faithful | 0.99 | доля незакрытых под-вопросов (расширение по Rotolo) |
-| Attributes of an emerging field (… | Rapid growth | faithful | 0.63 | приток свежих работ |
-| Attributes of an emerging field (… | Coherence | faithful | 0.58 | растущая внутренняя связность |
-| Attributes of an emerging field (… | Prominent impact | faithful | 0.85 | концентрация цитат/гиганты |
-| Attributes of an emerging field (… | Uncertainty/ambiguity | faithful | 0.99 | доля незакрытых под-вопросов |
-| Consolidation ↔ disruption (CD in… | Consolidation↔disruption | proxy | 0.48 | опора на гигантов vs слом (прокси = канон+зрелость) |
-| Consensus formation (Shwed–Bearma… | Consensus | proxy | 0.33 | согласованность + устойчивость ядра |
-| Conventionality × novelty (Uzzi; … | Conventionality | proxy | 0.85 | опора на канонические привычные комбинации (прокси = канон) |
+| Our synthesis (working theory) | Maturity / consolidation | faithful | 0.12 | a re-checked, answered core |
+| Our synthesis (working theory) | Freshness | faithful | 0.63 | share of fresh papers |
+| Our synthesis (working theory) | Coherence (demand↔work) | faithful | 0.58 | the field works on what it asks for |
+| Our synthesis (working theory) | Tensor coverage | faithful | 0.58 | share of filled cells |
+| Our synthesis (working theory) | Link density | faithful | 0.69 | requests per cell |
+| Our synthesis (working theory) | Canon concentration | faithful | 0.85 | citation inequality (Gini) |
+| Our synthesis (working theory) | Uncertainty / openness | faithful | 0.99 | share of unclosed sub-questions (a Rotolo-style extension) |
+| Attributes of an emerging field (… | Rapid growth | faithful | 0.63 | an influx of fresh work |
+| Attributes of an emerging field (… | Coherence | faithful | 0.58 | growing internal connectedness |
+| Attributes of an emerging field (… | Prominent impact | faithful | 0.85 | citation concentration / giants |
+| Attributes of an emerging field (… | Uncertainty/ambiguity | faithful | 0.99 | share of unclosed sub-questions |
+| Consolidation ↔ disruption (CD in… | Consolidation↔disruption | proxy | 0.48 | reliance on giants vs. rupture (proxy = canon+maturity) |
+| Consensus formation (Shwed–Bearma… | Consensus | proxy | 0.33 | coherence + core robustness |
+| Conventionality × novelty (Uzzi; … | Conventionality | proxy | 0.85 | reliance on canonical, familiar combinations (proxy = canon) |
 
-## Поле как рынок внимания
+## The field as an attention market
 
-![Поле как рынок внимания](field_market.png)
+![The field as an attention market](field_market.png)
 
-- Что на картинке: каждое значение оси карты (например `Validity type: internal`) — «товар». Его спрос — сколько статей ПРОСЯТ там будущей работы, предложение — сколько там реально РАБОТАЮТ. Товары отсортированы по спросу; красная заливка — незакрытый спрос (дефицит), зелёная — профицит. Это тот же рыночный взгляд, что и в кросс-картовом отчёте, но для одного поля.
-- Товаров (значений осей): 57; суммарный спрос 5507, предложение 1989; незакрытый спрос 3519 (**индекс дефицита 64%** = доля спроса без предложения).
-- Концентрация работы: **Gini предложения 0.67** (0 — работа ровно размазана по темам, 1 — вся в одной), **HHI 0.052** (индекс Херфиндаля долей предложения). Высокие значения = работа стянута к немногим темам.
-- Сильнее всего не хватает работы в «LOCUS:cone-subspace»: спрос 169, а работают 7 (дефицит 162).
+- What the figure shows: each map axis value (for example, `MODELS:multi`) is a "good". Its demand is how many papers ASK for future work there, supply is how many actually WORK there. Goods are sorted by demand; the red fill — unmet demand (shortage), the green — surplus. This is a view of the field as a market: where demand for future work outruns supply.
+- Goods (axis values): 57; total demand 5507, supply 1989; unmet demand 3519 (**shortage index 64%** = share of demand without supply).
+- Concentration of work: **supply Gini 0.67** (0 — work spread evenly across themes, 1 — all in one), **HHI 0.052** (Herfindahl index of supply shares). High values = work pulled toward a few themes.
+- Work is most lacking in "LOCUS:cone-subspace": demand 169, but only 7 work there (shortage 162).
 
-## Что бросается в глаза (отдельные рекорды)
+## What stands out (individual records)
 
-- **Статьи.**
-  - самая цитируемая: [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 цитирований (2023)
-  - антирекорд по цитатам: [`P93` Metis: Self-Evolving Metacognitive Jailbreak](https://arxiv.org/pdf/2605.10067) — всего 0 цитирований (2026)
-  - старая, но всё ещё ключевая: [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 цитирований, возраст 35 мес
-  - самая «весомая» по сводному баллу важности: [`P88` Persona Vectors: Monitoring & Controlling Traits](https://arxiv.org/pdf/2507.21509) — балл 2.10 (балл = свежесть статьи плюс вклад её цитируемости — перцентиль среди сверстников по возрасту, то есть какая доля ровесников цитируется слабее неё; чем свежее и чаще цитируется, тем выше балл, поэтому старая малоцитируемая работа получает около нижней границы, а свежая из самых цитируемых — самый высокий балл поля; у этой работы возраст 11 мес — «от 4 месяцев до года» — и 234 цитирований, что вместе и даёт 2.10)
-  - самая свежая опорная работа: [`P03` Improved Optimization-Based Jailbreaking (I-GCG)](https://arxiv.org/pdf/2405.21018) — возраст 25 мес
-- **Области (оси карты).**
-  - больше всего просят область «Models / families: multi» (суммарный спрос 207 статей-просьб)
-  - больше всего работ в области «non-unique-direction: no» (145 статей)
-  - спрос без предложения: «evaluation-chain stage: weights» просят на 98, а работает там всего 2 статей
-  - работают, но дальше не просят: «modality: code» — 1 статей, и ноль просьб о будущей работе
-- **Точки карты (клетки).**
-  - точку чаще всего просят расширять дальше: RQ18: Transfer of safety geometry across modality (text… | refusal vector for other safety dimensions; auto-… — на ней сошлось 5 просьб о расширении
-  - полностью решённых точек (0 открытых под-вопросов), которые всё равно просят расширять, нет — расширять поле просит только точки, где ещё остались открытые под-вопросы
-- **Темы-просьбы (F).**
-  - самая востребованная тема: `F1` cross-model transfer — её просят 21 статей
-  - тема, задевающая больше всего точек карты: `F1` cross-model transfer — 23 целевых точек (клеток карты, которые тема просит закрыть)
-  - наименее востребованная тема: `F19` boundary data — её просят всего 2 статей
-  - сильнее всего «решили на словах»: `F20` steering reliability — заявлена сделанной, но нерешённость 3.1 из 4
-  - громче всего просят, но никто не берётся: `F1` cross-model transfer — спрос 21, реализаций 0
-- **Направления (RQ).**
-  - сильнее всего просят направление RQ8: Transfer across models (suffix/dir/feature/neuron) (суммарный спрос 129 статей)
-  - больше всего брошенных тем под направлением RQ10: Attacks stronger than GCG — 9 тем «никто не делает»
-  - больше всего пустых точек: RQ12: Shallow vs deep alignment — 100% пустые (1 точек); самое проработанное: RQ16: Predict-control: a feature predicts but does not control — 0% пустых
+- **Papers.**
+  - most cited: [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 citations (2023)
+  - citation anti-record: [`P93` Metis: Self-Evolving Metacognitive Jailbreak](https://arxiv.org/pdf/2605.10067) — only 0 citations (2026)
+  - old but still key: [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 citations, age 35 months
+  - most "weighty" by the composite importance score: [`P88` Persona Vectors: Monitoring & Controlling Traits](https://arxiv.org/pdf/2507.21509) — score 2.10 (the score = the paper's freshness plus the contribution of its citedness — the percentile among age peers, i.e. what share of peers are cited less than it; the fresher and more cited, the higher the score, so an old, lightly-cited work lands near the lower bound, while a fresh, most-cited one gets the field's highest score; this work's age is 11 months — "from 4 months to a year" — and 234 citations, which together give 2.10)
+  - freshest landmark work: [`P03` Improved Optimization-Based Jailbreaking (I-GCG)](https://arxiv.org/pdf/2405.21018) — age 25 months
+- **Areas (map axes).**
+  - most asked-for area "Models / families: multi" (total demand 207 request papers)
+  - most work in the area "non-unique-direction: no" (145 articles)
+  - demand without supply: "evaluation-chain stage: weights" is asked for by 98, yet only 2 articles work there
+  - worked on but no longer asked for: "modality: code" — 1 article, and zero requests for future work
+- **Map points (cells).**
+  - the point most often asked to extend further: RQ18: Transfer of safety geometry across modality (text… | refusal vector for other safety dimensions; auto-… — 5 requests for extension converge on it
+  - there are no fully answered points (0 open sub-questions) that are still asked to extend — the field asks to extend only points that still have open sub-questions
+- **Request themes (F).**
+  - most requested theme: `F1` cross-model transfer — asked for by 21 articles
+  - theme touching the most map points: `F1` cross-model transfer — 23 target points (map cells the theme asks to close)
+  - least requested theme: `F19` boundary data — asked for by only 2 articles
+  - most strongly "solved on paper": `F20` steering reliability — claimed done, but open-ness 3.1 of 4
+  - loudest asked-for but nobody takes it up: `F1` cross-model transfer — demand 21, realizations 0
+- **Directions (RQ).**
+  - most asked-for direction RQ8: Transfer across models (suffix/dir/feature/neuron) (total demand 129 articles)
+  - the most abandoned themes are under the direction RQ10: Attacks stronger than GCG — 9 themes "nobody does it"
+  - most empty points: RQ12: Shallow vs deep alignment — 100% empty (1 point); most worked-out: RQ16: Predict-control: a feature predicts but does not control — 0% empty

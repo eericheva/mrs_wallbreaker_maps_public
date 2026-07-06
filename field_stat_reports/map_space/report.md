@@ -1,217 +1,217 @@
-# Пространство карт: как выглядят возможные карты и где на нём наши
+# Map space: what possible maps look like and where ours sit on it
 
-## На какие вопросы отвечает этот отчёт
+## What questions this report answers
 
-| Вопрос | Где ответ |
+| Question | Where it is answered |
 | --- | --- |
-| Сколько последних лет допустимо (не для гигантов)? Трешхолд? | «Как собирались и фильтровались статьи» → `fig_collection_funnel.png` (ступень Recent ≤60 мес) + `fig_recency_by_map.png` |
-| Как взвешиваем статьи? | «Как собирались и фильтровались» (текст + схема), деталь по одной карте — per-map `pipeline.md` → `fig_weighting.png` |
-| Что в итоге отсеивается? Старые гиганты сохраняются? | `fig_collection_funnel.png` (отбор МЯГКИЙ; подпись «гигантов сохранено / старых») + `fig_citation_filter.png` |
-| Из цитирования пришло с константой на гигантах? | `fig_citation_filter.png` (абс. пол 100 + порог Тьюки на карту) |
-| Их сроки выхода? | `fig_recency_by_map.png` |
-| Как разбиваем на оси / вопросы / канонические запросы / аспекты? | «Как область разбивается на структуру» → `fig_structure.png` |
-| Как рисуются связи и размещения? | `fig_structure.png` (клетки, Fk, просьбы) + per-map `pipeline.md` → `fig_tensor_heatmaps.png` |
-| У какой карты глубже перепроверенное ядро (зрелость)? | «Сравнение полей» → `fig_maturity_funnel.png` |
-| Где больше брошенных тем / «решили на словах» (болевые точки)? | «Сравнение полей» → `fig_painpoints.png` |
-| Чьи просьбы конкретнее (готовый план vs пожелание)? | «Сравнение полей» → `fig_ask_scope.png` |
-| Где спрос расходится с реальной работой? Много ли скрытого спроса? | «Сравнение полей» → `fig_agenda_work.png`, `fig_realize_greenfield.png` |
-| Разбиение по 14 дескрипторам (сырые характеристики)? | «Теории оценки областей» → Часть 2 → «Our synthesis (working theory)» → «Разбиение по 14 дескрипторам»: `fig_descriptor_archetype_radar.png`, `fig_descriptor_archetype_gallery.png` + `fig_radar.png` (карта vs центр типа) |
-| Наполненная / свежая / когерентная / другая область (свёртка в 6 осей)? | «Теории оценки областей» → Часть 2 → «Our synthesis (working theory)» → «Свёртка в 6 композитных осей»: `fig_archetype_radar.png`, `fig_archetype_gallery.png`, `fig_type_radars.png` |
-| Какие вообще бывают типы карт, куда попала наша? | «Теории оценки областей» → Часть 2 → «Our synthesis (working theory)» (таблица сигнатур 6 типов + распределение карт по типам) |
-| Пространство карт и где на нём наша карта? | «Теории оценки областей» → Часть 2 → «Our synthesis (working theory)» → «Пространство карт» (6 плоскостей + SPLOM + PCA) + «Где находятся наши карты» |
-| Достаточно ли 6 осей? На какой теории основаны? | «Теории оценки областей» → Часть 1 — оси всех 5 теорий: что показывают + как вычислены из данных (со ссылками + faithful/proxy/N/A) |
-| Какие идеальные типы у ДРУГИХ теорий и где мы относительно них? | «Теории оценки областей» → Часть 2: Rotolo — `fig_rotolo_types.png` → `fig_rotolo_maps.png` → `fig_rotolo_matrix.png` → `fig_rotolo_pca.png`; три бинарные вместе — `fig_binaries_types.png` → `fig_binaries_maps.png` → `fig_binaries_matrix.png` → `fig_binaries_pca.png` + таблицы «идеальные типы + ближайшая карта» |
-| Спрос vs существующая работа по темам (экономика)? | «Экономика области» → `fig_supply_demand_curves.png`, `fig_supply_demand_sorted.png`, `fig_attention_lorenz.png`, `fig_market_map.png` |
+| How many recent years are allowed (for non-giants)? Threshold? | "How papers were harvested and filtered" → `fig_collection_funnel.png` (the Recent ≤60 mo rung) + `fig_recency_by_map.png` |
+| How do we weight papers? | "How papers were harvested and filtered" (text + diagram), per-map detail — per-map `pipeline.md` → `fig_weighting.png` |
+| What ends up filtered out? Are old giants retained? | `fig_collection_funnel.png` (selection is SOFT; caption 'giants retained / old ones') + `fig_citation_filter.png` |
+| Did it come from citations, with the giant constant? | `fig_citation_filter.png` (abs. floor 100 + per-map Tukey fence) |
+| Their release timing? | `fig_recency_by_map.png` |
+| How do we split into axes / questions / canonical requests / aspects? | "How the field splits into structure" → `fig_structure.png` |
+| How are links and placements drawn? | `fig_structure.png` (cells, Fk, asks) + per-map `pipeline.md` → `fig_tensor_heatmaps.png` |
+| Which map has the deeper re-checked core (maturity)? | "Field comparison" → `fig_maturity_funnel.png` |
+| Where are there more abandoned themes / 'declared done on paper' (pain points)? | "Field comparison" → `fig_painpoints.png` |
+| Whose asks are more concrete (ready plan vs wish)? | "Field comparison" → `fig_ask_scope.png` |
+| Where does demand diverge from actual work? How much hidden demand is there? | "Field comparison" → `fig_agenda_work.png`, `fig_realize_greenfield.png` |
+| Breakdown over the 14 descriptors (raw characteristics)? | "Theories of field evaluation" → Part 2 → "Our synthesis (working theory)" → "Breakdown over the 14 descriptors": `fig_descriptor_archetype_radar.png`, `fig_descriptor_archetype_gallery.png` + `fig_radar.png` (map vs type center) |
+| Is the field mature / fresh / coherent / other (the fold into 6 axes)? | "Theories of field evaluation" → Part 2 → "Our synthesis (working theory)" → "The fold into 6 composite axes": `fig_archetype_radar.png`, `fig_archetype_gallery.png`, `fig_type_radars.png` |
+| What map types exist at all, and where does ours fall? | "Theories of field evaluation" → Part 2 → "Our synthesis (working theory)" (table of the 6 type signatures + distribution of maps across types) |
+| The map space and where our map sits on it? | "Theories of field evaluation" → Part 2 → "Our synthesis (working theory)" → "Map space" (6 planes + SPLOM + PCA) + "Where our maps sit" |
+| Are 6 axes enough? What theory are they based on? | "Theories of field evaluation" → Part 1 — the axes of all 5 theories: what they show + how they are computed from the data (with references + faithful/proxy/N/A) |
+| What ideal types do OTHER theories have, and where are we relative to them? | "Theories of field evaluation" → Part 2: Rotolo — `fig_rotolo_types.png` → `fig_rotolo_maps.png` → `fig_rotolo_matrix.png` → `fig_rotolo_pca.png`; the three binary theories together — `fig_binaries_types.png` → `fig_binaries_maps.png` → `fig_binaries_matrix.png` → `fig_binaries_pca.png` + the 'ideal types + nearest map' tables |
+| Demand vs existing work by topic (economics)? | "Field economics" → `fig_supply_demand_curves.png`, `fig_supply_demand_sorted.png`, `fig_attention_lorenz.png`, `fig_market_map.png` |
 
-Глубокий разбор ОДНОЙ карты (воронка цитат×возраст, кривая веса, тензорные хитмапы) — в её per-map конвейере: [`refusal_geometry`](../refusal_geometry/pipeline.md); [`vcrc`](../vcrc/pipeline.md).
+A deep dive into a SINGLE map (the citations×age funnel, the weight curve, the tensor heatmaps) — in its per-map pipeline: [`refusal_geometry`](../refusal_geometry/pipeline.md); [`vcrc`](../vcrc/pipeline.md).
 
 
-Отдельный `report.md` отвечает «что происходит в ЭТОМ поле». Здесь мы отступаем на шаг и спрашиваем: как поле-карта может выглядеть ВООБЩЕ, и где на этом множестве находится каждая наша карта. Каждую карту сжимаем в вектор из 14 интерпретируемых дескрипторов, сворачиваем их в 6 композитных осей и рисуем теоретическое пространство, которое они образуют.
+A separate `report.md` answers 'what is happening in THIS field'. Here we step back and ask: what can a field map look like AT ALL, and where in this set does each of our maps sit. We compress each map into a vector of 14 interpretable descriptors, fold them into 6 composite axes, and draw the theoretical space they form.
 
-Три сущности на картинках пространства: (1) серое **облако допустимых карт** — Монте-Карло выборка дескрипторных векторов при структурных ограничениях, которые реальная карта не может нарушить (устойчивость ≤ подтверждённость ≤ покрытие; решённость ≤ покрытие; четыре угла спроса делят темы; все доли в [0,1]); это математически достижимая область, а не выдуманные данные. (2) цветные **архетип-зоны** — осмысленные именованные области (зрелая, свежий фронтир, когерентная плотная, contested, orphaned-разреженная, широкая мелкая). (3) **наши карты** — отмеченные точки-звёзды.
+Three entities in the space figures: (1) the gray **cloud of admissible maps** — a Monte-Carlo sample of descriptor vectors under structural constraints that a real map cannot violate (robustness ≤ corroboration ≤ coverage; answeredness ≤ coverage; the four demand corners partition the topics; all fractions in [0,1]); this is a mathematically reachable region, not made-up data. (2) the colored **archetype zones** — meaningful named regions (mature, fresh frontier, coherent dense, contested, orphaned-sparse, broad shallow). (3) **our maps** — marked star points.
 
-Карт в сравнении: 2. Облако: 4000 сэмплов (seed 20260703).
+Maps compared: 2. Cloud: 4000 samples (seed 20260703).
 
-## Дескрипторы карт (сводка)
+## Map descriptors (summary)
 
-| Карта | покрытие | подтв. 2+ | устойч. 3+ | решено | согласов. | orphaned | contested | свежесть | связи | Gini |
+| Map | coverage | corrob. 2+ | robust 3+ | answered | coherence | orphaned | contested | freshness | links | Gini |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `refusal_geometry` | 58% | 21% | 8% | 1% | 0.58 | 72% | 24% | 63% | 2.1 | 0.85 |
 | `vcrc` | 100% | 36% | 21% | 0% | 0.41 | 5% | 32% | 54% | 2.7 | 0.90 |
 
-- Что в таблице: доли клеток/тем в [0,1] и пара абсолютных (связи — рёбер просьба→клетка на закрытую клетку). «согласованность» = насколько поле работает над тем, что просит (1 — идеально: чем громче спрос, тем решённее; 0 — просят громче всего то, что забросили).
+- What is in the table: fractions of cells/topics in [0,1] and a couple of absolutes (links — ask→cell edges per closed cell). "coherence" = how much the field works on what it asks for (1 — ideal: the louder the demand, the more answered; 0 — the loudest asks are for what was abandoned).
 
-## Как собирались и фильтровались статьи (по каждой карте)
+## How papers were harvested and filtered (per map)
 
-Ключевая оговорка: отбор В КАТАЛОГ мягкий — после сбора ничего не выкидывается. Стадийные пороги СБОРА (harvest в Semantic Scholar по запросам поля; `discover`: цитаты ≥ ABS_FLOOR ИЛИ scope-score ≥ 3) отсекают кандидатов ДО каталога, и такие кандидаты в JSON карты не сохраняются — поэтому «сколько отсеялось на сборе» показать графиком нельзя, это дано схемой ниже. Всё, что попало в каталог, остаётся; вес лишь решает ЭМФАЗУ и право статьи порождать вопрос будущей работы.
+Key caveat: selection INTO THE CATALOG is soft — nothing is discarded after harvesting. The staged HARVEST thresholds (harvest from Semantic Scholar by field queries; `discover`: citations ≥ ABS_FLOOR OR scope-score ≥ 3) cut candidates off BEFORE the catalog, and such candidates are not saved into the map JSON — so 'how many were filtered out at harvest' cannot be shown as a chart; it is given by the diagram below. Everything that made it into the catalog stays; weight only decides EMPHASIS and a paper's right to spawn a future-work question.
 
 ```mermaid
 flowchart LR
-  H["Semantic Scholar harvest<br/>(запросы поля)"] --> D{"discover:<br/>цитаты ≥ ABS_FLOOR<br/>ИЛИ scope-score ≥ 3"}
-  D -->|прошло| C["Каталог карты<br/>(всё сохранено)"]
-  D -->|не прошло| X["не собрано<br/>(в JSON не хранится)"]
-  C --> W["weight: recency-ступень<br/>+ перцентиль цитат по возрасту"]
-  W --> R{"recent ≤60 мес?"}
-  W --> K{"canonical<br/>перцентиль ≥0.5?"}
-  W --> G{"гигант?<br/>цитаты >100 ИЛИ >Тьюки"}
-  R -->|да| E["question-eligible<br/>(может порождать вопрос)"]
-  K -->|да| E
-  G -->|да, всегда| E
-  R -->|нет| M["тусклая клетка<br/>(в каталоге, без эмфазы)"]
+  H["Semantic Scholar harvest<br/>(field queries)"] --> D{"discover:<br/>citations ≥ ABS_FLOOR<br/>OR scope-score ≥ 3"}
+  D -->|passed| C["Map catalog<br/>(everything saved)"]
+  D -->|not passed| X["not harvested<br/>(not stored in JSON)"]
+  C --> W["weight: recency tier<br/>+ citation percentile by age"]
+  W --> R{"recent ≤60 mo?"}
+  W --> K{"canonical<br/>percentile ≥0.5?"}
+  W --> G{"giant?<br/>citations >100 OR >Tukey"}
+  R -->|yes| E["question-eligible<br/>(can spawn a question)"]
+  K -->|yes| E
+  G -->|yes, always| E
+  R -->|no| M["dim cell<br/>(in catalog, no emphasis)"]
 ```
 
-### Воронка мягкого отбора (по каждой карте)
+### Soft-filter funnel (per map)
 
-![Воронка мягкого отбора (по каждой карте)](fig_collection_funnel.png)
+![Soft-filter funnel (per map)](fig_collection_funnel.png)
 
-- Что на картинке: по одной воронке на карту. Верхняя полоса — весь каталог (100%, ничего не выброшено), ниже — сколько статей проходят каждый порог эмфазы: question-eligible (может породить вопрос), из них recent (≤60 мес) и canonical (перцентиль цитат по возрасту ≥0.5), и «тусклые» — в каталоге, но без эмфазы.
-- Подпись каждой воронки отвечает «что отсеивается / старые гиганты»: гигантов сохранено (>100 цитат ИЛИ выше порога Тьюки), из них старых (>60 мес). По всем картам сохранено 257 гигантов, из них 36 старых — старые гиганты действительно НЕ выкидываются.
+- What the figure shows: one funnel per map. The top bar is the whole catalog (100%, nothing discarded); below it, how many papers clear each emphasis threshold: question-eligible (can spawn a question), of those recent (≤60 mo) and canonical (citation percentile by age ≥0.5), and 'dim' — in the catalog but without emphasis.
+- Each funnel's caption answers 'what is filtered out / old giants': giants retained (>100 citations OR above the Tukey fence), of those old ones (>60 mo). Across all maps 257 giants are retained, of which 36 are old — old giants are genuinely NOT discarded.
 
-### Сроки выхода статей (по каждой карте)
+### Paper release timing (per map)
 
-![Сроки выхода статей (по каждой карте)](fig_recency_by_map.png)
+![Paper release timing (per map)](fig_recency_by_map.png)
 
-- Что на картинке: нормированные стековые бары — доля статей по возрасту (свежие ≤4 мес, ≤12, ≤24, старше 24) на каждую карту; над баром — серединный возраст. Отвечает «их сроки выхода»: видно, поле собрано на свежаке или тянет длинный исторический хвост.
-- Порог recency (60 мес) — это тот самый «сколько последних лет допустимо не для гигантов»: статьи свежее него question-eligible по одной свежести; старше — только если каноничны или гиганты.
+- What the figure shows: normalized stacked bars — the share of papers by age (fresh ≤4 mo, ≤12, ≤24, older than 24) per map; above each bar, the median age. Answers 'their release timing': shows whether the field is built on fresh work or drags a long historical tail.
+- The recency threshold (60 mo) is exactly the 'how many recent years are allowed for non-giants': papers fresher than it are question-eligible on freshness alone; older ones only if canonical or giants.
 
-### Цитаты и пороги гигантов (по каждой карте)
+### Citations and giant thresholds (per map)
 
-![Цитаты и пороги гигантов (по каждой карте)](fig_citation_filter.png)
+![Citations and giant thresholds (per map)](fig_citation_filter.png)
 
-- Что на картинке: лог-strip цитат по каждой карте (точки — статьи). Пунктир — абсолютный пол гиганта = 100 (общий для всех), оранжевые чёрточки — порог Тьюки (Q3+1.5·IQR) ЭТОЙ карты. Всё выше любого из них — гигант, он сохраняется как канонический. Это и есть «из цитирования пришло с константой на гигантах».
-- Подпись у каждой карты: серединные/макс цитаты, число гигантов, Gini (неравенство цитирования). Высокий Gini + мало гигантов = поле с несколькими доминирующими работами и длинным малоцитируемым хвостом.
+- What the figure shows: a log strip of citations per map (points — papers). The dashed line is the absolute giant floor = 100 (shared by all), the orange dashes are THIS map's Tukey fence (Q3+1.5·IQR). Anything above either is a giant and is retained as canonical. This is exactly 'it came from citations, with the giant constant'.
+- Each map's caption: median/max citations, number of giants, Gini (citation inequality). High Gini + few giants = a field with a few dominant works and a long low-citation tail.
 
-## Как область разбивается на структуру
+## How the field splits into structure
 
-![Как область разбивается на структуру](fig_structure.png)
+![How the field splits into structure](fig_structure.png)
 
-- Что на картинке: слева — во сколько осей и направлений (значений RQ) разложена каждая карта; справа (лог шкала) — сколько получилось точек-клеток, канонических тем `Fk`, отдельных просьб (будущая работа) и клеток, подтверждённых 2+ источниками. Это путь «оси → вопросы → канонические запросы → аспекты → размещения/связи».
-- Клетка — пересечение значений осей (куда садится статья); канонический запрос `Fk` — тема будущей работы; просьба — конкретное ребро «источник → клетка»; подтверждённость 2+ — сколько клеток закрыты не одной работой. Больше просьб и Fk при том же числе клеток = плотнее сеть открытых направлений.
+- What the figure shows: on the left, into how many axes and directions (RQ values) each map is split; on the right (log scale), how many cell points, canonical themes `Fk`, individual asks (future work) and cells corroborated by 2+ sources result. This is the path 'axes → questions → canonical requests → aspects → placements/links'.
+- A cell is the intersection of axis values (where a paper lands); a canonical request `Fk` is a future-work theme; an ask is a concrete edge 'source → cell'; corroboration 2+ is how many cells are closed by more than one work. More asks and Fk at the same number of cells = a denser network of open directions.
 
-## Сравнение полей: зрелость, спрос и болевые точки
+## Field comparison: maturity, demand and pain points
 
-Каждое поле уже разобрано «изнутри» в своём `report.md`. Здесь мы кладём эти внутренние профили рядом: у кого глубже перепроверенное ядро, у кого больше брошенных тем, у кого просьбы конкретнее и где спрос расходится с реальной работой — всё из тех же реальных клеток и рёбер карт.
+Each field is already analyzed 'from the inside' in its own `report.md`. Here we place these internal profiles side by side: who has the deeper re-checked core, who has more abandoned themes, whose asks are more concrete, and where demand diverges from actual work — all from the same real cells and edges of the maps.
 
-### Воронка зрелости по картам
+### Maturity funnel across maps
 
-![Воронка зрелости по картам](fig_maturity_funnel.png)
+![Maturity funnel across maps](fig_maturity_funnel.png)
 
-- Что на картинке: по одной линии на карту вдоль лестницы покрыто (≥1 статья) → подтв. 2+ → устойч. 3+ → решено, в долях ОТ ВСЕХ клеток карты. Линия, которая держится высоко, — глубокое перепроверенное ядро; линия, обрушивающаяся сразу после «покрыто», — тонкое поле с одной статьёй на клетку.
-- Это кросс-картовый двойник per-map «воронки зрелости»: там она про одну карту, здесь — сравнение, у кого ядро доведено дальше.
+- What the figure shows: one line per map along the ladder covered (≥1 paper) → corrob. 2+ → robust 3+ → answered, as fractions of ALL the map's cells. A line that stays high is a deep re-checked core; a line that collapses right after 'covered' is a thin field with one paper per cell.
+- This is the cross-map twin of the per-map 'maturity funnel': there it is about one map, here it is a comparison of whose core is pushed further.
 
-### Профиль болевых точек
+### Pain-point profile
 
-![Профиль болевых точек](fig_painpoints.png)
+![Pain-point profile](fig_painpoints.png)
 
-- Что на картинке: стековые бары — сколько канонических тем `Fk` каждой карты попадает в один из четырёх углов спрос×решённость: «никто не делает» (orphaned: много просят, никто не взялся, упирается в пустоту), «решили на словах» (contested: реализатор есть, но точки открыты), «сделано» (settled) и «открыто, мало спроса» (low-signal). Считается тем же `_quadrants`, что и в per-map отчёте.
-- Высокая доля contested = поле склонно объявлять сделанным недоведённое; высокая доля orphaned = громкий спрос упирается в дыры тензора.
+- What the figure shows: stacked bars — how many of each map's canonical themes `Fk` fall into one of the four demand×answeredness corners: 'nobody works on it' (orphaned: much asked, nobody took it up, hits a void), 'declared done on paper' (contested: a realizer exists but the points are open), 'done' (settled) and 'open, low demand' (low-signal). Computed by the same `_quadrants` as the per-map report.
+- A high contested share = the field tends to declare unfinished work done; a high orphaned share = loud demand hits holes in the tensor.
 
-### Конкретность просьб
+### Ask concreteness
 
-![Конкретность просьб](fig_ask_scope.png)
+![Ask concreteness](fig_ask_scope.png)
 
-- Что на картинке: нормированные стековые бары — доля просьб каждой карты по конкретности: готовый план (full) → частичный (partial) → набросок (barely) → без деталей (unspecified). Над баром — доля «плана» (full+partial). Показывает, чьи заявки на будущую работу можно брать и делать, а чьи — расплывчатые пожелания.
+- What the figure shows: normalized stacked bars — the share of each map's asks by concreteness: ready plan (full) → partial (partial) → sketch (barely) → no detail (unspecified). Above each bar, the share of 'plan' (full+partial). Shows whose future-work requests can be taken and done, and whose are vague wishes.
 
-### Повестка vs работа
+### Agenda vs work
 
-![Повестка vs работа](fig_agenda_work.png)
+![Agenda vs work](fig_agenda_work.png)
 
-- Что на картинке: по одному бару на карту — доля не-RQ осей, где САМОЕ востребованное значение НЕ совпадает с тем, где больше всего реальной работы (спрос и работа смотрят в разные стороны). Над баром — N/всего осей.
-- `refusal_geometry`: рассинхрон на 1/13 осях (Public code). Например по оси «Public code» громче всего просят «not-released» (207), а больше всего работают в «released» (74).
-- `vcrc`: рассинхрон на 4/5 осях (Measurement instrument, evaluation-chain stage, Validity threat, Research subject). Например по оси «Measurement instrument» громче всего просят «none / theoretical» (1746), а больше всего работают в «statistical / metric» (806).
+- What the figure shows: one bar per map — the share of non-RQ axes where the MOST-demanded value does NOT coincide with where most of the actual work is (demand and work point in different directions). Above each bar, N/total axes.
+- `refusal_geometry`: misalignment on 1/13 axes (Public code). For example, on the "Public code" axis the loudest demand is for "not-released" (207), while most of the work is in "released" (74).
+- `vcrc`: misalignment on 4/5 axes (Measurement instrument, evaluation-chain stage, Validity threat, Research subject). For example, on the "Measurement instrument" axis the loudest demand is for "none / theoretical" (1746), while most of the work is in "statistical / metric" (806).
 
-### Выполнено и скрытый спрос
+### Delivered and hidden demand
 
-![Выполнено и скрытый спрос](fig_realize_greenfield.png)
+![Delivered and hidden demand](fig_realize_greenfield.png)
 
-- Что на картинке: пара баров на карту — доля выполненных просьб (нашлась статья, реально сделавшая) и доля greenfield (просьбы, синтезированные инструментом без статьи-автора = скрытый спрос). Низкая реализуемость при высоком greenfield = поле просит куда больше, чем успевает делать, и в нём много невысказанной вслух пустоты.
+- What the figure shows: a pair of bars per map — the share of delivered asks (a paper that actually did the work was found) and the greenfield share (asks synthesized by the instrument with no author paper = hidden demand). Low realize-rate with high greenfield = a field that asks far more than it manages to do, with much unvoiced emptiness.
 
-## Теории оценки областей (что показывает каждая ось и как мы её считаем)
+## Theories of field evaluation (what each axis shows and how we compute it)
 
-Наши 6 композитных осей — это НАША рабочая теория. Чтобы не обосновывать их «из головы», мы выражаем несколько реальных опубликованных рамок как их собственные оси-линзы, размещаем карты на каждой и честно помечаем каждую ось: **faithful** — есть настоящая метрика из наших данных; **proxy** — только приближение; **N/A** — наших данных (авторский тензор + счётчики цитат по статьям) не хватает для конструкта (например, нужен граф со-цитирований), и мы это НЕ выдумываем.
+Our 6 composite axes are OUR working theory. So as not to justify them 'off the top of our head', we express several real published frameworks as their own lens-axes, place the maps on each, and honestly label every axis: **faithful** — there is a real metric from our data; **proxy** — only an approximation; **N/A** — our data (the author tensor + per-paper citation counts) is not enough for the construct (e.g. a co-citation graph is needed), and we do NOT make it up.
 
-Структура раздела: **Часть 1** — оси ВСЕХ теорий: что каждая показывает и как именно вычислена из наших данных. **Часть 2** — для каждой теории сначала её ИДЕАЛЬНЫЕ типы (полюса), потом НАШИ карты на них, и (где осей ≥3) 2D-матрица (SPLOM) и PCA пространства этой теории. Начинаем с нашего синтеза, затем Rotolo, затем три бинарные теории.
+Section structure: **Part 1** — the axes of ALL theories: what each shows and exactly how it is computed from our data. **Part 2** — for each theory, first its IDEAL types (poles), then OUR maps on them, and (where there are ≥3 axes) the 2D matrix (SPLOM) and PCA of that theory's space. We begin with our synthesis, then Rotolo, then the three binary theories.
 
-### Часть 1 — оси всех теорий: что показывают и как вычислены
+### Part 1 — the axes of all theories: what they show and how they are computed
 
-Сначала — САМИ оси каждой теории: что ось должна показывать и как именно мы получаем её значение для наших карт (та же формула, что в коде `theory_axis_value`). Все значения на радарах, SPLOM и PCA из Части 2 посчитаны ровно этими формулами — ни одна точка не подгоняется вручную, поэтому каждый график обоснован.
+First, the axes of each theory THEMSELVES: what an axis is meant to show and exactly how we obtain its value for our maps (the same formula as in the `theory_axis_value` code). All the values on the radars, SPLOM and PCA in Part 2 are computed by exactly these formulas — not a single point is fitted by hand, so every chart is grounded.
 
 #### Our synthesis (working theory)
 
-6 композитных осей + расширение «неопределённость/открытость»; свёртка идей из теорий ниже.
+6 composite axes + an "uncertainty/openness" extension; a fold of the ideas from the theories below.
 
-Источник: Наша рабочая теория поля-карты (синтез рамок ниже)
+Source: Our working field-map theory (a synthesis of the frameworks below)
 
-| Ось | Тип | Что показывает | Как вычислено из наших данных / почему N/A |
+| Axis | Type | What it shows | How it is computed from our data / why N/A |
 | --- | --- | --- | --- |
-| Maturity / consolidation | faithful | перепроверенное решённое ядро | среднее 5 дескрипторов «твёрдости ядра»: подтверждённость (2+ источника), устойчивость (3+), решённость, реализуемость, плотность связей |
-| Freshness | faithful | доля свежих статей | дескриптор fresh_share — доля недавно активных тем |
-| Coherence (demand↔work) | faithful | поле работает над тем, что просит | дескриптор согласованности = (1 − ρ)/2, где ρ = корреляция «громкость спроса ↔ решённость темы» (1 — поле решает именно то, что громче всего просит) |
-| Tensor coverage | faithful | доля закрытых клеток | дескриптор coverage — доля закрытых клеток тензора |
-| Link density | faithful | просьб на клетку | дескриптор interaction_norm — нормированная плотность связей просьба→клетка |
-| Canon concentration | faithful | неравенство цитат (Gini) | дескриптор cit_gini — Gini неравенства цитат между статьями (насколько есть «гиганты»-канон) |
-| Uncertainty / openness | faithful | доля незакрытых под-вопросов (расширение по Rotolo) | 1 − решённость (answered): какая доля ядра ещё открыта |
+| Maturity / consolidation | faithful | a re-checked, answered core | mean of the 5 "core solidity" descriptors: corroboration (2+ sources), robustness (3+), answeredness, realize rate, link density |
+| Freshness | faithful | share of fresh papers | the fresh_share descriptor — the share of recently active topics |
+| Coherence (demand↔work) | faithful | the field works on what it asks for | the coherence descriptor = (1 − ρ)/2, where ρ = the correlation between demand loudness and how answered a topic is (1 = the field works on exactly what it asks loudest for) |
+| Tensor coverage | faithful | share of filled cells | the coverage descriptor — the share of filled tensor cells |
+| Link density | faithful | requests per cell | the interaction_norm descriptor — normalized density of request→cell links |
+| Canon concentration | faithful | citation inequality (Gini) | the cit_gini descriptor — Gini of citation inequality across papers (how much of a "giant" canon exists) |
+| Uncertainty / openness | faithful | share of unclosed sub-questions (a Rotolo-style extension) | 1 − answeredness: what share of the core is still open |
 
 #### Attributes of an emerging field (Rotolo–Hicks–Martin)
 
-Пять атрибутов возникновения: радикальная новизна, быстрый рост, когерентность, заметное влияние, неопределённость/неоднозначность.
+Five attributes of emergence: radical novelty, rapid growth, coherence, prominent impact, uncertainty/ambiguity.
 
-Источник: Rotolo D., Hicks D., Martin B. R. (2015). What is an emerging technology? Research Policy 44(10): 1827–1843. DOI: [10.1016/j.respol.2015.06.006](https://doi.org/10.1016/j.respol.2015.06.006)
+Source: Rotolo D., Hicks D., Martin B. R. (2015). What is an emerging technology? Research Policy 44(10): 1827–1843. DOI: [10.1016/j.respol.2015.06.006](https://doi.org/10.1016/j.respol.2015.06.006)
 
-| Ось | Тип | Что показывает | Как вычислено из наших данных / почему N/A |
+| Axis | Type | What it shows | How it is computed from our data / why N/A |
 | --- | --- | --- | --- |
-| Radical novelty | N/A | принципиально новые сущности/комбинации | нужен анализ атипичных комбинаций/новых терминов, которого нет в наших данных |
-| Rapid growth | faithful | приток свежих работ | дескриптор fresh_share — доля недавно активных тем |
-| Coherence | faithful | растущая внутренняя связность | дескриптор согласованности = (1 − ρ)/2, где ρ = корреляция «громкость спроса ↔ решённость темы» (1 — поле решает именно то, что громче всего просит) |
-| Prominent impact | faithful | концентрация цитат/гиганты | дескриптор cit_gini — Gini неравенства цитат между статьями (насколько есть «гиганты»-канон) |
-| Uncertainty/ambiguity | faithful | доля незакрытых под-вопросов | 1 − решённость (answered): какая доля ядра ещё открыта |
+| Radical novelty | N/A | fundamentally new entities/combinations | needs an analysis of atypical combinations / new terms, which our data lacks |
+| Rapid growth | faithful | an influx of fresh work | the fresh_share descriptor — the share of recently active topics |
+| Coherence | faithful | growing internal connectedness | the coherence descriptor = (1 − ρ)/2, where ρ = the correlation between demand loudness and how answered a topic is (1 = the field works on exactly what it asks loudest for) |
+| Prominent impact | faithful | citation concentration / giants | the cit_gini descriptor — Gini of citation inequality across papers (how much of a "giant" canon exists) |
+| Uncertainty/ambiguity | faithful | share of unclosed sub-questions | 1 − answeredness: what share of the core is still open |
 
 #### Consolidation ↔ disruption (CD index)
 
-Работа консолидирующая (опирается на предшественников, «на плечах гигантов») или дизруптивная (обесценивает их). У нас — только ПРОКСИ: настоящий CD-индекс требует графа цитирований.
+Work is either consolidating (it builds on predecessors, "on the shoulders of giants") or disruptive (it eclipses them). We have only a PROXY: a true CD index needs a citation graph.
 
-Источник: Park M., Leahey E., Funk R. J. (2023). Papers and patents are becoming less disruptive over time. Nature 613: 138–144 (индекс: Funk & Owen-Smith 2017; Wu, Wang & Evans 2019). DOI: [10.1038/s41586-022-05543-x](https://doi.org/10.1038/s41586-022-05543-x)
+Source: Park M., Leahey E., Funk R. J. (2023). Papers and patents are becoming less disruptive over time. Nature 613: 138–144 (index: Funk & Owen-Smith 2017; Wu, Wang & Evans 2019). DOI: [10.1038/s41586-022-05543-x](https://doi.org/10.1038/s41586-022-05543-x)
 
-| Ось | Тип | Что показывает | Как вычислено из наших данных / почему N/A |
+| Axis | Type | What it shows | How it is computed from our data / why N/A |
 | --- | --- | --- | --- |
-| Consolidation↔disruption | proxy | опора на гигантов vs слом (прокси = канон+зрелость) | (канон + зрелость) / 2 |
-| Team size | N/A | малые команды дизраптят, большие — развивают | нет данных об авторах/командах в наших JSON |
+| Consolidation↔disruption | proxy | reliance on giants vs. rupture (proxy = canon+maturity) | (canon + maturity) / 2 |
+| Team size | N/A | small teams disrupt, large teams develop | no author/team data in our JSON |
 
 #### Consensus formation (Shwed–Bearman)
 
-Консенсус = падение модулярности (значимости сообществ) в сети цитирований, нормированное на размер литературы. У нас — только ПРОКСИ через согласованность+устойчивость.
+Consensus = a drop in modularity (community salience) in the citation network, normalized by literature size. We have only a PROXY via coherence+robustness.
 
-Источник: Shwed U., Bearman P. S. (2010). The temporal structure of scientific consensus formation. American Sociological Review 75(6): 817–840. DOI: [10.1177/0003122410388488](https://doi.org/10.1177/0003122410388488)
+Source: Shwed U., Bearman P. S. (2010). The temporal structure of scientific consensus formation. American Sociological Review 75(6): 817–840. DOI: [10.1177/0003122410388488](https://doi.org/10.1177/0003122410388488)
 
-| Ось | Тип | Что показывает | Как вычислено из наших данных / почему N/A |
+| Axis | Type | What it shows | How it is computed from our data / why N/A |
 | --- | --- | --- | --- |
-| Modularity / community salience | N/A | разбиение сети цитирований на кластеры | нужен граф со-цитирований и детекция сообществ, которых нет в наших данных |
-| Consensus | proxy | согласованность + устойчивость ядра | (согласованность + устойчивость) / 2 |
+| Modularity / community salience | N/A | partition of the citation network into clusters | needs a co-citation graph and community detection, which our data lacks |
+| Consensus | proxy | coherence + core robustness | (coherence + robustness) / 2 |
 
 #### Conventionality × novelty (Uzzi; Science of science)
 
-Влиятельная работа = высокая конвенциональность (опора на привычные комбинации) с вкраплениями атипичной новизны. Конвенциональность — ПРОКСИ через канон; новизна — не операционализируема.
+Influential work = high conventionality (reliance on familiar combinations) with flecks of atypical novelty. Conventionality is a PROXY via canon; novelty is not operationalizable.
 
-Источник: Uzzi B., Mukherjee S., Stringer M., Jones B. (2013). Atypical combinations and scientific impact. Science 342: 468–472; Fortunato S. et al. (2018). Science of science. Science 359: eaao0185. DOI: [10.1126/science.1240474](https://doi.org/10.1126/science.1240474)
+Source: Uzzi B., Mukherjee S., Stringer M., Jones B. (2013). Atypical combinations and scientific impact. Science 342: 468–472; Fortunato S. et al. (2018). Science of science. Science 359: eaao0185. DOI: [10.1126/science.1240474](https://doi.org/10.1126/science.1240474)
 
-| Ось | Тип | Что показывает | Как вычислено из наших данных / почему N/A |
+| Axis | Type | What it shows | How it is computed from our data / why N/A |
 | --- | --- | --- | --- |
-| Conventionality | proxy | опора на канонические привычные комбинации (прокси = канон) | дескриптор cit_gini — Gini неравенства цитат между статьями (насколько есть «гиганты»-канон) |
-| Atypical novelty | N/A | необычные комбинации ссылок | нужны z-оценки пар ссылок по всему корпусу, которых нет в наших данных |
+| Conventionality | proxy | reliance on canonical, familiar combinations (proxy = canon) | the cit_gini descriptor — Gini of citation inequality across papers (how much of a "giant" canon exists) |
+| Atypical novelty | N/A | unusual reference combinations | needs z-scores of reference pairs across the whole corpus, which our data lacks |
 
-### Часть 2 — архетипы типов и где на них наши карты
+### Part 2 — type archetypes and where our maps sit on them
 
-Каждая теория — в одном порядке: сначала её идеальные типы (полюса), затем наши карты на них. Значения всех осей — по формулам из Части 1.
+Each theory in the same order: first its ideal types (poles), then our maps on them. All axis values follow the formulas from Part 1.
 
-#### Our synthesis (working theory): архетипы, карты, пространство
+#### Our synthesis (working theory): archetypes, maps, space
 
-«Тип» карты — это ближайший **архетип**: осмысленная опорная точка в пространстве наших композитных осей. Важная честная оговорка: это НЕ кластеры, найденные алгоритмом по данным (карт слишком мало для настоящей кластеризации) — это отобранные вручную обоснованные ориентиры-центры, каждый со своей сигнатурой и половинной шириной зоны (±0.16 по каждой оси).
+A map's "type" is its nearest **archetype**: a meaningful anchor point in the space of our composite axes. An important honest caveat: these are NOT clusters found by an algorithm from the data (there are too few maps for real clustering) — they are hand-picked, justified reference centers, each with its own signature and half-width zone (±0.16 per axis).
 
-Порядок рассказа — такой же, как у остальных теорий: сначала ОПИСАНИЕ шести типов (их сигнатуры и какие наши карты в какой тип попали), затем их АРХЕТИПЫ и наши карты поверх — сперва по 14 дескрипторам, затем в свёртке в 6 композитных осей (именно по этим 6 осям, по евклидову расстоянию до центра, карте и назначается тип), — и в конце само пространство карт (2D-плоскости → SPLOM → PCA).
+The order of the story is the same as for the other theories: first a DESCRIPTION of the six types (their signatures and which of our maps fell into each), then their ARCHETYPES with our maps on top — first over the 14 descriptors, then in the fold into 6 composite axes (it is by these 6 axes, by euclidean distance to the center, that a map is assigned its type) — and finally the map space itself (2D planes → SPLOM → PCA).
 
-##### Шесть типов: сигнатура и обоснование
+##### The six types: signature and rationale
 
-| Тип | Сигнатура (сильные композитные оси) | Смысл |
+| Type | Signature (strong composite axes) | Meaning |
 | --- | --- | --- |
 | **Mature consolidated** | tensor 0.90, maturity 0.80, coherence 0.80 | re-checked dense core; the field works on what it asks for |
 | **Fresh frontier** | freshness 0.90, tensor 0.55, canon 0.45 | young stream; the core is still thin, almost nothing carried to completion |
@@ -220,193 +220,193 @@ flowchart LR
 | **Orphaned sparse** | freshness 0.50, canon 0.50, tensor 0.30 | leaky tensor; high demand runs into empty cells, nobody takes up the themes |
 | **Broad shallow** | tensor 0.95, freshness 0.65, canon 0.50 | sampled everywhere, re-checked almost nowhere — one paper per cell |
 
-##### Какие карты в какой тип попали
+##### Which maps fell into which type
 
-- **Mature consolidated**: — (пока нет карт этого типа)
-- **Fresh frontier**: — (пока нет карт этого типа)
-- **Coherent dense**: — (пока нет карт этого типа)
+- **Mature consolidated**: — (no maps of this type yet)
+- **Fresh frontier**: — (no maps of this type yet)
+- **Coherent dense**: — (no maps of this type yet)
 - **Contested / "on paper"**: `refusal_geometry`, `vcrc`
-- **Orphaned sparse**: — (пока нет карт этого типа)
-- **Broad shallow**: — (пока нет карт этого типа)
+- **Orphaned sparse**: — (no maps of this type yet)
+- **Broad shallow**: — (no maps of this type yet)
 
-##### Разбиение по 14 дескрипторам
+##### Breakdown over the 14 descriptors
 
-Каждая карта — это вектор из 14 дескрипторов (покрытие, подтверждённость, устойчивость, решённость, свежесть, доля брошенных тем orphaned, «на словах» contested, канон и т.д.). Вот полное разбиение типов по ним — самый детальный взгляд, до всякой свёртки. Он показывает то, что 6 осей позже прячут: например, тип «Orphaned разреженная» узнаётся по пику orphaned, а «Contested» — по пику contested.
+Each map is a vector of 14 descriptors (coverage, corroboration, robustness, answeredness, freshness, orphaned share, contested 'on paper', canon, etc.). Here is the full breakdown of the types over them — the most detailed view, before any fold. It shows what the 6 axes later hide: for example, the "Orphaned sparse" type is recognized by its orphaned peak, and "Contested" by its contested peak.
 
-###### Все типы на одном радаре (14 дескрипторов)
+###### All types on one radar (14 descriptors)
 
-![Все типы на одном радаре (14 дескрипторов)](fig_descriptor_archetype_radar.png)
+![All types on one radar (14 descriptors)](fig_descriptor_archetype_radar.png)
 
-- Что на картинке: центры всех 6 типов на одном 14-лучевом радаре (каждый в своём цвете). Самый детальный профиль каждого типа — по всем сырым дескрипторам.
+- What the figure shows: the centers of all 6 types on one 14-spoke radar (each in its own color). The most detailed profile of each type — over all raw descriptors.
 
-###### Галерея типов (14 дескрипторов, по одному радару на тип)
+###### Type gallery (14 descriptors, one radar per type)
 
-![Галерея типов (14 дескрипторов, по одному радару на тип)](fig_descriptor_archetype_gallery.png)
+![Type gallery (14 descriptors, one radar per type)](fig_descriptor_archetype_gallery.png)
 
-- Что на картинке: по одному 14-лучевому радару на тип — полная дескрипторная сигнатура каждого типа отдельно.
+- What the figure shows: one 14-spoke radar per type — each type's full descriptor signature on its own.
 
-###### Наши карты относительно центров своих типов (14 дескрипторов)
+###### Our maps relative to their type centers (14 descriptors)
 
-![Наши карты относительно центров своих типов (14 дескрипторов)](fig_radar.png)
+![Our maps relative to their type centers (14 descriptors)](fig_radar.png)
 
-- Что на картинке: по одному радару на карту, 14 лучей — дескрипторы (0 в центре, 1 на ободе), цвет = тип карты. Сплошная — сама карта, ПУНКТИР — центр её типа: видно, чем карта отличается от «эталона» своего типа.
-- Так «наполненная зрелая» карта — большой ровный многоугольник с сильными подтверждённость/устойчивость/решённость; «свежая» — тянется к свежести при тонком ядре; «orphaned» — торчит доля брошенных тем при низком покрытии.
+- What the figure shows: one radar per map, 14 spokes — descriptors (0 at the center, 1 at the rim), color = map type. Solid is the map itself, DASHED is its type center: shows how the map differs from its type's 'reference'.
+- Thus a "mature, well-filled" map is a large even polygon with strong corroboration/robustness/answeredness; a "fresh" one stretches toward freshness with a thin core; an "orphaned" one has a protruding orphaned share at low coverage.
 
-##### Свёртка в 6 композитных осей
+##### The fold into 6 composite axes
 
-Те же 14 дескрипторов, свёрнутые в 6 композитных осей (зрелость, свежесть, согласованность, охват, плотность связей, канон). Свёртка детерминирована: дескрипторная сигнатура каждого типа по построению сворачивается ровно в его композитный центр (один источник истины). Именно в этом 6-мерном пространстве карта относится к типу, к центру которого она ближе всего по евклидовому расстоянию.
+The same 14 descriptors, folded into 6 composite axes (maturity, freshness, coherence, coverage, link density, canon). The fold is deterministic: each type's descriptor signature folds by construction exactly into its composite center (a single source of truth). It is in this 6-dimensional space that a map is assigned to the type whose center it is closest to by euclidean distance.
 
-###### Все типы на одном радаре
+###### All types on one radar
 
-![Все типы на одном радаре](fig_archetype_radar.png)
+![All types on one radar](fig_archetype_radar.png)
 
-- Что на картинке: центры всех 6 типов, наложенные на один радар из 6 композитных осей (каждый в своём цвете). Видно, чем типы различаются: где у одного пик, у другого провал.
+- What the figure shows: the centers of all 6 types overlaid on one radar of the 6 composite axes (each in its own color). Shows how the types differ: where one has a peak, another has a dip.
 
-###### Галерея типов (по одному радару на тип)
+###### Type gallery (one radar per type)
 
-![Галерея типов (по одному радару на тип)](fig_archetype_gallery.png)
+![Type gallery (one radar per type)](fig_archetype_gallery.png)
 
-- Что на картинке: тот же набор, но по одному радару на тип — чтобы прочитать профиль каждого типа отдельно. Заменяет прежнюю запутанную «тензор-галерею».
+- What the figure shows: the same set, but one radar per type — to read each type's profile on its own. Replaces the old confusing 'tensor gallery'.
 
-###### Наши карты относительно центров своих типов
+###### Our maps relative to their type centers
 
-![Наши карты относительно центров своих типов](fig_type_radars.png)
+![Our maps relative to their type centers](fig_type_radars.png)
 
-- Что на картинке: по одному радару на реальную карту (сплошная, в цвете её типа), а пунктиром — центр её типа. `d` в подписи — расстояние до центра: чем меньше, тем «типичнее» карта для своего типа.
+- What the figure shows: one radar per real map (solid, in its type color), with the dashed line as its type center. `d` in the title is the distance to the center: the smaller it is, the more 'typical' the map is for its type.
 
-##### Пространство карт нашего синтеза (2D-плоскости, SPLOM, PCA)
+##### The map space of our synthesis (2D planes, SPLOM, PCA)
 
-Те же 6 композитных осей, но теперь как непрерывное пространство: серое — облако структурно допустимых карт, цветные зоны — архетипы, звёзды — наши карты.
+The same 6 composite axes, but now as a continuous space: gray is the cloud of structurally admissible maps, colored zones are archetypes, stars are our maps.
 
-###### Пространство карт в 2D-плоскостях
+###### Map space in 2D planes
 
-![Пространство карт в 2D-плоскостях](fig_space_planes.png)
+![Map space in 2D planes](fig_space_planes.png)
 
-- Что на картинке: шесть плоскостей из пар композитных осей (2×3). Серые точки — облако допустимых карт (что вообще возможно); цветные круги с подписями — зоны типов; звёзды — наши карты. Где звезда попадает в цветную зону, там её характер.
-- Пары осей: свежесть×зрелость, связи×согласованность, охват×зрелость, охват×согласованность, связи×охват, канон×свежесть. Пустые части облака — сочетания, которые структурно почти недостижимы.
+- What the figure shows: six planes of pairs of composite axes (2×3). Gray points are the cloud of admissible maps (what is possible at all); labeled colored circles are type zones; stars are our maps. Where a star falls into a colored zone is its character.
+- The axis pairs: freshness×maturity, links×coherence, coverage×maturity, coverage×coherence, links×coverage, canon×freshness. Empty parts of the cloud are combinations that are structurally nearly unreachable.
 
-###### Матрица всех плоскостей (SPLOM)
+###### Matrix of all planes (SPLOM)
 
-![Матрица всех плоскостей (SPLOM)](fig_space_matrix.png)
+![Matrix of all planes (SPLOM)](fig_space_matrix.png)
 
-- Что на картинке: все 15 пар из 6 композитных осей сразу — нижнетреугольная матрица мини-панелей. В каждой: облако допустимых карт, зоны типов, наши карты-звёзды. Имена осей — по краям. Обзор «все плоскости за раз», чтобы не упустить ни одной проекции.
+- What the figure shows: all 15 pairs of the 6 composite axes at once — a lower-triangular matrix of mini-panels. In each: the cloud of admissible maps, type zones, our maps as stars. Axis names are on the edges. An 'all planes at once' overview so no projection is missed.
 
-###### PCA пространства карт
+###### PCA of the map space
 
-![PCA пространства карт](fig_pca.png)
+![PCA of the map space](fig_pca.png)
 
-- Что на картинке: 6 композитных осей сжаты методом главных компонент (PCA) в 2 оси PC1/PC2 так, чтобы развернуть облако максимально широко. Серое — облако, цветные круги — архетипы, звёзды — наши карты. Синие стрелки — вклады композитных осей (куда растёт каждая).
-- Проценты на осях — сколько разброса объясняет каждая компонента. Близкие точки = похожие по всему профилю карты.
+- What the figure shows: the 6 composite axes are compressed by principal component analysis (PCA) into 2 axes PC1/PC2 so as to spread the cloud as widely as possible. Gray is the cloud, colored circles are archetypes, stars are our maps. Blue arrows are the composite-axis loadings (which way each grows).
+- The percentages on the axes are how much variance each component explains. Close points = maps similar across their whole profile.
 
-#### Rotolo: идеальные типы → карты → SPLOM → PCA
+#### Rotolo: ideal types → maps → SPLOM → PCA
 
-У Rotolo четыре вычислимые оси (свежесть, когерентность, влияние, неопределённость), поэтому теорию можно показать так же полно, как наше пространство: сперва её полюса «возникающая ↔ устоявшаяся», затем наши карты, затем все 2D-пары и PCA.
+Rotolo has four computable axes (freshness, coherence, impact, uncertainty), so the theory can be shown as fully as our own space: first its poles "emerging ↔ established", then our maps, then all 2D pairs and the PCA.
 
-Идеальные типы этой теории (обоснованные полюса) и ближайшая к каждому наша карта:
+This theory's ideal types (justified poles) and the map of ours nearest to each:
 
-| Идеальный тип | Сигнатура (по вычислимым осям) | Ближайшая наша карта |
+| Ideal type | Signature (over computable axes) | Nearest map of ours |
 | --- | --- | --- |
-| **Emerging** (молодая, быстро растёт, ещё не когерентна, влияние копится, высокая неопределённость) | rapid growth 0.85, coherence 0.35, prominent impact 0.30, uncertainty/ambig… 0.85 | `refusal_geometry` (d=0.65) |
-| **Established** (рост замедлился, когерентна, влияние высокое, неопределённость мала) | rapid growth 0.20, coherence 0.80, prominent impact 0.80, uncertainty/ambig… 0.20 | `refusal_geometry` (d=0.92) |
+| **Emerging** (young, growing fast, not yet coherent, impact accruing, high uncertainty) | rapid growth 0.85, coherence 0.35, prominent impact 0.30, uncertainty/ambig… 0.85 | `refusal_geometry` (d=0.65) |
+| **Established** (growth has slowed, coherent, high impact, low uncertainty) | rapid growth 0.20, coherence 0.80, prominent impact 0.80, uncertainty/ambig… 0.20 | `refusal_geometry` (d=0.92) |
 
-##### Rotolo: идеальные типы
+##### Rotolo: ideal types
 
-![Rotolo: идеальные типы](fig_rotolo_types.png)
+![Rotolo: ideal types](fig_rotolo_types.png)
 
-- Что на картинке: сначала САМИ идеальные типы теории (пунктир, каждый в своём цвете) на радаре из её вычислимых осей — прежде чем накладывать наши карты. Полюса задаёт сама рамка, они НЕ подогнаны под данные.
+- What the figure shows: first the theory's ideal types THEMSELVES (dashed, each in its own color) on a radar of its computable axes — before overlaying our maps. The poles are set by the framework itself; they are NOT fitted to the data.
 
-##### Rotolo: где на них наши карты
+##### Rotolo: where our maps sit on them
 
-![Rotolo: где на них наши карты](fig_rotolo_maps.png)
+![Rotolo: where our maps sit on them](fig_rotolo_maps.png)
 
-- Что на картинке: по одному радару на КАЖДУЮ нашу карту (сплошная, цвет = тип карты) на фоне идеальных типов теории (пунктир, каждый в своём цвете) — видно, к какому полюсу теории каждая карта ближе.
+- What the figure shows: one radar per EACH of our maps (solid, color = map type) against the theory's ideal types (dashed, each in its own color) — shows which theory pole each map is closer to.
 
-##### Rotolo: все пары осей (SPLOM)
+##### Rotolo: all axis pairs (SPLOM)
 
-![Rotolo: все пары осей (SPLOM)](fig_rotolo_matrix.png)
+![Rotolo: all axis pairs (SPLOM)](fig_rotolo_matrix.png)
 
-- Что на картинке: все пары вычислимых осей теории (нижнетреугольная матрица). В каждой мини-панели — облако допустимых карт, спроецированное на оси теории, кружки идеальных типов и звёзды наших карт.
+- What the figure shows: all pairs of the theory's computable axes (lower-triangular matrix). In each mini-panel — the cloud of admissible maps projected onto the theory axes, circles for the ideal types and stars for our maps.
 
 ##### Rotolo: PCA
 
 ![Rotolo: PCA](fig_rotolo_pca.png)
 
-- Что на картинке: оси теории сжаты методом главных компонент в 2 оси PC1/PC2. Серое — облако, кружки — идеальные типы, звёзды — наши карты, синие стрелки — вклад осей теории.
+- What the figure shows: the theory axes are compressed by principal component analysis into 2 axes PC1/PC2. Gray is the cloud, circles are ideal types, stars are our maps, blue arrows are the theory-axis loadings.
 
 #### Three binary theories together (mainstream ↔ frontier)
 
-CD-индекс, Shwed–Bearman и Uzzi каждая дают ровно ОДНУ вычислимую ось (консолидация↔дизрупция, консенсус, конвенциональность). По отдельности это лишь точки на прямой, поэтому мы кладём их три оси на ОДИН радар. Важная честная оговорка: каждая рамка определяет только свою ось, поэтому идеальные типы здесь — наш СИНТЕЗ из двух согласованных полюсов: «мейнстрим/нормальная наука» (высоко по всем трём) и «фронтир/бунтарская» (низко по всем трём). Это осмысленная связка (нормальная наука vs революция/фронтир), а не подгонка под данные.
+The CD-index, Shwed–Bearman and Uzzi each give exactly ONE computable axis (consolidation↔disruption, consensus, conventionality). Individually these are just points on a line, so we put their three axes on ONE radar. An important honest caveat: each framework defines only its own axis, so the ideal types here are our SYNTHESIS from two coherent poles: "mainstream / normal science" (high on all three) and "frontier / rebellious" (low on all three). This is a meaningful pairing (normal science vs revolution/frontier), not a fit to the data.
 
-Идеальные полюса объединённого пространства и ближайшая к каждому наша карта:
+The ideal poles of the combined space and the map of ours nearest to each:
 
-| Идеальный тип | Сигнатура (по вычислимым осям) | Ближайшая наша карта |
+| Ideal type | Signature (over computable axes) | Nearest map of ours |
 | --- | --- | --- |
-| **Mainstream / normal science** (консолидирует, консенсус достигнут, конвенциональна — «нормальная наука») | consolidation↔dis… 0.85, consensus (shwed) 0.85, conventionality (… 0.85 | `vcrc` (d=0.63) |
-| **Frontier / rebellious** (дизруптивна, спорна, неконвенциональна — фронтир/революция) | consolidation↔dis… 0.15, consensus (shwed) 0.15, conventionality (… 0.15 | `refusal_geometry` (d=0.80) |
+| **Mainstream / normal science** (consolidates, consensus reached, conventional — "normal science") | consolidation↔dis… 0.85, consensus (shwed) 0.85, conventionality (… 0.85 | `vcrc` (d=0.63) |
+| **Frontier / rebellious** (disruptive, contested, unconventional — frontier/revolution) | consolidation↔dis… 0.15, consensus (shwed) 0.15, conventionality (… 0.15 | `refusal_geometry` (d=0.80) |
 
-##### Three binary theories: идеальные типы
+##### Three binary theories: ideal types
 
-![Three binary theories: идеальные типы](fig_binaries_types.png)
+![Three binary theories: ideal types](fig_binaries_types.png)
 
-- Что на картинке: сначала САМИ идеальные типы теории (пунктир, каждый в своём цвете) на радаре из её вычислимых осей — прежде чем накладывать наши карты. Полюса задаёт сама рамка, они НЕ подогнаны под данные.
+- What the figure shows: first the theory's ideal types THEMSELVES (dashed, each in its own color) on a radar of its computable axes — before overlaying our maps. The poles are set by the framework itself; they are NOT fitted to the data.
 
-##### Three binary theories: где на них наши карты
+##### Three binary theories: where our maps sit on them
 
-![Three binary theories: где на них наши карты](fig_binaries_maps.png)
+![Three binary theories: where our maps sit on them](fig_binaries_maps.png)
 
-- Что на картинке: по одному радару на КАЖДУЮ нашу карту (сплошная, цвет = тип карты) на фоне идеальных типов теории (пунктир, каждый в своём цвете) — видно, к какому полюсу теории каждая карта ближе.
+- What the figure shows: one radar per EACH of our maps (solid, color = map type) against the theory's ideal types (dashed, each in its own color) — shows which theory pole each map is closer to.
 
-##### Three binary theories: все пары осей (SPLOM)
+##### Three binary theories: all axis pairs (SPLOM)
 
-![Three binary theories: все пары осей (SPLOM)](fig_binaries_matrix.png)
+![Three binary theories: all axis pairs (SPLOM)](fig_binaries_matrix.png)
 
-- Что на картинке: все пары вычислимых осей теории (нижнетреугольная матрица). В каждой мини-панели — облако допустимых карт, спроецированное на оси теории, кружки идеальных типов и звёзды наших карт.
+- What the figure shows: all pairs of the theory's computable axes (lower-triangular matrix). In each mini-panel — the cloud of admissible maps projected onto the theory axes, circles for the ideal types and stars for our maps.
 
 ##### Three binary theories: PCA
 
 ![Three binary theories: PCA](fig_binaries_pca.png)
 
-- Что на картинке: оси теории сжаты методом главных компонент в 2 оси PC1/PC2. Серое — облако, кружки — идеальные типы, звёзды — наши карты, синие стрелки — вклад осей теории.
+- What the figure shows: the theory axes are compressed by principal component analysis into 2 axes PC1/PC2. Gray is the cloud, circles are ideal types, stars are our maps, blue arrows are the theory-axis loadings.
 
-## Где на пространстве находятся наши карты
+## Where our maps sit in the space
 
-- `refusal_geometry` (Refusal directions, harm schemas, evasion and…) — ближе всего к архетипу **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Композитные оси: зрелость 0.12, свежесть 0.63, согласованность 0.58, охват 0.58, плотность связей 0.69, канон 0.85.
-- `vcrc` (VCRC) — ближе всего к архетипу **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Композитные оси: зрелость 0.17, свежесть 0.54, согласованность 0.41, охват 1.00, плотность связей 0.90, канон 0.90.
+- `refusal_geometry` (Refusal directions, harm schemas, evasion and…) — closest to archetype **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Composite axes: maturity 0.12, freshness 0.63, coherence 0.58, coverage 0.58, link density 0.69, canon 0.85.
+- `vcrc` (VCRC) — closest to archetype **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Composite axes: maturity 0.17, freshness 0.54, coherence 0.41, coverage 1.00, link density 0.90, canon 0.90.
 
 
-Это первый шаг теории таких карт: реальные карты — точки на множестве всех ответов, которые могли бы дать вопросы сбора/фильтрации статей и вопросы аналитического отчёта. Двигаясь по осям (добирая свежий фронт, уплотняя связи, доводя под-вопросы до решения), карту можно осознанно перемещать между архетипами.
+This is the first step of a theory of such maps: the real maps are points on the set of all answers that the paper collection/filtering questions and the analytical report questions could produce. By moving along the axes (adding a fresh frontier, densifying links, driving sub-questions to resolution), a map can be deliberately moved between archetypes.
 
-## Экономика области (спрос ↔ предложение внимания)
+## Field economics (demand ↔ supply of attention)
 
-Ещё один взгляд: поле как **рынок внимания**. Каждое значение оси (тема, например `MODELS:multi`) — это «товар». Его **спрос** — сколько разных статей ПРОСЯТ там будущей работы (`area_demand`), его **предложение** — сколько статей там реально РАБОТАЮТ (`area_supply`). Всё из реальных рёбер карты, без выдуманных чисел.
+Another lens: the field as an **attention market**. Each axis value (a topic, e.g. `MODELS:multi`) is a "good". Its **demand** is how many distinct papers ASK for future work there (`area_demand`); its **supply** is how many papers actually DO the work there (`area_supply`). All from the map's real edges, with no made-up numbers.
 
-| Карта | тем-товаров | спрос Σ | предложение Σ | незакрытый спрос | индекс дефицита | Gini предложения | HHI |
+| Map | topic-goods | demand Σ | supply Σ | unmet demand | shortage index | supply Gini | HHI |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `refusal_geometry` | 57 | 5507 | 1989 | 3519 | 64% | 0.67 | 0.052 |
 | `vcrc` | 35 | 60128 | 13086 | 47042 | 78% | 0.39 | 0.044 |
 
-Глоссарий: **индекс дефицита** = доля спроса без предложения (Σ max(спрос−предложение,0) / Σ спрос); **Gini предложения** — неравенство распределения работы по темам (0 — ровно, 1 — вся работа в одной теме); **HHI** (индекс Херфиндаля) — сумма квадратов долей предложения, мера концентрации.
+Glossary: **shortage index** = the share of demand with no supply (Σ max(demand−supply,0) / Σ demand); **supply Gini** — the inequality of how work is distributed across topics (0 — even, 1 — all work in one topic); **HHI** (Herfindahl index) — the sum of squared supply shares, a measure of concentration.
 
-### Кривые спроса и предложения
+### Demand and supply curves
 
-![Кривые спроса и предложения](fig_supply_demand_curves.png)
+![Demand and supply curves](fig_supply_demand_curves.png)
 
-- Что на картинке: по карте — две убывающие ступенчатые кривые: спрос D(p) = число тем с спросом ≥ p и предложение S(p) = число тем с предложением ≥ p, где p — порог внимания. Пересечение — «равновесная цена внимания»: интенсивность, при которой спрос и предложение уравновешиваются по числу тем.
+- What the figure shows: per map, two decreasing step curves: demand D(p) = the number of topics with demand ≥ p and supply S(p) = the number of topics with supply ≥ p, where p is the attention threshold. Their crossing is the 'equilibrium price of attention': the intensity at which demand and supply balance by number of topics.
 
-### Дефицит и профицит по темам
+### Shortage and surplus by topic
 
-![Дефицит и профицит по темам](fig_supply_demand_sorted.png)
+![Shortage and surplus by topic](fig_supply_demand_sorted.png)
 
-- Что на картинке: темы отсортированы по спросу; линии спроса и предложения, красная заливка — незакрытый спрос (дефицит), зелёная — профицит. Прямо видно, где поле просят больше, чем делают.
+- What the figure shows: topics are sorted by demand; demand and supply lines, red fill is unmet demand (shortage), green is surplus. Directly shows where the field is asked for more than it does.
 
-### Концентрация внимания (кривые Лоренца)
+### Attention concentration (Lorenz curves)
 
-![Концентрация внимания (кривые Лоренца)](fig_attention_lorenz.png)
+![Attention concentration (Lorenz curves)](fig_attention_lorenz.png)
 
-- Что на картинке: по одной кривой Лоренца на карту — накопленная доля работы против доли тем. Диагональ — идеальное равенство; чем сильнее провисает линия, тем больше работа стянута к немногим темам (выше Gini/HHI).
+- What the figure shows: one Lorenz curve per map — the cumulative share of work against the share of topics. The diagonal is perfect equality; the more a line sags, the more work is pulled onto a few topics (higher Gini/HHI).
 
-### Рынок внимания по картам
+### Attention market across maps
 
-![Рынок внимания по картам](fig_market_map.png)
+![Attention market across maps](fig_market_map.png)
 
-- Что на картинке: одна точка на карту — индекс дефицита (X) против концентрации работы (Y, Gini предложения), цвет = тип карты. Квадранты называют вид рынка: дефицитный/насыщенный × концентрированный/ровный.
+- What the figure shows: one point per map — shortage index (X) against work concentration (Y, supply Gini), color = map type. The quadrants name the market kind: scarce/saturated × concentrated/even.
