@@ -2,7 +2,7 @@
 
 This report is about the MACHINE that assembled the map, not about its content (for content see `report.md`). Three steps: how a paper earns its WEIGHT from recency and citations; how the weighted catalog LANDS on the tensor (grid heatmaps); and the overall build pipeline. Selection into the catalog is soft: no paper is discarded by weight or age; weight affects only emphasis (node size/color) and a paper's right to SPAWN a future-work question.
 
-Build anchor (as_of): 2026-06. Papers in catalog: 153; points on the map: 203; closed by ≥1 paper: 118. Future-work requests: 246. Citation "giants": 23 (Tukey threshold 188 citations, absolute floor 100).
+Build anchor (as_of): 2026-07. Papers in catalog: 1009; points on the map: 687; closed by ≥1 paper: 604. Future-work requests: 246. Citation "giants": 18 (Tukey threshold 563 citations, absolute floor 100).
 
 ## The weighting and filtering instrument
 
@@ -19,7 +19,7 @@ Build anchor (as_of): 2026-06. Papers in catalog: 153; points on the map: 203; c
 ![Where papers come from by citations and age, and the weight they earned](fig_citation_age.png)
 
 - What the figure shows: each point is a paper; the horizontal axis is its age in months, the vertical axis is citations (+1, log scale), and color is the earned weight. The blue band is the "recent" window (age ≤60 mo). The stars are manual landmarks.
-- The two horizontal lines are the "giant" thresholds: the absolute floor of 100 citations (red dashed) and the relative Tukey threshold Q3+1.5·IQR = 188 citations for THIS catalog (orange dashed). Above either one is a giant, which must survive a rebuild.
+- The two horizontal lines are the "giant" thresholds: the absolute floor of 100 citations (red dashed) and the relative Tukey threshold Q3+1.5·IQR = 563 citations for THIS catalog (orange dashed). Above either one is a giant, which must survive a rebuild.
 - A paper's right to spawn a question (question-eligible) = recent (in the blue band) OR canonical (percentile ≥ 0.5). A fresh paper with 0 citations is still eligible; an old one with low citations is not.
 - The vertical dashed lines are the recency-tier boundaries (4 / 12 / 60 months).
 

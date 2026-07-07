@@ -36,7 +36,7 @@ Maps compared: 2. Cloud: 4000 samples (seed 20260703).
 
 | Map | coverage | corrob. 2+ | robust 3+ | answered | coherence | orphaned | contested | freshness | links | Gini |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `refusal_geometry` | 58% | 21% | 8% | 1% | 0.58 | 72% | 24% | 63% | 2.1 | 0.85 |
+| `refusal_geometry` | 88% | 23% | 13% | 9% | 0.63 | 68% | 24% | 75% | 0.4 | 0.72 |
 | `vcrc` | 100% | 36% | 21% | 0% | 0.41 | 5% | 32% | 54% | 2.7 | 0.90 |
 
 - What is in the table: fractions of cells/topics in [0,1] and a couple of absolutes (links — ask→cell edges per closed cell). "coherence" = how much the field works on what it asks for (1 — ideal: the louder the demand, the more answered; 0 — the loudest asks are for what was abandoned).
@@ -65,7 +65,7 @@ flowchart LR
 ![Soft-filter funnel (per map)](fig_collection_funnel.png)
 
 - What the figure shows: one funnel per map. The top bar is the whole catalog (100%, nothing discarded); below it, how many papers clear each emphasis threshold: question-eligible (can spawn a question), of those recent (≤60 mo) and canonical (citation percentile by age ≥0.5), and 'dim' — in the catalog but without emphasis.
-- Each funnel's caption answers 'what is filtered out / old giants': giants retained (>100 citations OR above the Tukey fence), of those old ones (>60 mo). Across all maps 257 giants are retained, of which 36 are old — old giants are genuinely NOT discarded.
+- Each funnel's caption answers 'what is filtered out / old giants': giants retained (>100 citations OR above the Tukey fence), of those old ones (>60 mo). Across all maps 323 giants are retained, of which 36 are old — old giants are genuinely NOT discarded.
 
 ### Paper release timing (per map)
 
@@ -117,8 +117,8 @@ Each field is already analyzed 'from the inside' in its own `report.md`. Here we
 ![Agenda vs work](fig_agenda_work.png)
 
 - What the figure shows: one bar per map — the share of non-RQ axes where the MOST-demanded value does NOT coincide with where most of the actual work is (demand and work point in different directions). Above each bar, N/total axes.
-- `refusal_geometry`: misalignment on 1/13 axes (Public code). For example, on the "Public code" axis the loudest demand is for "not-released" (207), while most of the work is in "released" (74).
-- `vcrc`: misalignment on 4/5 axes (Measurement instrument, evaluation-chain stage, Validity threat, Research subject). For example, on the "Measurement instrument" axis the loudest demand is for "none / theoretical" (1746), while most of the work is in "statistical / metric" (806).
+- `refusal_geometry`: misalignment on 2/13 axes (failure mechanism, evaluation-chain stage). For example, on the "failure mechanism" axis the loudest demand is for "directions" (202), while most of the work is in "behavior" (505).
+- `vcrc`: misalignment on 4/5 axes (Validity type, Measurement instrument, Validity threat, Research subject). For example, on the "Validity type" axis the loudest demand is for "internal" (1746), while most of the work is in "construct" (1114).
 
 ### Delivered and hidden demand
 
@@ -225,9 +225,9 @@ The order of the story is the same as for the other theories: first a DESCRIPTIO
 - **Mature consolidated**: — (no maps of this type yet)
 - **Fresh frontier**: — (no maps of this type yet)
 - **Coherent dense**: — (no maps of this type yet)
-- **Contested / "on paper"**: `refusal_geometry`, `vcrc`
+- **Contested / "on paper"**: `vcrc`
 - **Orphaned sparse**: — (no maps of this type yet)
-- **Broad shallow**: — (no maps of this type yet)
+- **Broad shallow**: `refusal_geometry`
 
 ##### Breakdown over the 14 descriptors
 
@@ -306,7 +306,7 @@ This theory's ideal types (justified poles) and the map of ours nearest to each:
 
 | Ideal type | Signature (over computable axes) | Nearest map of ours |
 | --- | --- | --- |
-| **Emerging** (young, growing fast, not yet coherent, impact accruing, high uncertainty) | rapid growth 0.85, coherence 0.35, prominent impact 0.30, uncertainty/ambig… 0.85 | `refusal_geometry` (d=0.65) |
+| **Emerging** (young, growing fast, not yet coherent, impact accruing, high uncertainty) | rapid growth 0.85, coherence 0.35, prominent impact 0.30, uncertainty/ambig… 0.85 | `refusal_geometry` (d=0.51) |
 | **Established** (growth has slowed, coherent, high impact, low uncertainty) | rapid growth 0.20, coherence 0.80, prominent impact 0.80, uncertainty/ambig… 0.20 | `refusal_geometry` (d=0.92) |
 
 ##### Rotolo: ideal types
@@ -342,7 +342,7 @@ The ideal poles of the combined space and the map of ours nearest to each:
 | Ideal type | Signature (over computable axes) | Nearest map of ours |
 | --- | --- | --- |
 | **Mainstream / normal science** (consolidates, consensus reached, conventional — "normal science") | consolidation↔dis… 0.85, consensus (shwed) 0.85, conventionality (… 0.85 | `vcrc` (d=0.63) |
-| **Frontier / rebellious** (disruptive, contested, unconventional — frontier/revolution) | consolidation↔dis… 0.15, consensus (shwed) 0.15, conventionality (… 0.15 | `refusal_geometry` (d=0.80) |
+| **Frontier / rebellious** (disruptive, contested, unconventional — frontier/revolution) | consolidation↔dis… 0.15, consensus (shwed) 0.15, conventionality (… 0.15 | `refusal_geometry` (d=0.67) |
 
 ##### Three binary theories: ideal types
 
@@ -370,7 +370,7 @@ The ideal poles of the combined space and the map of ours nearest to each:
 
 ## Where our maps sit in the space
 
-- `refusal_geometry` (Refusal directions, harm schemas, evasion and…) — closest to archetype **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Composite axes: maturity 0.12, freshness 0.63, coherence 0.58, coverage 0.58, link density 0.69, canon 0.85.
+- `refusal_geometry` (Refusal directions, harm schemas, evasion and…) — closest to archetype **Broad shallow** (sampled everywhere, re-checked almost nowhere — one paper per cell). Composite axes: maturity 0.15, freshness 0.75, coherence 0.63, coverage 0.88, link density 0.14, canon 0.72.
 - `vcrc` (VCRC) — closest to archetype **Contested / "on paper"** (broadly covered but declared "done" while sub-questions are still open). Composite axes: maturity 0.17, freshness 0.54, coherence 0.41, coverage 1.00, link density 0.90, canon 0.90.
 
 
@@ -382,7 +382,7 @@ Another lens: the field as an **attention market**. Each axis value (a topic, e.
 
 | Map | topic-goods | demand Σ | supply Σ | unmet demand | shortage index | supply Gini | HHI |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `refusal_geometry` | 57 | 5507 | 1989 | 3519 | 64% | 0.67 | 0.052 |
+| `refusal_geometry` | 59 | 5521 | 13117 | 1022 | 19% | 0.68 | 0.050 |
 | `vcrc` | 35 | 60128 | 13086 | 47042 | 78% | 0.39 | 0.044 |
 
 Glossary: **shortage index** = the share of demand with no supply (Σ max(demand−supply,0) / Σ demand); **supply Gini** — the inequality of how work is distributed across topics (0 — even, 1 — all work in one topic); **HHI** (Herfindahl index) — the sum of squared supply shares, a measure of concentration.
