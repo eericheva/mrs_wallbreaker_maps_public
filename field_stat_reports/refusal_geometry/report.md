@@ -15,7 +15,7 @@
 | Fully answered (no open sub-questions) | 64 (9%) |
 | Corroborated by 2+ independent papers (of closed) | 138 (23%) |
 | Robust on 3+ papers (of closed) | 76 (13%) |
-| Density (median papers per closed cell) | 1 |
+| Density (median papers per closed map point) | 1 |
 | Request themes (F, after merging similar ones) | 25 |
 | Separate requests (with author / gathered by instrument) | 246 (236 / 10) |
 | Requests: already done / still open / needs a new axis | 7 / 233 / 6 |
@@ -38,7 +38,7 @@
 
 ![Demand and supply: what is in high demand and what is abandoned](demand_answeredness.png)
 
-- What the figure shows: each circle is one request theme. Horizontally — "demand" (how many different papers ask for it: further right = asked more often). Vertically — "how open-ness it still is" on a 0..4 scale. The circle size is how many papers have already taken up the theme. Dashed lines split the field into four corners (often/rarely asked x answered/unanswered).
+- What the figure shows: each circle is one request theme. Horizontally — "demand" (how many different papers ask for it: further right = asked more often). Vertically — how far from a full answer it still is ("open-ness") on a 0..4 scale. The circle size is how many papers have already taken up the theme. Dashed lines split the field into four corners (often/rarely asked x answered/unanswered).
 - What "the theme's target points" are: they are the map cells that this particular request theme wants to close. A map cell is a single question under specific conditions, defined by a combination of a research direction (RQ) and the map's other axes (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept); a cell has no short name of its own — it is defined precisely by these coordinates. Which cells belong to a theme is not set by hand but taken from the request papers themselves: each request marks which cells it wants closed, and the theme gathers them all together. For example, the theme `F20` steering reliability has 16 target points; one of them — RQ17: Geometry of over-refusal (POLARITY): a separ… — Models / families "multi", non-unique-direction "no", Public code "not-released", Threat model / access "white-box", Failure polarity "over-refusal", Mechanism dynamics "static", Cross-model transfer tested "not-tested", Architecture family "dense", failure mechanism "training", modality "text", Lifecycle stage "inference-time", evaluation-chain stage "direction", Behavior concept "refusal" — and this cell is currently among the completely empty, without a single paper (=4).
 - Where the 0..4 scale comes from (it is not set by hand): each map point carries a checklist of at most 3 clarifying sub-questions, and the number is how many of them are still open (0 — all closed, so the point is "answered"; 1, 2 or 3 — that many sub-questions remain). A special case — a point with no papers at all: it is worse than "3 open", so it is given a 4 (the scale's ceiling). A theme usually has several target points (map cells the theme asks to close), and its "open-ness" is the mean of these numbers over all its points (which is why the value is fractional, e.g. 2.6).
 - Demand (horizontal): on average 8 different papers ask for the theme, the median is 7; for most it is 3–18 (that band holds 90%), and overall from 2 to 21. The most requested on the right — `F1` cross-model transfer (asked for by 21 articles); on the left — themes asked for only 2 times (isolated, rarely mentioned requests). Some separate requests in the field were phrased by the instrument itself, with no source author — these are called greenfield (they do not form separate themes but merge into ordinary ones).
@@ -76,7 +76,7 @@
   - "already done (REALIZED)": 7 of 246 — a paper was found that actually did it. Example: [`P09` PAIR](https://arxiv.org/pdf/2310.08419) — "Directions for future work include extending this framework to systematically generate red teaming datasets for fine-tuning to improve the safety of LLMs and e…"
   - "still open (SPACE)": 233 of 246 — the request exists, but there is no realizer paper yet. Example: [`P20` Conditional Activation Steering (CAST)](https://arxiv.org/pdf/2409.05907) — "While a comprehensive comparison of these methods is beyond the scope of this paper, it represents an important area for future research."
   - "needs a new axis (NEW)": 6 of 246 — the request needs a dimension that is not among the map's axes. Example: [`P141` From Weights to Activations: Is Steering the Next Fron…](https://arxiv.org/pdf/2604.14090) — "Although many steering methods exploit linear structure that supports additive composition, reliable compositionality remains an open challenge."
-- Already-done requests vs still-open ones: among the done, the share of ready plans is 0%, among the open — 0%. That is, what is still waiting is more worked-out than what has already been taken up.
+- Already-done requests vs still-open ones: among the done, the share of ready plans is 0%, among the open — 0%. That is, ready plans are equally scarce on both sides — in thoroughness, done and still-open requests do not differ.
 - 7 requests of those marked "done" are in fact closed only partially or as a sketch — the checkbox is formally ticked, but in substance the work is shallow.
   - example: [`P115` What Can We Actually Steer? (multi-behavior)](https://arxiv.org/pdf/2511.18284) is marked done, but the request itself was only "partial plan (partial)" — "Future work should explore whether more sophisticated vector diagnostics or non-linear relationships might better predict steerability."
 
@@ -268,7 +268,7 @@
 
 - What the figure shows: the solid line — 14 descriptors of THIS map, the dashed line — the center of its nearest type among all possible maps (both in the type's color). Matching lines = the map is typical of its type; divergences along the spokes show how it stands out from the type.
 - Closest to the archetype **Broad shallow** (sampled everywhere, re-checked almost nowhere — one paper per cell); Euclidean distance over the 6 composite axes 0.35 (0 — exactly at the type's center).
-- The map's composite axes (each in [0,1]): maturity (maturity: share of re-checked findings) 0.15, freshness (freshness: share of young papers) 0.75, coherence (coherence: how much the field works on what it asks for) 0.63, coverage (coverage: share of closed cells) 0.88, interaction (interaction density: future-work requests per cell) 0.14, canon (canon concentration: citation inequality (Gini)) 0.72.
+- The map's composite axes (each in [0,1]): maturity (maturity: share of re-checked findings) 0.15, freshness (freshness: share of young papers) 0.75, coherence (coherence: how much the field works on what it asks for) 0.63, coverage (coverage: share of closed map points) 0.88, interaction (interaction density: future-work requests per map point) 0.14, canon (canon concentration: citation inequality (Gini)) 0.72.
 - Deviates most from the type's center: orphaned fraction 68% vs 10% for the type; ask concreteness (full+partial) 86% vs 50% for the type; greenfield fraction (synthesized asks) 4% vs 40% for the type.
 
 ## Field scores by theory
@@ -287,8 +287,8 @@ Another slice: where this field stands on the axes of published theories of eval
 | Our synthesis (working theory) | Maturity / consolidation | faithful | 0.15 | a re-checked, answered core |
 | Our synthesis (working theory) | Freshness | faithful | 0.75 | share of fresh papers |
 | Our synthesis (working theory) | Coherence (demand↔work) | faithful | 0.63 | the field works on what it asks for |
-| Our synthesis (working theory) | Tensor coverage | faithful | 0.88 | share of filled cells |
-| Our synthesis (working theory) | Link density | faithful | 0.14 | requests per cell |
+| Our synthesis (working theory) | Tensor coverage | faithful | 0.88 | share of filled map points |
+| Our synthesis (working theory) | Link density | faithful | 0.14 | requests per map point |
 | Our synthesis (working theory) | Canon concentration | faithful | 0.72 | citation inequality (Gini) |
 | Our synthesis (working theory) | Uncertainty / openness | faithful | 0.91 | share of unclosed sub-questions (a Rotolo-style extension) |
 | Attributes of an emerging field (… | Rapid growth | faithful | 0.75 | an influx of fresh work |
