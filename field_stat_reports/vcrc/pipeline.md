@@ -1,4 +1,4 @@
-# How the map is filled and built: VCRC
+# How the map is filled and built: Validity, Conceptual Robustness and Confounding
 
 This report is about the MACHINE that assembled the map, not about its content (for content see `report.md`). Three steps: how a paper earns its WEIGHT from recency and citations; how the weighted catalog LANDS on the tensor (grid heatmaps); and the overall build pipeline. Selection into the catalog is soft: no paper is discarded by weight or age; weight affects only emphasis (node size/color) and a paper's right to SPAWN a future-work question.
 

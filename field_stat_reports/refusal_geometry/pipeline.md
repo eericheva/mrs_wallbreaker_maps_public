@@ -2,7 +2,7 @@
 
 This report is about the MACHINE that assembled the map, not about its content (for content see `report.md`). Three steps: how a paper earns its WEIGHT from recency and citations; how the weighted catalog LANDS on the tensor (grid heatmaps); and the overall build pipeline. Selection into the catalog is soft: no paper is discarded by weight or age; weight affects only emphasis (node size/color) and a paper's right to SPAWN a future-work question.
 
-Build anchor (as_of): 2026-07. Papers in catalog: 1009; points on the map: 687; closed by ≥1 paper: 604. Future-work requests: 246. Citation "giants": 18 (Tukey threshold 563 citations, absolute floor 100).
+Build anchor (as_of): 2026-07. Papers in catalog: 1130; points on the map: 716; closed by ≥1 paper: 633. Future-work requests: 246. Citation "giants": 18 (Tukey threshold 563 citations, absolute floor 100).
 
 ## The weighting and filtering instrument
 

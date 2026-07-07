@@ -1,20 +1,20 @@
 # What is happening in the field: Refusal directions, harm schemas, evasion and defense of probe/latent monitors
 
-**Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — a young and active field (early stage: almost no findings have been re-checked by three or more independent papers — even the basics have not yet settled). The map consists of 687 points (each point is a separate question under specific conditions). At least one paper closes 604 of 687 points (88%); of the closed ones, 23% are corroborated by another independent paper (two or more) and only 13% by three or more; fully answered (no open sub-questions left on the point) are 9% of all points. It is important not to confuse three different things: COVERAGE (a point has at least one paper) is not yet maturity; CORROBORATION (2+ studies) and ANSWEREDNESS (all of a point's sub-questions closed) are what maturity means. A median density of 1 paper per closed cell (a map cell is the same as a point: one question under specific conditions) is a necessary but not sufficient condition: the median value can be on target while the thin half of the cells sits on a single paper. The field asks for 25 major themes of future work (compressed from 246 separate requests found in the papers); of these, 17 are "nobody has taken it up" (orphaned: many ask, but no one has taken it up) and 6 are "solved on paper" (contested: someone claimed to have done it, but the points are still open). Of the requests with a settled outcome (either done or still open), only 3% are already done (7 of 240: a paper was found that actually did it); citations are heavily concentrated in a few papers (Gini concentration index=0.72: 0 — evenly shared, 1 — all in a handful).
+**Refusal directions, harm schemas, evasion and defense of probe/latent monitors** — a young and active field (early stage: almost no findings have been re-checked by three or more independent papers — even the basics have not yet settled). The map consists of 716 points (each point is a separate question under specific conditions). At least one paper closes 633 of 716 points (88%); of the closed ones, 24% are corroborated by another independent paper (two or more) and only 13% by three or more; fully answered (no open sub-questions left on the point) are 9% of all points. It is important not to confuse three different things: COVERAGE (a point has at least one paper) is not yet maturity; CORROBORATION (2+ studies) and ANSWEREDNESS (all of a point's sub-questions closed) are what maturity means. A median density of 1 paper per closed cell (a map cell is the same as a point: one question under specific conditions) is a necessary but not sufficient condition: the median value can be on target while the thin half of the cells sits on a single paper. The field asks for 25 major themes of future work (compressed from 246 separate requests found in the papers); of these, 17 are "nobody has taken it up" (orphaned: many ask, but no one has taken it up) and 6 are "solved on paper" (contested: someone claimed to have done it, but the points are still open). Of the requests with a settled outcome (either done or still open), only 3% are already done (7 of 240: a paper was found that actually did it); citations are heavily concentrated in a few papers (Gini concentration index=0.72: 0 — evenly shared, 1 — all in a handful).
 
 ## Summary (key numbers)
 
 | Metric | Value |
 | --- | --- |
-| Papers (unique) | 1009 |
-| Points on the map (question under specific conditions) | 687 |
+| Papers (unique) | 1130 |
+| Points on the map (question under specific conditions) | 716 |
 | Axes on the map (dimensions along which questions differ) | 14 |
 | Values per axis (options on each axis) | RQ 24 · Models / families 2 · non-unique-direction 2 · Public code 3 · Threat model / access 3 · Failure polarity 3 · Mechanism dynamics 3 · Cross-model transfer tested 4 · Architecture family 4 · failure mechanism 6 · modality 6 · Lifecycle stage 6 · evaluation-chain stage 8 · Behavior concept 9 — 83 total |
 | Research directions (RQ — the root axis) | 24 |
-| Closed by at least 1 paper / completely empty | 604 / 83 |
-| Fully answered (no open sub-questions) | 64 (9%) |
-| Corroborated by 2+ independent papers (of closed) | 138 (23%) |
-| Robust on 3+ papers (of closed) | 76 (13%) |
+| Closed by at least 1 paper / completely empty | 633 / 83 |
+| Fully answered (no open sub-questions) | 68 (9%) |
+| Corroborated by 2+ independent papers (of closed) | 153 (24%) |
+| Robust on 3+ papers (of closed) | 81 (13%) |
 | Density (median papers per closed map point) | 1 |
 | Request themes (F, after merging similar ones) | 25 |
 | Separate requests (with author / gathered by instrument) | 246 (236 / 10) |
@@ -28,11 +28,10 @@
 
 - What the figure shows: on the left — how many map points are in each state (empty = no papers; "1/2/3 open" = that many open sub-questions remain on the point; "answered" = fully answered). On the right — the "maturity funnel": how many points passed each rung (has at least one paper -> corroborated by a second independent paper -> robust on three or more -> fully answered).
 - Only 13% of closed points are robust on three or more independent papers — almost everything rests on a single paper that no one has re-checked yet.
-- Only 23% of points are corroborated by at least a second paper — most findings still rest on a single work.
-- 12% of points are completely empty (no paper on them at all): the field is covered broadly but very sparsely.
-- Most often the points are in state "2 open" (that many sub-questions on the point still open): there are 433 such — the largest group. Completely empty are 12%, and fully answered only 9% — that is, the bulk sits somewhere in the middle and is not yet finished.
-- Full breakdown of all 687 points by state — completely empty, without a single paper (=4): 83, with 3 open sub-questions (=3): 44, with 2 open sub-questions (=2): 433, with 1 open sub-question (=1): 63, fully closed (=0): 64.
-- The funnel narrows fast: of the points with at least one paper, 23% reach corroboration by a second paper, from there 55% reach three or more, and 84% reach a full answer. The most is filtered out at re-checking by a second paper (only 23% pass further) — this is the main sign of immaturity.
+- Only 24% of points are corroborated by at least a second paper — most findings still rest on a single work.
+- Most often the points are in state "2 open" (that many sub-questions on the point still open): there are 446 such — the largest group. Completely empty are 12%, and fully answered only 9% — that is, the bulk sits somewhere in the middle and is not yet finished.
+- Full breakdown of all 716 points by state — completely empty, without a single paper (=4): 83, with 3 open sub-questions (=3): 44, with 2 open sub-questions (=2): 446, with 1 open sub-question (=1): 75, fully closed (=0): 68.
+- The funnel narrows fast: of the points with at least one paper, 24% reach corroboration by a second paper, from there 53% reach three or more, and 84% reach a full answer. The most is filtered out at re-checking by a second paper (only 24% pass further) — this is the main sign of immaturity.
 
 ## Demand and supply: what is in high demand and what is abandoned
 
@@ -44,7 +43,7 @@
 - Demand (horizontal): on average 8 different papers ask for the theme, the median is 7; for most it is 3–18 (that band holds 90%), and overall from 2 to 21. The most requested on the right — `F1` cross-model transfer (asked for by 21 articles); on the left — themes asked for only 2 times (isolated, rarely mentioned requests). Some separate requests in the field were phrased by the instrument itself, with no source author — these are called greenfield (they do not form separate themes but merge into ordinary ones).
 - How unanswered (vertical): on average 3.2 of 4 (4 — completely empty), median value 3.2 — the cloud of circles hangs in the upper half, meaning almost nothing has been finished. Take the theme `F20` steering reliability as an example:
   - where 3.0 comes from: the theme has 16 target points (map cells the theme asks to close) — 7 completely empty, without a single paper (=4), 4 with 3 open sub-questions (=3), 3 with 2 open sub-questions (=2), 2 with 1 open sub-question (=1); the mean of these numbers (0..4) is the open-ness (answeredScore) = 3.00
-- Relationship between demand and open-ness: weak negative relationship (coefficient -0.26 on a scale from -1 to 1: +1 — the more often a theme is requested, the more OPEN it is; -1 — the opposite; 0 — no relationship (we compare the ordering of themes by demand and by open-ness)) — the more often a theme is asked for, the FEWER gaps it has — popular themes are at least partially taken up (they become "solved on paper"), while rare ones stand untouched; meanwhile almost nothing reaches a full answer. For example (and that is how you get the coefficient -0.26): the most requested theme `F1` cross-model transfer is asked for by 21 articles at open-ness 3.4 of 4, while the rarely asked `F19` boundary data — only 2 at open-ness 4.0: the most requested one has lower open-ness (3.4 vs 4.0) — this is exactly the negative relationship: the more often asked, the fewer gaps.
+- Relationship between demand and open-ness: weak negative relationship (coefficient -0.27 on a scale from -1 to 1: +1 — the more often a theme is requested, the more OPEN it is; -1 — the opposite; 0 — no relationship (we compare the ordering of themes by demand and by open-ness)) — the more often a theme is asked for, the FEWER gaps it has — popular themes are at least partially taken up (they become "solved on paper"), while rare ones stand untouched; meanwhile almost nothing reaches a full answer. For example (and that is how you get the coefficient -0.27): the most requested theme `F1` cross-model transfer is asked for by 21 articles at open-ness 3.4 of 4, while the rarely asked `F19` boundary data — only 2 at open-ness 4.0: the most requested one has lower open-ness (3.4 vs 4.0) — this is exactly the negative relationship: the more often asked, the fewer gaps.
 - How many themes in each corner: "nobody does it" (orphaned) 17, "solved on paper" (contested) 6, "done and closed" (settled) 0, "open, but few ask" (low-signal open) 2 — 25 themes in total.
 - Only 3% of requests are already done — that is 7 of 240 (for 7, a paper was found that actually did them; the remaining 233 are still open). Far more is asked for than gets done.
 - **"nobody does it"** (orphaned) — 17 themes (many ask, but no one has taken up the theme, and it runs into an empty point). Most striking: `F1` cross-model transfer (asked for by 21 articles, open-ness 3.4 of 4).
@@ -130,14 +129,14 @@
   - `F11` emergence (asked for by 3 articles, open-ness 3.3 of 4)
   - `F19` boundary data (asked for by 2 articles, open-ness 4.0 of 4)
 - **attacks, black** — 2 themes, asked for by 22 articles, open 100% ("nobody does it" 1, open-ness 2.7/4):
-  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 3.0 of 4)
+  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 2.9 of 4)
   - `F15` multi-turn (asked for by 5 articles, open-ness 2.4 of 4)
 - **defenses, adversarial** — 1 theme, asked for by 6 articles, open 100% ("nobody does it" 1, open-ness 3.3/4):
   - `F18` empirical defenses (asked for by 6 articles, open-ness 3.3 of 4)
 - **adversarial, attack** — 1 theme, asked for by 7 articles, open 100% ("nobody does it" 1, open-ness 3.6/4):
   - `F13` attack optimization (asked for by 7 articles, open-ness 3.6 of 4)
-- **jailbreak, attacker** — 1 theme, asked for by 18 articles, open 100% ("nobody does it" 1, open-ness 3.1/4):
-  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.1 of 4)
+- **jailbreak, attacker** — 1 theme, asked for by 18 articles, open 100% ("nobody does it" 1, open-ness 3.0/4):
+  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.0 of 4)
 - The most requested sub-theme — refusal, mechanisms (asked for by 94 articles, "nobody does it" 8) — the field pushes there hardest.
 
 ## Who sets the agenda and who does the work
@@ -145,19 +144,19 @@
 ![Who sets the agenda and who does the work](provenance.png)
 
 - What the figure shows: instead of individual papers we compare the map's AREAS. The map has several axes (Models / families, non-unique-direction, Public code, Threat model / access, Failure polarity, Mechanism dynamics, Cross-model transfer tested, Architecture family, failure mechanism, modality, Lifecycle stage, evaluation-chain stage, Behavior concept), and each axis has its own values (for example, on the "Models / families" axis these are "multi", "single", etc.). On the left — the areas the field asks for the most future work; on the right — the areas where the most papers already sit (actual work). An area's "demand" is the total number of request papers whose target points fall into this area (a request is counted in all the areas of its points). "Work" is how many different papers sit in the points of this area (counted from the papers' coordinates on the map).
-- **Models / families**: most asked for is "multi" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "multi" (995 articles).
-- **non-unique-direction**: most asked for is "no" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "no" (1000 articles).
-- **Public code**: most asked for is "not-released" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "not-released" (671 articles).
-- **Threat model / access**: most asked for is "white-box" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "white-box" (607 articles).
-- **Failure polarity**: most asked for is "under-refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "under-refusal" (676 articles).
-- **Mechanism dynamics**: most asked for is "static" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "static" (868 articles).
-- **Cross-model transfer tested**: most asked for is "not-tested" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "not-tested" (838 articles).
-- **Architecture family**: most asked for is "dense" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "dense" (974 articles).
-- **failure mechanism**: most asked for is "directions" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "behavior" (505 articles) — demand and work point in different directions: one thing is asked for, another is worked on.
-- **modality**: most asked for is "text" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "text" (762 articles).
-- **Lifecycle stage**: most asked for is "inference-time" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "inference-time" (764 articles).
-- **evaluation-chain stage**: most asked for is "direction" (demand 187 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "token" (506 articles) — demand and work point in different directions: one thing is asked for, another is worked on.
-- **Behavior concept**: most asked for is "refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "refusal" (757 articles).
+- **Models / families**: most asked for is "multi" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "multi" (1114 articles).
+- **non-unique-direction**: most asked for is "no" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "no" (1120 articles).
+- **Public code**: most asked for is "not-released" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "not-released" (721 articles).
+- **Threat model / access**: most asked for is "white-box" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "white-box" (655 articles).
+- **Failure polarity**: most asked for is "under-refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "under-refusal" (789 articles).
+- **Mechanism dynamics**: most asked for is "static" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "static" (985 articles).
+- **Cross-model transfer tested**: most asked for is "not-tested" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "not-tested" (945 articles).
+- **Architecture family**: most asked for is "dense" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "dense" (1095 articles).
+- **failure mechanism**: most asked for is "directions" (demand 202 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "behavior" (591 articles) — demand and work point in different directions: one thing is asked for, another is worked on.
+- **modality**: most asked for is "text" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "text" (861 articles).
+- **Lifecycle stage**: most asked for is "inference-time" (demand 204 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "inference-time" (854 articles).
+- **evaluation-chain stage**: most asked for is "direction" (demand 187 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "token" (593 articles) — demand and work point in different directions: one thing is asked for, another is worked on.
+- **Behavior concept**: most asked for is "refusal" (demand 207 — summed over themes whose target points fall here; one paper asking for several themes is counted in each); most work is in "refusal" (872 articles).
 - 10 requests were gathered by the instrument itself, with no specific source author (greenfield) — this is hidden demand that no one in the field voiced directly, but it follows from the map's structure. Here they all are:
   - Across dense, mixture-of-experts, state-space and diffusion models, is refusal carried by the SAME geometric object (direction/cone) or is it architecture-spec… — rolls up into the theme `F1` cross-model transfer; scope partial plan (partial); research direction RQ22: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Ma…; target points (map cells the theme asks to close): 3
   - Is there ONE shared cross-modal refusal vector validated jointly across audio, vision and video, rather than a separate direction recovered per modality? — rolls up into the theme `F8` multimodal; scope partial plan (partial); research direction RQ18: Transfer of safety geometry across modality (text -> V…; target points (map cells the theme asks to close): 2
@@ -181,7 +180,7 @@
 - The field asks most strongly for the direction RQ8: Transfer across models (suffix/dir/feature/neuron) (asked for by 129 articles in total).
 - The directions are closed very unevenly: between the emptiest and the most worked-out the difference is 38% of empty points.
 - Directions in descending order of demand (the most requested first). Each request theme under a direction carries in parentheses "open-ness N of 4" — the mean over its points of the number of still-open clarifying sub-questions (0 — all sub-questions on the point closed, 4 — the point completely empty, no papers):
-- **RQ8**: Transfer across models (suffix/dir/feature/neuron) — 18 points; of which 22% empty, 78% partially open, 0% answered; asked for by 129 articles, abandoned ("nobody does it") 6. hot but abandoned — high demand runs into empty points.
+- **RQ8**: Transfer across models (suffix/dir/feature/neuron) — 19 points; of which 21% empty, 79% partially open, 0% answered; asked for by 129 articles, abandoned ("nobody does it") 6. hot but abandoned — high demand runs into empty points.
   - (there are no separate request themes under this direction)
 - **RQ1**: Does a refusal direction exist — 28 points; of which 25% empty, 68% partially open, 7% answered; asked for by 119 articles, abandoned ("nobody does it") 7. hot but abandoned — high demand runs into empty points.
   - `F20` steering reliability (asked for by 17 articles, open-ness 3.0 of 4)
@@ -190,17 +189,17 @@
   - `F15` multi-turn (asked for by 5 articles, open-ness 2.4 of 4)
   - `F5` extraction (asked for by 3 articles, open-ness 3.7 of 4)
   - `F24` agent safety (asked for by 3 articles, open-ness 2.3 of 4)
-- **RQ6**: Defense (input / latent / multi-layer) — 124 points; of which 3% empty, 83% partially open, 14% answered; asked for by 93 articles, abandoned ("nobody does it") 8. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ6**: Defense (input / latent / multi-layer) — 128 points; of which 3% empty, 82% partially open, 15% answered; asked for by 93 articles, abandoned ("nobody does it") 8. actively studied but not yet closed — work is under way, but the points are still open.
   - `F18` empirical defenses (asked for by 6 articles, open-ness 3.3 of 4)
   - `F17` certified defense (asked for by 4 articles, open-ness 4.0 of 4)
-- **RQ10**: Attacks stronger than GCG — 68 points; of which 19% empty, 57% partially open, 24% answered; asked for by 92 articles, abandoned ("nobody does it") 8. hot but abandoned — high demand runs into empty points.
-  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.1 of 4)
-  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 3.0 of 4)
+- **RQ10**: Attacks stronger than GCG — 72 points; of which 18% empty, 58% partially open, 24% answered; asked for by 92 articles, abandoned ("nobody does it") 8. hot but abandoned — high demand runs into empty points.
+  - `F21` eval rigor & benchmarks (asked for by 18 articles, open-ness 3.0 of 4)
+  - `F14` transferable & obfuscation attacks (asked for by 17 articles, open-ness 2.9 of 4)
   - `F13` attack optimization (asked for by 7 articles, open-ness 3.6 of 4)
 - **RQ22**: ARCHITECTURE: cones/RepInd/count outside dense (MoE/Mamba/diffusion) — 28 points; of which 21% empty, 75% partially open, 4% answered; asked for by 92 articles, abandoned ("nobody does it") 4. hot but abandoned — high demand runs into empty points.
   - `F1` cross-model transfer (asked for by 21 articles, open-ness 3.4 of 4)
   - `F9` non-dense architectures (asked for by 5 articles, open-ness 3.6 of 4)
-- **RQ12**: Shallow vs deep alignment — 12 points; of which 0% empty, 92% partially open, 8% answered; asked for by 91 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ12**: Shallow vs deep alignment — 16 points; of which 0% empty, 94% partially open, 6% answered; asked for by 91 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
   - (there are no separate request themes under this direction)
 - **RQ4**: Does a probe detect harm — 41 points; of which 20% empty, 76% partially open, 5% answered; asked for by 88 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
   - `F16` probe monitoring & detection (asked for by 9 articles, open-ness 3.2 of 4)
@@ -208,15 +207,15 @@
   - `F19` boundary data (asked for by 2 articles, open-ness 4.0 of 4)
 - **RQ19**: STAGE: emergence/drift/transfer of the direction (pretrain -> finetune -> compress) — 20 points; of which 10% empty, 90% partially open, 0% answered; asked for by 76 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
   - (there are no separate request themes under this direction)
-- **RQ14**: Other directions/circuits (sycophancy/deception/emergent-misalignment/persona-traits): do they exist and transfer? — 69 points; of which 10% empty, 84% partially open, 6% answered; asked for by 75 articles, abandoned ("nobody does it") 3. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ14**: Other directions/circuits (sycophancy/deception/emergent-misalignment/persona-traits): do they exist and transfer? — 72 points; of which 10% empty, 85% partially open, 6% answered; asked for by 75 articles, abandoned ("nobody does it") 3. actively studied but not yet closed — work is under way, but the points are still open.
   - `F6` non-refusal behaviors (asked for by 12 articles, open-ness 3.2 of 4)
 - **RQ9**: SAE decomposition of refusal (core/tail, redundancy) — 35 points; of which 14% empty, 69% partially open, 17% answered; asked for by 66 articles, abandoned ("nobody does it") 5. hot but abandoned — high demand runs into empty points.
   - `F22` SAE features (asked for by 3 articles, open-ness 3.3 of 4)
 - **RQ24**: non-unique-direction: is the direction/cone unique, how many really? — 12 points; of which 25% empty, 75% partially open, 0% answered; asked for by 66 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
   - `F3` mechanism count (asked for by 7 articles, open-ness 3.9 of 4)
-- **RQ5**: Evasion of probe/latent monitors — 10 points; of which 10% empty, 90% partially open, 0% answered; asked for by 65 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ5**: Evasion of probe/latent monitors — 11 points; of which 9% empty, 91% partially open, 0% answered; asked for by 65 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
   - (there are no separate request themes under this direction)
-- **RQ13**: Benchmarks / evaluation — 79 points; of which 5% empty, 81% partially open, 14% answered; asked for by 59 articles, abandoned ("nobody does it") 5. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ13**: Benchmarks / evaluation — 80 points; of which 5% empty, 81% partially open, 14% answered; asked for by 59 articles, abandoned ("nobody does it") 5. actively studied but not yet closed — work is under way, but the points are still open.
   - (there are no separate request themes under this direction)
 - **RQ7**: Count of harm-schemas/neurons (min/max) — 13 points; of which 38% empty, 62% partially open, 0% answered; asked for by 51 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
   - `F11` emergence (asked for by 3 articles, open-ness 3.3 of 4)
@@ -224,19 +223,19 @@
   - `F7` over-refusal (asked for by 4 articles, open-ness 3.0 of 4)
 - **RQ18**: Transfer of safety geometry across modality (text -> VLM/audio/video) — 16 points; of which 25% empty, 75% partially open, 0% answered; asked for by 50 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
   - `F8` multimodal (asked for by 11 articles, open-ness 3.0 of 4)
-- **RQ23**: BACKDOOR/conditional: geometry of trigger-behavior, count — 21 points; of which 14% empty, 86% partially open, 0% answered; asked for by 50 articles, abandoned ("nobody does it") 4. hot but abandoned — high demand runs into empty points.
+- **RQ23**: BACKDOOR/conditional: geometry of trigger-behavior, count — 27 points; of which 11% empty, 89% partially open, 0% answered; asked for by 50 articles, abandoned ("nobody does it") 4. actively studied but not yet closed — work is under way, but the points are still open.
   - `F10` finetune robustness & backdoors (asked for by 12 articles, open-ness 3.0 of 4)
 - **RQ21**: DYNAMICS (across-generation): dynamics of refusal/cone along generation steps — 8 points; of which 12% empty, 88% partially open, 0% answered; asked for by 37 articles, abandoned ("nobody does it") 3. hot but abandoned — high demand runs into empty points.
   - `F4` causal evidence (asked for by 10 articles, open-ness 3.5 of 4)
 - **RQ20**: ACCESS: probe-as-attack (grey-box), degradation under access change — 3 points; of which 33% empty, 67% partially open, 0% answered; asked for by 27 articles, abandoned ("nobody does it") 2. hot but abandoned — high demand runs into empty points.
   - (there are no separate request themes under this direction)
-- **RQ15**: Refusal in reasoning/CoT models: one direction, cones, does the picture transfer? — 32 points; of which 9% empty, 88% partially open, 3% answered; asked for by 14 articles, abandoned ("nobody does it") 2. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ15**: Refusal in reasoning/CoT models: one direction, cones, does the picture transfer? — 34 points; of which 9% empty, 85% partially open, 6% answered; asked for by 14 articles, abandoned ("nobody does it") 2. actively studied but not yet closed — work is under way, but the points are still open.
   - `F25` reasoning safety (asked for by 7 articles, open-ness 2.8 of 4)
-- **RQ3**: Suffix mechanism (suppression vs activation, hijack) — 5 points; of which 20% empty, 80% partially open, 0% answered; asked for by 7 articles, abandoned ("nobody does it") 1. hot but abandoned — high demand runs into empty points.
+- **RQ3**: Suffix mechanism (suppression vs activation, hijack) — 6 points; of which 17% empty, 83% partially open, 0% answered; asked for by 7 articles, abandoned ("nobody does it") 1. hot but abandoned — high demand runs into empty points.
   - (there are no separate request themes under this direction)
-- **RQ2**: How many directions / geometry (cones, dim) — 14 points; of which 0% empty, 93% partially open, 7% answered; asked for by 3 articles, abandoned ("nobody does it") 0. actively studied but not yet closed — work is under way, but the points are still open.
+- **RQ2**: How many directions / geometry (cones, dim) — 15 points; of which 0% empty, 93% partially open, 7% answered; asked for by 3 articles, abandoned ("nobody does it") 0. actively studied but not yet closed — work is under way, but the points are still open.
   - (there are no separate request themes under this direction)
-- **RQ11**: Several types of refusal (taxonomy) — 2 points; of which 0% empty, 100% partially open, 0% answered; asked for by 0 articles, abandoned ("nobody does it") 0. quiet direction — the field almost never asks for it.
+- **RQ11**: Several types of refusal (taxonomy) — 3 points; of which 0% empty, 100% partially open, 0% answered; asked for by 0 articles, abandoned ("nobody does it") 0. quiet direction — the field almost never asks for it.
   - (there are no separate request themes under this direction)
 - **RQ16**: Predict-control: a feature predicts but does not control — 5 points; of which 0% empty, 100% partially open, 0% answered; asked for by 0 articles, abandoned ("nobody does it") 0. quiet direction — the field almost never asks for it.
   - (there are no separate request themes under this direction)
@@ -248,7 +247,7 @@
 - What the figure shows: on the left — how unevenly the citations are divided. The curve shows what share of all citations papers collect, going from the least- to the most-cited; the more it sags below the diagonal (the diagonal = everyone equal), the more everything is concentrated in a few. The solid line — all papers, the dash-dot — the same papers without the "giants" (the most-cited outliers). The Gini number compresses the curve into a single figure on a 0..1 scale: it is the area of the gap between the diagonal and the curve, divided by the whole area under the diagonal (0 — all papers cited equally, 1 — all citations on one paper). The scale is chosen so as not to depend on either the number of papers or the absolute number of citations. On the right — how many papers by age: younger than 4 months, up to a year, up to 2 years, older than 2 years.
 - Citation unevenness (across all papers): the top 10% most-cited collect 53% of all citations (Gini 0.72) — a few "giants" pull the field.
 - How 0.72 arises on real numbers: going from the least-cited, the bottom half of papers (99 of 199) collects only 2% of all citations, while the top 10% — 53%. If citations were shared equally, the bottom half would collect its 50%, the curve would lie on the diagonal and Gini would be 0; the further this share is from 50%, the closer Gini is to 1 — here 0.72.
-- Who counts as a "giant" (these are citation outliers): papers whose citations exceed the upper bound by Tukey's rule — the third quartile plus 1.5 interquartile ranges (that is, noticeably above the typical spread). Here the threshold is 563 citations; above it are 18 articles of 199 (the citation count runs over the 199 papers with a known citation number — for the remaining 810 of 1009 the counter is not yet filled in). Which ones exactly we exclude (by descending citations):
+- Who counts as a "giant" (these are citation outliers): papers whose citations exceed the upper bound by Tukey's rule — the third quartile plus 1.5 interquartile ranges (that is, noticeably above the typical spread). Here the threshold is 563 citations; above it are 18 articles of 199 (the citation count runs over the 199 papers with a known citation number — for the remaining 931 of 1130 the counter is not yet filled in). Which ones exactly we exclude (by descending citations):
   - [`P01` Universal and Transferable Adversarial Attacks (GCG)](https://arxiv.org/pdf/2307.15043) — 3250 citations (2023)
   - [`P14` Jailbroken: How Does Safety Training Fail](https://arxiv.org/pdf/2307.02483) — 1947 citations (2023)
   - [`P09` PAIR](https://arxiv.org/pdf/2310.08419) — 1518 citations (2023)
@@ -260,15 +259,15 @@
   - … and 10 more (all with citations above 563)
 - The same computation without the giants (on the remaining 181 papers): concentration drops noticeably — Gini 0.72 -> 0.65, and the top 10% now collect 41% of citations instead of 53%. The median paper still gets 24 quotes (was 76), but the maximum among the remaining ones is 528 (it was 3250). That is, without a few super-cited works the field is still uneven, but no longer "all in a handful".
 - How much a typical paper is cited (across all): median value 76, top 5% — 740, maximum 3250. That is, an ordinary paper is cited little, while a handful hold the whole volume.
-- Age: 75% of papers are younger than a year, median age 5 months — a young and active stream. Breakdown by age group (how many papers in each): younger than 4 months: 464, from 4 months to a year: 296, from a year to 2 years: 160, older than 2 years: 89.
+- Age: 68% of papers are younger than a year, median age 8 months — a young and active stream. Breakdown by age group (how many papers in each): younger than 4 months: 464, from 4 months to a year: 300, from a year to 2 years: 211, older than 2 years: 155.
 
 ## What type of field this is (among all maps)
 
 ![What type of field this is (among all maps)](field_type.png)
 
 - What the figure shows: the solid line — 14 descriptors of THIS map, the dashed line — the center of its nearest type among all possible maps (both in the type's color). Matching lines = the map is typical of its type; divergences along the spokes show how it stands out from the type.
-- Closest to the archetype **Broad shallow** (sampled everywhere, re-checked almost nowhere — one paper per cell); Euclidean distance over the 6 composite axes 0.35 (0 — exactly at the type's center).
-- The map's composite axes (each in [0,1]): maturity (maturity: share of re-checked findings) 0.15, freshness (freshness: share of young papers) 0.75, coherence (coherence: how much the field works on what it asks for) 0.63, coverage (coverage: share of closed map points) 0.88, interaction (interaction density: future-work requests per map point) 0.14, canon (canon concentration: citation inequality (Gini)) 0.72.
+- Closest to the archetype **Broad shallow** (sampled everywhere, re-checked almost nowhere — one paper per cell); Euclidean distance over the 6 composite axes 0.34 (0 — exactly at the type's center).
+- The map's composite axes (each in [0,1]): maturity (maturity: share of re-checked findings) 0.15, freshness (freshness: share of young papers) 0.68, coherence (coherence: how much the field works on what it asks for) 0.64, coverage (coverage: share of closed map points) 0.88, interaction (interaction density: future-work requests per map point) 0.13, canon (canon concentration: citation inequality (Gini)) 0.72.
 - Deviates most from the type's center: orphaned fraction 68% vs 10% for the type; ask concreteness (full+partial) 86% vs 50% for the type; greenfield fraction (synthesized asks) 4% vs 40% for the type.
 
 ## Field scores by theory
@@ -278,21 +277,21 @@ Another slice: where this field stands on the axes of published theories of eval
 ![Field position by theory](theory_positions.png)
 
 - What the figure shows: the solid line — the position of THIS field on each theory's computable axes (in its type's color), the dashed lines — the theory's ideal types (each in its own color). A match = the field resembles that ideal type. The first panel is our synthesis: the field on the 6 consolidated axes (maturity, freshness, coherence, coverage, interaction density, canon concentration) plus open-ness, overlaid on the 6 reference field archetypes.
-- **Our synthesis (working theory)**: closest to the ideal type "Broad shallow"; Euclidean distance over the theory's axes 0.36 (0 — exactly in this type). The field's axes: Maturity / consolidation 0.15, Freshness 0.75, Coherence (demand↔work) 0.63, Tensor coverage 0.88, Link density 0.14, Canon concentration 0.72, Uncertainty / openness 0.91.
-- **Attributes of an emerging field (Rotolo–Hic…**: closest to the ideal type "Emerging"; Euclidean distance over the theory's axes 0.51 (0 — exactly in this type). The field's axes: Rapid growth 0.75, Coherence 0.63, Prominent impact 0.72, Uncertainty/ambiguity 0.91.
-- **Three binary theories together (mainstream …**: closest to the ideal type "Mainstream / normal science"; Euclidean distance over the theory's axes 0.65 (0 — exactly in this type). The field's axes: Consolidation↔disruption … 0.43, Consensus (Shwed) 0.38, Conventionality (Uzzi) 0.72.
+- **Our synthesis (working theory)**: closest to the ideal type "Broad shallow"; Euclidean distance over the theory's axes 0.35 (0 — exactly in this type). The field's axes: Maturity / consolidation 0.15, Freshness 0.68, Coherence (demand↔work) 0.64, Tensor coverage 0.88, Link density 0.13, Canon concentration 0.72, Uncertainty / openness 0.91.
+- **Attributes of an emerging field (Rotolo–Hic…**: closest to the ideal type "Emerging"; Euclidean distance over the theory's axes 0.54 (0 — exactly in this type). The field's axes: Rapid growth 0.68, Coherence 0.64, Prominent impact 0.72, Uncertainty/ambiguity 0.91.
+- **Three binary theories together (mainstream …**: closest to the ideal type "Mainstream / normal science"; Euclidean distance over the theory's axes 0.64 (0 — exactly in this type). The field's axes: Consolidation↔disruption … 0.43, Consensus (Shwed) 0.38, Conventionality (Uzzi) 0.72.
 
 | Theory | Axis | Type | Field value | What the axis shows |
 | --- | --- | --- | --- | --- |
 | Our synthesis (working theory) | Maturity / consolidation | faithful | 0.15 | a re-checked, answered core |
-| Our synthesis (working theory) | Freshness | faithful | 0.75 | share of fresh papers |
-| Our synthesis (working theory) | Coherence (demand↔work) | faithful | 0.63 | the field works on what it asks for |
+| Our synthesis (working theory) | Freshness | faithful | 0.68 | share of fresh papers |
+| Our synthesis (working theory) | Coherence (demand↔work) | faithful | 0.64 | the field works on what it asks for |
 | Our synthesis (working theory) | Tensor coverage | faithful | 0.88 | share of filled map points |
-| Our synthesis (working theory) | Link density | faithful | 0.14 | requests per map point |
+| Our synthesis (working theory) | Link density | faithful | 0.13 | requests per map point |
 | Our synthesis (working theory) | Canon concentration | faithful | 0.72 | citation inequality (Gini) |
 | Our synthesis (working theory) | Uncertainty / openness | faithful | 0.91 | share of unclosed sub-questions (a Rotolo-style extension) |
-| Attributes of an emerging field (… | Rapid growth | faithful | 0.75 | an influx of fresh work |
-| Attributes of an emerging field (… | Coherence | faithful | 0.63 | growing internal connectedness |
+| Attributes of an emerging field (… | Rapid growth | faithful | 0.68 | an influx of fresh work |
+| Attributes of an emerging field (… | Coherence | faithful | 0.64 | growing internal connectedness |
 | Attributes of an emerging field (… | Prominent impact | faithful | 0.72 | citation concentration / giants |
 | Attributes of an emerging field (… | Uncertainty/ambiguity | faithful | 0.91 | share of unclosed sub-questions |
 | Consolidation ↔ disruption (CD in… | Consolidation↔disruption | proxy | 0.43 | reliance on giants vs. rupture (proxy = canon+maturity) |
@@ -304,7 +303,7 @@ Another slice: where this field stands on the axes of published theories of eval
 ![The field as an attention market](field_market.png)
 
 - What the figure shows: each map axis value (for example, `MODELS:multi`) is a "good". Its demand is how many papers ASK for future work there, supply is how many actually WORK there. Goods are sorted by demand; the red fill — unmet demand (shortage), the green — surplus. This is a view of the field as a market: where demand for future work outruns supply.
-- Goods (axis values): 59; total demand 5521, supply 13117; unmet demand 1022 (**shortage index 19%** = share of demand without supply).
+- Goods (axis values): 59; total demand 5521, supply 14690; unmet demand 986 (**shortage index 18%** = share of demand without supply).
 - Concentration of work: **supply Gini 0.68** (0 — work spread evenly across themes, 1 — all in one), **HHI 0.050** (Herfindahl index of supply shares). High values = work pulled toward a few themes.
 - Work is most lacking in "LOCUS:cone-subspace": demand 169, but only 19 work there (shortage 150).
 
@@ -317,10 +316,10 @@ Another slice: where this field stands on the axes of published theories of eval
   - most "weighty" by the composite importance score: [`P88` Persona Vectors: Monitoring & Controlling Traits](https://arxiv.org/pdf/2507.21509) — score 2.10 (the score = the paper's freshness plus the contribution of its citedness — the percentile among age peers, i.e. what share of peers are cited less than it; the fresher and more cited, the higher the score, so an old, lightly-cited work lands near the lower bound, while a fresh, most-cited one gets the field's highest score; this work's age is 11 months — "from 4 months to a year" — and 234 citations, which together give 2.10)
   - freshest landmark work: [`P193` Constitutional Classifiers: Defending against Universa…](https://arxiv.org/pdf/2501.18837) — age 17 months
 - **Areas (map axes).**
-  - most asked-for area "Models / families: multi" (total demand 207 request papers)
-  - most work in the area "non-unique-direction: no" (1000 articles)
-  - demand without supply: "non-unique-direction: yes" is asked for by 135, yet only 9 articles work there
-  - worked on but no longer asked for: "Lifecycle stage: rlhf-alignment" — 37 articles, and zero requests for future work
+  - most asked-for area "Threat model / access: white-box" (total demand 207 request papers)
+  - most work in the area "non-unique-direction: no" (1120 articles)
+  - demand without supply: "Cross-model transfer tested: no" is asked for by 63, yet only 4 articles work there
+  - worked on but no longer asked for: "Lifecycle stage: rlhf-alignment" — 43 articles, and zero requests for future work
 - **Map points (cells).**
   - the point most often asked to extend further: RQ12: Shallow vs deep alignment | optimal curriculum ordering; safety under bio/cyb… — 11 requests for extension converge on it
   - already fully closed, yet the field still asks to extend it: RQ10: Attacks stronger than GCG | extend prompt-level jailbreaking to multi-turn co… — 1 request
