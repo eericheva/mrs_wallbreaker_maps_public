@@ -29,6 +29,13 @@ what only the map reveals as still **askable**.
   confounding of empirical ML research break, mapped across the field's research
   questions.
 
+| Map | Live on the site | Report | Pipeline | Written source |
+|-----|------------------|--------|----------|----------------|
+| **refusal_geometry** | [open the map](https://mrswallbreakermaps.com/maps/refusal_geometry) | [report.md](field_stat_reports/refusal_geometry/report.md) | [pipeline.md](field_stat_reports/refusal_geometry/pipeline.md) | [FIELD_MAP.md](field_maps/refusal_geometry/FIELD_MAP.md) |
+| **vcrc** | [open the map](https://mrswallbreakermaps.com/maps/vcrc) | [report.md](field_stat_reports/vcrc/report.md) | [pipeline.md](field_stat_reports/vcrc/pipeline.md) | [FIELD_MAP.md](field_maps/vcrc/FIELD_MAP.md) |
+
+Cross-map meta-report (all maps at once): [field_stat_reports/map_space/report.md](field_stat_reports/map_space/report.md).
+
 ## What's in this repo
 
 - `field_maps/<map>/`
